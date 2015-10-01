@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.mycompany.myapp.ApplicationContextLoader;
 import com.mycompany.myapp.dto.Member;
 
+import junit.framework.Assert;
+
 public class MemberDaoTest extends ApplicationContextLoader{
 	@Autowired
 	MemberDao mdao;
@@ -14,7 +16,7 @@ public class MemberDaoTest extends ApplicationContextLoader{
 	public void testJoin(){
 		Member member = new Member();
 		
-		member.setId("testID");
+		member.setId("TestID");
 		member.setPw("TestPw");
 		member.setName("TestName");
 		
@@ -24,17 +26,34 @@ public class MemberDaoTest extends ApplicationContextLoader{
 	@Test
 	public void testUpdateInfo(){
 		Member member = new Member();
+		member.setId("TestID");
+		member.setNickName("TestNickName");
+		member.setEmail("Test@naver.com");
+		member.setTel("010-1111-2222");
 		
+		int row = mdao.updateInfo(member);
+		Assert.assertEquals(1,  row);
 	}
 	
 	@Test
 	public void testSelect(){
+		String Id = "TestID";
 		
+		Member member = mdao.selectById(Id);
+		Assert.assertEquals(member.getId(), Id);
 	}
 	
 	@Test
-	public void testUpdateRecord(){
-		Member member = new Member();
+	public void testUpdateWin(){
+		String Id = "TestID";
+		String result = "win";
+		mdao.updateRecord(Id, result);
 	}
 	
+	@Test
+	public void testUpdateLose(){
+		String Id = "TestID";
+		String result = "lose";
+		mdao.updateRecord(Id, result);
+	}
 }
