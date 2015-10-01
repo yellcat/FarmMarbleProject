@@ -44,7 +44,7 @@ public class MemberDao {
 				+ "update Members "
 				+ "set member_nickname = ?, member_email = ?, member_tel = ? "
 				+ "where member_id=?";
-		int rows = jdbcTemplate.update(sql, member.getNickName(), member.getEmail(), member.getTel());
+		int rows = jdbcTemplate.update(sql, member.getNickName(), member.getEmail(), member.getTel(), member.getId());
 
 		return rows;
 	}
@@ -76,12 +76,12 @@ public class MemberDao {
 		return member;
 	}
 	
-	public int updateRecord(String result, String id){
+	public int updateRecord(String id, String result){
 		String sql = "";
 		if(result.equals("win")){
 			sql = "update Members set member_win = member_win + 1 where member_id=?";
 		}else if(result.equals("lose")){
-			sql = "update Members set member_win = member_lose + 1 where member_id=?";
+			sql = "update Members set member_lose = member_lose + 1 where member_id=?";
 		}
 		int rows = jdbcTemplate.update(sql, id);
 		
