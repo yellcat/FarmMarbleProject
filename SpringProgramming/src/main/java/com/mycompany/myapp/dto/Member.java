@@ -9,7 +9,7 @@ public class Member {
 	private String tel;
 	private int win;
 	private int lose;
-	private String grage;
+	private String grade;
 	
 	public String getId() {
 		return id;
@@ -59,11 +59,11 @@ public class Member {
 	public void setLose(int lose) {
 		this.lose = lose;
 	}
-	public String getGrage() {
-		return grage;
+	public String getGrade() {
+		return grade;
 	}
-	public void setGrage(String grage) {
-		this.grage = grage;
+	public void setGrade(String grade) {
+		this.grade = grade;
 	}
 	
 	
