@@ -44,6 +44,33 @@ public class MemberDaoTest extends ApplicationContextLoader{
 	}
 	
 	@Test
+	public void testFindId(){
+		Member member = new Member();
+		String name = "TestName";
+		String email = "Test@naver.com";
+		
+		member.setName(name);
+		member.setEmail(email);
+		
+		String id = mdao.findId(member);
+		Assert.assertEquals(id, "TestID");
+	}
+	
+	@Test
+	public void testFindPw(){
+		Member member = new Member();
+
+		String id = "TestID";
+		String email = "Test@naver.com";
+
+		member.setId(id);
+		member.setEmail(email);
+		
+		String pw = mdao.findPw(member);
+		Assert.assertEquals(pw, "TestPw");
+	}
+	
+	@Test
 	public void testUpdateWin(){
 		String Id = "TestID";
 		String result = "win";

@@ -7,8 +7,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.mycompany.myapp.dto.JoinValidator;
 import com.mycompany.myapp.dto.Member;
 import com.mycompany.myapp.service.MemberService;
 
@@ -20,26 +23,23 @@ public class MemberController {
 	@Autowired
 	private MemberService memberservice;
 
-	@RequestMapping("member/joinForm")
-	public String joininForm(){
+	//join
+	@RequestMapping(value="member/join", method = RequestMethod.GET)
+	public String joinForm(Member member){
 		logger.info("joinForm()");
 		return "member/joinForm";
 	}
 	
-	@RequestMapping("member/join")
-	public String join(Member member){
+	@RequestMapping(value="member/join", method = RequestMethod.POST)
+	public String join(Member member, BindingResult bindingResult){
 		logger.info("join()");
-		memberservice.join(member);
-		return "member/joinResult";
-	}
-	
-	@RequestMapping("member/login")
-	public String login(Member member, HttpSession session, Model model){
-		logger.info("login()");
-		String result = memberservice.loginCheck(member.getId(), member.getPw(), session);
-		model.addAttribute("result", result);
 		
-		return "member/result";
+		new JoinValidator().validate(member, bindingResult);
+		if(bindingResult.hasErrors()){
+			return "member/joinForm";
+		}
+		memberservice.join(member);
+		return "redirect:member/loginForm";
 	}
 	
 	@RequestMapping("member/idCheck")
@@ -50,6 +50,29 @@ public class MemberController {
 		return "member/result";
 	}
 	
+	//login/logout
+	@RequestMapping(value="member/login", method = RequestMethod.GET)
+	public String loginForm(Member member){
+		logger.info("loginForm()");
+		return "member/loginForm";
+	}
+	
+	@RequestMapping("member/loginCheck")
+	public String loginCheck(Member member, HttpSession session, Model model){
+		logger.info("loginCheck()");
+		String result = memberservice.loginCheck(member, session);
+		model.addAttribute("result", result);
+		return "member/result";
+	}
+	
+	@RequestMapping(value="member/login", method = RequestMethod.POST)
+	public String login(){
+		logger.info("login()");
+		
+		return "redirect:member/menu";
+	}
+
+
 	@RequestMapping("member/logout")
 	public String logout(String id, HttpSession session, Model model){
 		logger.info("logout()");
@@ -59,5 +82,46 @@ public class MemberController {
 		
 		return "member/result";
 	}
+	
+	////find
+	@RequestMapping("member/selectFind")
+	public String selectFind(){
+		logger.info("selectFind()");
+		return "member/selectFind";
+	}
+	//id
+	@RequestMapping(value="member/idFind", method = RequestMethod.GET)
+	public String idFindForm(Member member){
+		logger.info("idFindForm()");
+		return "member/idFindForm";
+	}
+	
+	@RequestMapping(value="member/idFind", method = RequestMethod.POST)
+	public String idFind(Member member, Model model){
+		logger.info("idFind()");
+		String id = memberservice.FindID(member);
+		
+		model.addAttribute("id", id);
+		
+		return "member/id";
+	}
+	//pw
+	@RequestMapping(value="member/pwFind", method = RequestMethod.GET)
+	public String pwFindForm(Member member){
+		logger.info("pwFindForm()");
+		return "member/pwFindForm";
+	}
+	
+	@RequestMapping(value="member/pwFind", method = RequestMethod.POST)
+	public String pwFind(Member member, Model model){
+		logger.info("pwFind()");
+		String pw = memberservice.FindPW(member);
+		
+		model.addAttribute("pw", pw);
+		
+		return "member/pw";
+	}
+	
+	
 	
 }
