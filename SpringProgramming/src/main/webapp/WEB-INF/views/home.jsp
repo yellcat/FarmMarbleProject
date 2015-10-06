@@ -8,7 +8,7 @@
 	</head>
 	
 	<body>
-		<div id="page">
+		<div id="pagehome">
 			<div id="content">
 				
 					<iframe name="iframe" height="100%" width="100%"></iframe>
