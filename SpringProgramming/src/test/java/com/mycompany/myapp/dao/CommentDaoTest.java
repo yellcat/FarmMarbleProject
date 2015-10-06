@@ -15,10 +15,12 @@ public class CommentDaoTest extends ApplicationContextLoader {
 	@Test
 	public void testInsert() {
 		Comment comment = new Comment();
+		
 		comment.setBoardNo(1);
 		comment.setWriter("testID");
 		comment.setContent("content1");
 		Integer no = commentDao.insert(comment);
+		
 		Assert.assertNotNull(no);
 		
 	}
