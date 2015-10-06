@@ -14,7 +14,7 @@
 						<li><a href="game/game">GAME</a></li>
 						<li><a href="board/list">COMUNNITY</a></li>
 						<li><a href="game/information">INFORMATION</a></li>
-						<li><a href="member/logout">LOGOUT</a></li>
+						<li><a id="logout" href="member/logout">LOGOUT</a></li>
 					</ul>
 				</div>
 	</body>
