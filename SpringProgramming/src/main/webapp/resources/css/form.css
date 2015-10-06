@@ -6,101 +6,38 @@
 			}
 			/*------------------------------------*/
 			body{
-				background-image: url("../image/background.jpg");
-			}
-			#pagewrapper {
-				width: 960px;
-				margin: 0px auto;
+				
+				margin: 0px;
 				color: #FFFFFF;
+				background-image: url("../image/Farm.png");
+				background-size:100% 100%;
+				
+				background-repeat: no-repeat;
+
+				
 			}
 			/*------------------------------------*/				
 			#page {
-				height: 100vh;
-				display: flex;
-				flex-direction: column;
-			}
-			/*------------------------------------*/			
-			#header {
-				margin: 20px /* 0px */;
-				font-family: 'nanumbarunpenb', cursive;
-				text-decoration: none;
-				/* font-style: italic; */
-			}
-			#content1 {
-				height: 200px;
-				display: flex;
-			}
-			#content2 {
-				flex: 1;
-				margin-top: 10px;
-				min-height: 300px;
-				display: flex;
+				position:absolute;
+				left:50%; top:50%;
+				width:600px;
+				height:400px;
+				margin-left:-300px;
+				margin-top:-200px;
+				
 				
 			}
-			#footer {
-				margin: 20px 0px;
-			}			
-			/*------------------------------------*/	
-			#content1 #login {
-				width: 250px;
-				border: 3px solid #655143;	
-				border-radius: 10px;			
-			}
+			/*------------------------------------*/			
 			
-			#content1 #frontImage {
-				flex: 1;
-				border: 3px solid #655143;
-				border-radius: 10px;
-				margin-left: 10px;
-				padding: 10px;
-			}
 			
-			#content1 #frontImage img {
-				width: 665px;
-				height: 175px;
-			}
-
-			/*------------------------------------*/
-			#content2 #menu {
-				width: 250px;
-				border: 3px solid #655143;	
-				border-radius: 10px;
-				padding: 10px;
-				overflow-y: scroll;
-				background-color: rgba(131,98,91,0.5);
-				font-family: nanumbarunpenb, cursive;
-			}
-			
-			#content2 #menu ul {
-				margin-top: 10px;
-			}
-			
-			#content2 #menu ul h4 {
-				margin-top: 10px;
-			}
-			
-			#content2 #menu a {
-				display:block;
-				margin: 1px 10px 1px 20px;
-				text-decoration: none;
-				font-size: small;
-				color: white;
-			}
-			
-			#content2 #menu a:hover {
-				color: orange;
-			}
-			
-			#content2 #content {
-				flex: 1;	
-				margin-left: 10px;		
+			#content {
 				position: relative;		
 			}
 			
-			#content2 #content iframe {
+			#content iframe {
 				width: 100%;
 				height: 100%;
-				position: absolute;
 				border: none;
-				background-color: rgba(131,98,91,0.5);
+				border-radius: 80px;
+				background-color: rgba(242,192,68,0.7);
 			}
