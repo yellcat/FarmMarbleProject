@@ -27,7 +27,7 @@
 				
 				
 			}
-			#pagemenu {
+			#pagedetail {
 				position:absolute;
 				left:50%; top:50%;
 				width:1000px;
@@ -37,6 +37,7 @@
 				
 				
 			}
+			
 			/*------------------------------------*/			
 			
 			
@@ -51,3 +52,22 @@
 				border-radius: 80px;
 				background-color: rgba(242,192,68,0.7);
 			}
+			/*------------------------------------*/	
+			
+			#menu {
+				margin: 10px;
+				text-align: center;
+				display: flex;
+    			flex-direction:column;
+			}
+			
+			#menu li{
+				width: 400px;
+				line-height: 30px;
+				text-decoration: none;
+				font-size: medium;
+				color: white;
+				border: 1px solid darkgray;
+				background-color: rgb(136,101,57);
+				font-weight: bold;
+			
