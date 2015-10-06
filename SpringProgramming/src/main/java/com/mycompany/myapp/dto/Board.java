@@ -2,6 +2,8 @@ package com.mycompany.myapp.dto;
 
 import java.util.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class Board {
 	private int board_no;
 	private String board_title;
@@ -12,6 +14,15 @@ public class Board {
 	private String board_file_system_name;
 	private String board_original_file_name;
 	private String board_content_type;
+	private MultipartFile attach;
+	
+	
+	public MultipartFile getAttach() {
+		return attach;
+	}
+	public void setAttach(MultipartFile attach) {
+		this.attach = attach;
+	}
 	public int getBoard_no() {
 		return board_no;
 	}
