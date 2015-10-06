@@ -20,13 +20,26 @@ public class MemberService {
 		Member member = mdao.selectById(memberId);
 		return member;
 	}
+
+	public String idCheck(String id) {
+		String result;
+		System.out.println("idCheck");
+		Member member = mdao.selectById(id);
+		if(member!=null||id==""){
+			result="unable";
+		}else{
+			result="able";
+		}
+		System.out.println(result);
+		return result;
+	}
 	
-	public String loginCheck(String memberId, String memberPw, HttpSession session){
+	public String loginCheck(Member member, HttpSession session){
 		String state;
-		Member member = getMember(memberId);
-		if(member!=null){
-			if(memberPw.equals(member.getPw())){
-				session.setAttribute("memberId", memberId);
+		Member temp = mdao.selectById(member.getId());
+		if(temp!=null){
+			if(member.getPw().equals(temp.getPw())){
+				session.setAttribute("memberId", member.getId());
 				state="success";
 			}else {
 				state="wrong_mpass";
@@ -37,15 +50,13 @@ public class MemberService {
 		return state;
 	}
 
-	public String idCheck(String id) {
-		String result;
-		Member member = getMember(id);
-		if(member!=null||id==""){
-			result="unable";
-		}else{
-			result="able";
-		}
-		return result;
+	public String FindID(Member member) {
+		return mdao.findId(member);
+		
+	}
+
+	public String FindPW(Member member) {
+		return mdao.findPw(member);
 	}	
 
 }
