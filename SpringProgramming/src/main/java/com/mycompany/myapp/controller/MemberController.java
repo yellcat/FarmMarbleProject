@@ -121,6 +121,16 @@ public class MemberController {
 		return "member/pw";
 	}
 	
-	
-	
+	//mypage
+	@RequestMapping(value="member/mypage", method = RequestMethod.GET)
+	public String mypageDetail(HttpSession session, Model model){
+		logger.info("mypageDetail()");
+		String id = (String)session.getAttribute("memberId");
+		
+		Member member = memberservice.getMember(id);
+		
+		model.addAttribute("member",member);
+		
+		return "member/mypageDetail";
+	}
 }
