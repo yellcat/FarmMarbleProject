@@ -7,6 +7,7 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 	</head>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/form_basic.css"/>
 	<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 	function sendData(){
