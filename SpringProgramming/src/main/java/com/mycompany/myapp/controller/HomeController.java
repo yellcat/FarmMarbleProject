@@ -12,10 +12,18 @@ public class HomeController {
 
 	@RequestMapping("/")
 	public String home() {
-		/*System.out.println("HomeController-Home()");//ÇÁ·Î±×·¥À» ¸¸µç´Ù¸é Áö¿öÁÖ¾î¾ß ÇÔ*/	
+		/*System.out.println("HomeController-Home()");//ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ ï¿½ï¿½*/	
 		logger.info("HomeController-Home()");
-		/*logger.debug("HomeController-Home()");//log¸¦ ±â·ÏÇÏÁö ¾Ê´Â´Ù°í ÇÑ´Ù¸é Áö¿öÁÖÁö ¾Ê¾Æµµ µÈ´Ù*/	
+		/*logger.debug("HomeController-Home()");//logï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´Ù°ï¿½ ï¿½Ñ´Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Æµï¿½ ï¿½È´ï¿½*/	
 		return "home";
+	}
+	
+	@RequestMapping("/menu")
+	public String menu() {
+		/*System.out.println("HomeController-Home()");//ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ ï¿½ï¿½*/	
+		logger.info("HomeController-Menu()");
+		/*logger.debug("HomeController-Home()");//logï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´Ù°ï¿½ ï¿½Ñ´Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Æµï¿½ ï¿½È´ï¿½*/	
+		return "menu";
 	}
 	
 }
