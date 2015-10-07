@@ -12,18 +12,19 @@ public class HomeController {
 
 	@RequestMapping("/")
 	public String home() {
-		/*System.out.println("HomeController-Home()");//���α׷��� ����ٸ� �����־�� ��*/	
 		logger.info("HomeController-Home()");
-		/*logger.debug("HomeController-Home()");//log�� ������� �ʴ´ٰ� �Ѵٸ� �������� �ʾƵ� �ȴ�*/	
 		return "home";
 	}
 	
 	@RequestMapping("/menu")
 	public String menu() {
-		/*System.out.println("HomeController-Home()");//���α׷��� ����ٸ� �����־�� ��*/	
-		logger.info("HomeController-Menu()");
-		/*logger.debug("HomeController-Home()");//log�� ������� �ʴ´ٰ� �Ѵٸ� �������� �ʾƵ� �ȴ�*/	
+		logger.info("HomeController-Menu()");	
 		return "menu";
 	}
 	
+	@RequestMapping("/information")
+	public String info() {
+		logger.info("HomeController-Info()");	
+		return "information";
+	}
 }
