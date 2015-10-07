@@ -5,8 +5,8 @@
 <html>
 	<head>
 		<title>Board</title>
-		<script src="src/main/webapp/resources/js/iframechange.js">
-			javascript:addIfr();
+		<script src="${pageContext.request.contextPath}/resources/js/iframechange.js">
+		
 		</script>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formboard.css"/>
 	</head>
