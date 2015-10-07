@@ -37,15 +37,16 @@ public class MemberService {
 	public String loginCheck(Member member, HttpSession session){
 		String state;
 		Member temp = mdao.selectById(member.getId());
-		if(temp!=null){
+		
+		if(temp.getId()!=null){
 			if(member.getPw().equals(temp.getPw())){
 				session.setAttribute("memberId", member.getId());
 				state="success";
 			}else {
-				state="wrong_mpass";
+				state="wrong_pw";
 			}
 		}else {
-			state="wrong_mid";
+			state="wrong_id";
 		}
 		return state;
 	}

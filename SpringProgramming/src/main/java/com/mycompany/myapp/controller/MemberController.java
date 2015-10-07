@@ -39,7 +39,7 @@ public class MemberController {
 			return "member/joinForm";
 		}
 		memberservice.join(member);
-		return "redirect:member/loginForm";
+		return "redirect:login";
 	}
 	
 	@RequestMapping("member/idCheck")
@@ -69,9 +69,8 @@ public class MemberController {
 	public String login(){
 		logger.info("login()");
 		
-		return "redirect:member/menu";
+		return "/menu";
 	}
-
 
 	@RequestMapping("member/logout")
 	public String logout(String id, HttpSession session, Model model){

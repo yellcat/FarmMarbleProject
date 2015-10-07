@@ -50,7 +50,7 @@
 			<form:password id = "pw" path="pw" size="20"/> <br/>
 			<form:errors path="pw"/> <br/>
 			PW check
-			<form:password id = "pwCheck" path="pw" size="20"/> <br/>
+			<input type="password" id = "pwCheck" path="pw" size="20"/> <br/>
 
 			<div id="btnGroup">
 				<a href="javascript:sendData()">JOIN</a>
