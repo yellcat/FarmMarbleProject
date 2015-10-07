@@ -13,8 +13,8 @@
 						<li><a href="${pageContext.request.contextPath}/member/mypage">MY PAGE</a></li>
 						<li><a href="${pageContext.request.contextPath}/game/game">GAME</a></li>
 						<li><a href="${pageContext.request.contextPath}/board/list">COMUNNITY</a></li>
-						<li><a href="${pageContext.request.contextPath}/game/information">INFORMATION</a></li>
-						<li><a id="logout" href="${pageContext.request.contextPath}/member/logout">LOGOUT</a></li>
+						<li><a href="${pageContext.request.contextPath}/information">INFORMATION</a></li>
+						<li id="logout"><a href="${pageContext.request.contextPath}/member/logout">LOGOUT</a></li>
 					</ul>
 				</div>
 	</body>
