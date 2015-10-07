@@ -8,7 +8,9 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		<h4>LOGIN</h4>
+		<div id="bar">
+			<h4>LOGIN</h4>
+		</div>
 		<hr/>
 		<div id="btnGroup">
 			<a href="idFind">ID</a>

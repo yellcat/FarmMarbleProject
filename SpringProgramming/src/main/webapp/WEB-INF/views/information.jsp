@@ -13,6 +13,22 @@
 			text-align: center;
 			font-family: 'Righteous', cursive;
 		}
+		#bar{
+			display:flex;
+			margin: 40px;
+			border: none;
+			border-radius: 15px;
+			background-color: rgb(136,101,57);
+		}
+		#title{
+			display:inline-block;
+			flex:1;
+			color:white;
+		}
+		#cancle{
+			height:30px;
+			width:30px;
+		}
 		#developer{
 			font-family: 'Kaushan Script', cursive;
 		}
@@ -23,12 +39,13 @@
 	<body>
 			<div id=info>
 				<div id="bar">
-				<h4>information</h4> <a href="menu">X</a>
+					<div id="title">
+						<h2>information</h4>
+					</div>
+					<a href="menu"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
 				<hr/>
 				</div>
 				<div id="logo">
-					<br/>
-					<br/>
 					<p><h1>Farm
 					<img height="30px" width="30px" src="${pageContext.request.contextPath}/resources/image/character/logo.png">
 					Marble</h1></p>

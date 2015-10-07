@@ -32,8 +32,9 @@
 	}
 	</script>
 	<body>
+	<div id="bar">
 		<h4>LOGIN</h4>
-		<hr/>
+	</div>
 		<form:form id="login" commandName="member">
 			ID
 			<form:input path="id" size="20"/>

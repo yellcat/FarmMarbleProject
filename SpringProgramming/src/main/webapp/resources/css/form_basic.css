@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Sigmar+One);
 
+#bar{
+			display:flex;
+			margin: 40px;
+			border: none;
+			border-radius: 15px;
+			background-color: rgb(136,101,57);
+		}
+		
 a{
 
 	font-family: 'Sigmar One';

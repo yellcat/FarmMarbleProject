@@ -8,7 +8,9 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-      <h4>mypage</h4><a href="../menu" id="btnCancle">X</a>
+		<div id="bar">
+     		<h4>mypage</h4><a href="../menu" id="btnCancle"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
+     	 </div>
       <div id="part1">
         <span class="title">ID</span>
         <span class="content">${member.id}</span><br/>

@@ -37,8 +37,9 @@
 	}
 	</script>
 	<body>
-		<h4>JOIN</h4>
-		<hr/>
+		<div id="bar">
+			<h4>JOIN</h4>
+		</div>
 		<form:form id="join" commandName="member">
 			ID
 			<form:input path="id" id="id" size="20"/><a href="javascript:idCheck()">ID중복체크</a><br/>

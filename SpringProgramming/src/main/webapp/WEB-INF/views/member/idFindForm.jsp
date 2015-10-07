@@ -14,8 +14,9 @@
 		}
     </script>
 	<body>
-		<h4>ID FIND</h4>
-		<hr/>
+		<div id="bar">
+			<h4>ID FIND</h4>
+		</div>
 		<form:form id="Find" commandName="member">
 			NAME
 			<form:input path="name" size="20"/>

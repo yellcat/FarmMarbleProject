@@ -14,8 +14,9 @@
 		}
     </script>
 	<body>
+	<div id="bar">
 		<h4>PW FIND</h4>
-		<hr/>
+	</div>
 		<form:form id="Find" commandName="member">
 			ID
 			<form:input path="id" size="20"/>

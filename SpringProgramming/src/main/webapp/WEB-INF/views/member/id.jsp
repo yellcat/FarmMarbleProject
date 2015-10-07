@@ -8,8 +8,9 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		<h4>ID</h4>
-		<hr/>
+		<div id="bar">
+			<h4>ID</h4>
+		</div>
 		<div>
 			memberId : ${id} <br/>
 		</div>
