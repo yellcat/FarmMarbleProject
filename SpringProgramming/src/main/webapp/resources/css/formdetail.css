@@ -5,29 +5,19 @@
 				padding: 0px;
 			}
 			/*------------------------------------*/
-			body{
-				
-				margin: 0px;
-				color: #FFFFFF;
-				background-image: url("../image/Farm.png");
-				background-size:100% 100%;
-				
-				background-repeat: no-repeat;
-
-				
-			}
+			
 			/*------------------------------------*/				
-			#pagehome {
+			
+			#pagedetail {
 				position:absolute;
 				left:50%; top:50%;
-				width:600px;
-				height:400px;
-				margin-left:-300px;
-				margin-top:-200px;
+				width:1000px;
+				height:800px;
+				margin-left:-500px;
+				margin-top:-400px;
 				
 				
 			}
-			
 			
 			/*------------------------------------*/			
 			
