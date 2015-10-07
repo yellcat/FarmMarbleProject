@@ -15,16 +15,25 @@
 			body {
 				width: 960px;
 				margin: 0 auto;
-				background: 
+				background-image: url('resources/img/logo.png');
+				background-size:  100%;
 			}
+			
+			
 		</style>
 	</head>
 	
 	<body>
+	
+		<!-- 언니 자리 뺏어서 죄송해요 매일 매일 흑흑 -->
+		<!-- 이제 안뺏을게요 ㅠㅠ 미안해요 -->
 		<div id="page-wrapper">
 			<div id="content">
 				<aside id="userInfo">
-				
+					<div id="p1"></div>
+					<div id="p2"></div>
+					<div id="p3"></div>
+					<div id="p4"></div>
 				</aside>
 				
 				<section id="map">
