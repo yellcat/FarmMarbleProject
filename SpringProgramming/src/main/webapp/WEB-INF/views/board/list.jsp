@@ -5,10 +5,14 @@
 <html>
 	<head>
 		<title>Board</title>
+		<script src="src/main/webapp/resources/js/iframechange.js">
+			javascript:addIfr();
+		</script>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formboard.css"/>
 	</head>
 	<body>
 		<div id="pagedetail">
+		
 		<h3>FARM'S COMMUNITY</h3>
 		
 		<h4>LIST</h4>
@@ -24,11 +28,11 @@
 			
 			<c:forEach var="board" items="${list}">
 				<tr>
-					<td>${board.no}</td>
-					<td><a class="title" href="detail?boardNo=${board.no}">${board.title}</a></td>
-					<td>${board.writer}</td>
-					<td>${board.date}</td>
-					<td>${board.hitcount}</td>
+					<td>${board.board_no}</td>
+					<td><a class="title" href="detail?boardNo=${board.board_no}">${board.board_title}</a></td>
+					<td>${board.board_writer}</td>
+					<td>${board.board_date}</td>
+					<td>${board.board_hitcount}</td>
 				</tr>
 			</c:forEach>
 		</table>
@@ -56,6 +60,7 @@
 			<a href="write">WRITE</a>
 		</div>
 		</div>
+		
 	</body>
 </html>
 
