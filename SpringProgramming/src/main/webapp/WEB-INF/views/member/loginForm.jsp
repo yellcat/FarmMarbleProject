@@ -37,10 +37,10 @@
 	</div>
 		<form:form id="login" commandName="member">
 			ID
-			<form:input path="id" size="20"/>
+			<form:input path="id" size="20"/><br/>
 			<form:errors path="id"/> <br/>
 			PW
-			<form:password path="pw" size="20"/>
+			<form:password path="pw" size="20"/><br/>
 			<form:errors path="pw"/> <br/>
 
 			<div id="btnGroup">

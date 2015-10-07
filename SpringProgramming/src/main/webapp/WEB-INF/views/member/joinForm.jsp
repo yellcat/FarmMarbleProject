@@ -7,6 +7,7 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 	</head>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/form_basic.css"/>
 	<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 	function idCheck(){
@@ -42,13 +43,13 @@
 		</div>
 		<form:form id="join" commandName="member">
 			ID
-			<form:input path="id" id="id" size="20"/><a href="javascript:idCheck()">ID중복체크</a><br/>
-			<form:errors path="id"/> <br/>
+			<form:input path="id" id="id" size="20"/><form:errors path="id"/>
+			<a id="button" href="javascript:idCheck()">ID중복체크</a> <br/>
 			Name
-			<form:input path="name" size="20"/> <br/>
+			<form:input path="name" size="20"/>
 			<form:errors path="name"/> <br/>
 			PW(4~12자)
-			<form:password id = "pw" path="pw" size="20"/> <br/>
+			<form:password id = "pw" path="pw" size="20"/>
 			<form:errors path="pw"/> <br/>
 			PW check
 			<input type="password" id = "pwCheck" path="pw" size="20"/> <br/>
