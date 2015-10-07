@@ -122,15 +122,44 @@ public class MemberController {
 	}
 	
 	//mypage
-	@RequestMapping(value="member/mypage", method = RequestMethod.GET)
+	@RequestMapping("member/mypage")
 	public String mypageDetail(HttpSession session, Model model){
 		logger.info("mypageDetail()");
 		String id = (String)session.getAttribute("memberId");
-		
 		Member member = memberservice.getMember(id);
-		
 		model.addAttribute("member",member);
 		
 		return "member/mypageDetail";
+	}
+
+	@RequestMapping(value="member/mypageUpdate", method=RequestMethod.GET)
+	public String mypageUpdateForm(HttpSession session, Model model){
+		logger.info("mypageUpdateForm()");
+		String id = (String)session.getAttribute("memberId");
+		Member member = memberservice.getMember(id);
+		model.addAttribute("member",member);
+		
+		return "member/mypageUpdate";
+	}
+	
+	@RequestMapping(value="member/mypageUpdate", method=RequestMethod.POST)
+	public String mypageUpdate(Member member){
+		logger.info("mypageUpdate()");
+		memberservice.update(member);
+		return "redirect:mypage";
+	}
+	
+	@RequestMapping("member/ranking")
+	public String mypageRanking(HttpSession session, Model model){
+		logger.info("mypageRanking()");
+		String id = (String)session.getAttribute("memberId");
+		Member member = memberservice.getMember(id);
+		
+		double rate = (double)member.getWin()/(member.getWin()+member.getLose());
+		member.setRate(rate);
+		
+		model.addAttribute("member",member);
+		
+		return "member/ranking";
 	}
 }

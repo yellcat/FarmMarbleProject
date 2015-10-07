@@ -21,5 +21,9 @@
         <span class="title">Email</span>
         <span class="content">${member.email}</span><br/>
       </div>
+      <div id="btnGroup">
+	     <a href="ranking">RANKING</a>
+     	 <a href="mypageUpdate">UPDATE</a>
+      </div>
 	</body>
 </html>

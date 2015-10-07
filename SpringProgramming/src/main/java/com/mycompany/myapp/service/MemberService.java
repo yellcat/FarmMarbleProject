@@ -58,6 +58,10 @@ public class MemberService {
 
 	public String FindPW(Member member) {
 		return mdao.findPw(member);
+	}
+
+	public void update(Member member) {
+		mdao.updateInfo(member);
 	}	
 
 }

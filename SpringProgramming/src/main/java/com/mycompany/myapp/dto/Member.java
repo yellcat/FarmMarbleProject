@@ -9,6 +9,7 @@ public class Member {
 	private String tel;
 	private int win;
 	private int lose;
+	private double rate;
 	private String grade;
 	
 	public String getId() {
@@ -65,6 +66,11 @@ public class Member {
 	public void setGrade(String grade) {
 		this.grade = grade;
 	}
-	
-	
+
+	public double getRate() {
+		return rate;
+	}
+	public void setRate(double rate) {
+		this.rate = rate;
+	}
 }
