@@ -11,7 +11,7 @@
 		<div id="pagehome">
 			<div id="content">
 				
-					<iframe name="iframe" height="100%" width="100%"></iframe>
+					<iframe name="iframe" src="member/login" height="100%" width="100%"></iframe>
 				
 			</div>
 		</div>
