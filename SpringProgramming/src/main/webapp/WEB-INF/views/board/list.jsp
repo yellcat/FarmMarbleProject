@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formboard.css"/>
 	</head>
 	<body>
+		<div id="pagedetail">
 		<h3>FARM'S COMMUNITY</h3>
 		
 		<h4>LIST</h4>
@@ -53,6 +54,7 @@
 		
 		<div id="buttonGroup">
 			<a href="write">WRITE</a>
+		</div>
 		</div>
 	</body>
 </html>

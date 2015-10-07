@@ -5,33 +5,44 @@
 				padding: 0px;
 			}
 			/*------------------------------------*/
-			body{
-				
-				margin: 0px;
-				color: #FFFFFF;
-				background-image: url("../image/Farm.png");
-				background-size:100% 100%;
-				
-				background-repeat: no-repeat;
-
-				
+			body {
+				color: white;
+				text-align: center;
 			}
 			/*------------------------------------*/				
-			#pagehome {
+			#pagedetail {
 				position:absolute;
 				left:50%; top:50%;
-				width:600px;
-				height:400px;
-				margin-left:-300px;
-				margin-top:-200px;
+				width:1000px;
+				height:800px;
+				margin-left:-500px;
+				margin-top:-400px;
 				
 				
 			}
 			
 			
 			/*------------------------------------*/			
+			h3{
+				width: 900px;
+				line-height: 30px;
+				text-decoration: none;
+				font-size: medium;
+				border: none;
+				border-radius: 20px;
+				background-color: rgb(136,101,57);
+				font-weight: bold;
+			}
+			h4{
+				color:rgb(174,162,44);
+				font-size: medium;
+				font-weight: bold;
+			}
+			/*------------------------------------*/
 			
 			
+			
+			/*------------------------------------*/	
 			#content {
 				position: relative;		
 			}
@@ -87,25 +98,11 @@
 				color: white;
 				text-align: center;
 			}
-			h3{
-				width: 900px;
-				line-height: 30px;
-				text-decoration: none;
-				font-size: medium;
-				border: none;
-				border-radius: 20px;
-				background-color: rgb(136,101,57);
-				font-weight: bold;
-			}
-			h4{
-				color:rgb(174,162,44);
-				font-size: medium;
-				font-weight: bold;
-			}
+			
 			
 			table {
 				color: rgb(136,101,57);
-				width: 100%;
+				width: 90%;
 				border-collapse: collapse;
 				font-size: small;
 			}
