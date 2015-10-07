@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<title>Menu</title>
-		<link rel="stylesheet" href="resources/css/form.css"/>
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/form.css"/>
 	</head>
 	
 	<body>

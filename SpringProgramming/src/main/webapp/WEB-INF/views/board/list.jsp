@@ -9,15 +9,32 @@
 		<style type="text/css">
 			body {
 				color: white;
+				text-align: center;
 			}
+			h3{
+				width: 900px;
+				line-height: 30px;
+				text-decoration: none;
+				font-size: medium;
+				border: none;
+				border-radius: 20px;
+				background-color: rgb(136,101,57);
+				font-weight: bold;
+			}
+			h4{
+				color:rgb(174,162,44);
+				font-size: medium;
+				font-weight: bold;
+			}
+			
 			table {
+				color: rgb(136,101,57);
 				width: 100%;
 				border-collapse: collapse;
 				font-size: small;
 			}
 			table, th, td {
 				border: 1px solid white;
-				text-align: center;
 			}
 			th {
 				background-color: orange;
@@ -81,15 +98,17 @@
 	</head>
 	
 	<body>
-		<h4>게시물 목록</h4>
+		<h3>FARM'S COMMUNITY</h3>
+		
+		<h4>LIST</h4>
 		
 		<table>
 			<tr>
-				<th style="width:50px">번호</th>
-				<th>제목</th>
-				<th style="width:60px">글쓴이</th>
-				<th style="width:80px">날짜</th>
-				<th style="width:60px">조회수</th>
+				<th style="width:50px">NO</th>
+				<th>TITLE</th>
+				<th style="width:60px">WRITER</th>
+				<th style="width:80px">DATE</th>
+				<th style="width:60px">VIEW</th>
 			</tr>
 			
 			<c:forEach var="board" items="${list}">
@@ -104,10 +123,10 @@
 		</table>
 		
 		<div id="pager">
-			<a href="list?pageNo=1">[처음]</a>
+			<a href="list?pageNo=1">[FIRST]</a>
 			
 			<c:if test="${groupNo>1}">
-				<a href="list?pageNo=${startPageNo-pagesPerGroup}">[이전]</a>
+				<a href="list?pageNo=${startPageNo-pagesPerGroup}">[previous]</a>
 			</c:if>
 			
 			<c:forEach var="i" begin="${startPageNo}" end="${endPageNo}">
@@ -116,14 +135,14 @@
 			</c:forEach>
 			
 			<c:if test="${groupNo<totalGroupNo}">
-				<a href="list?pageNo=${endPageNo+1}">[다음]</a>
+				<a href="list?pageNo=${endPageNo+1}">[NEXT]</a>
 			</c:if>		
 	
-			<a href="list?pageNo=${totalPageNo}">[맨끝]</a>
+			<a href="list?pageNo=${totalPageNo}">[LAST]</a>
 		</div>		
 		
 		<div id="buttonGroup">
-			<a href="write">글쓰기</a>
+			<a href="write">WRITE</a>
 		</div>
 	</body>
 </html>
