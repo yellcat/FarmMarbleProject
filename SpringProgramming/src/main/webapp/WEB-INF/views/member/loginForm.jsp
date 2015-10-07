@@ -9,27 +9,27 @@
 	</head>
 	<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
-		function sendData(){
-			$.ajax({
-				url:"loginCheck",
-				method:"POST",
-				data:{"id": id, "pw":pw},
-				success:function(data){
-					console.log(data);
-					var result = data.trim();
-					if(result == "wrong_id"){
-						alert("id가 존재하지 않습니다");
-						$("#login").reset();
-					}else if(result=="wrong_pw"){
-						alert("비밀번호가 틀렸습니다");
-						$("#login").reset();
-					}else if(result=="success"){
-						$("#login").submit();
-					}
+	function sendData(){
+		var id = $("#id").val();
+		var pw = $("#pw").val();
+		$.ajax({
+			url:"loginCheck",
+			method:"POST",
+			data:{"id":id, "pw":pw},
+			success:function(data){
+				console.log(data);
+				var result = data.trim();
+				if(result == "success"){
+					$("#login").submit();
+				}else if(result=="wrong_id"){
+					alert("Non id");
+				}else if(result=="wrong_pw"){
+					alert("Non password");
 				}
-			});
-		}
-    </script>
+			}
+		});
+	}
+	</script>
 	<body>
 		<h4>LOGIN</h4>
 		<hr/>
