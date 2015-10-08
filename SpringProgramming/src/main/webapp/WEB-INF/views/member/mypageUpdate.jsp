@@ -20,11 +20,18 @@
 	      <div id="part1">
 		        <span class="title">ID</span>
 		        <span class="content">
-		        	<form:input path="id" size="20"/>
+		        	${member.id}
+		        	<form:hidden path="id" size="20"/>
 				</span><br/>
 				<span class="title">NAME</span>
 				<span class="content">
-					<form:input path="name" size="20"/>
+					${member.name}
+					<form:hidden path="name" size="20"/>
+				</span><br/>
+				<span class="title">PW</span>
+				<span class="content">
+					<form:password id="pw" path="pw" size="20"/>
+					<form:errors path="pw"/>
 				</span><br/>
 				<span class="title">NICKNAME</span>
 				<span class="content">

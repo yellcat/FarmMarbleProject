@@ -22,6 +22,11 @@ public class JoinValidator implements Validator {
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "name", "required", "필수 항목입니다.");
 
 		int passwordLength = member.getPw().length();
+		
+		if(member.getPwChange()!=member.getPwCheck()){
+			errors.rejectValue("pwChange", "확인 비민번호를 제대로 입력 해주세요");
+		}
+		
 		if(passwordLength<4) {
 			errors.rejectValue("pw", "minlength", new Object[] {4, passwordLength}, "최소 4자리 이상 입력");
 		}else if(passwordLength>12){

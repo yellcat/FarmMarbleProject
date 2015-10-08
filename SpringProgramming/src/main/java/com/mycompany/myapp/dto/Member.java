@@ -11,6 +11,8 @@ public class Member {
 	private int lose;
 	private double rate;
 	private String grade;
+	private String pwChange;
+	private String pwCheck;
 	
 	public String getId() {
 		return id;
@@ -73,4 +75,18 @@ public class Member {
 	public void setRate(double rate) {
 		this.rate = rate;
 	}
+	public String getPwChange() {
+		return pwChange;
+	}
+	public void setPwChange(String pwChange) {
+		this.pwChange = pwChange;
+	}
+	public String getPwCheck() {
+		return pwCheck;
+	}
+	public void setPwCheck(String pwCheck) {
+		this.pwCheck = pwCheck;
+	}
+	
+	
 }

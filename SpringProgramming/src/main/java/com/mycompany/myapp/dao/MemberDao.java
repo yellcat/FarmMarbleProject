@@ -139,4 +139,14 @@ public class MemberDao {
 		
 		return rows;
 	}
+
+	public int updatePw(Member member) {
+		String sql = ""
+				+ "update Members "
+				+ "set member_pw = ? "
+				+ "where member_id=?";
+		int rows = jdbcTemplate.update(sql, member.getPwChange(), member.getId());
+
+		return rows;
+	}
 }

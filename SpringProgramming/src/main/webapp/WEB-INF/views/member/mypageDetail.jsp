@@ -26,6 +26,7 @@
       <div id="btnGroup">
 	     <a href="ranking">RANKING</a>
      	 <a href="mypageUpdate">UPDATE</a>
+     	 <a href="pwChange">PW Change</a>
       </div>
 	</body>
 </html>

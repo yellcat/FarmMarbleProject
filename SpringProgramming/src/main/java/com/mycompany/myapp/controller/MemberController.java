@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.mycompany.myapp.dto.JoinValidator;
 import com.mycompany.myapp.dto.Member;
+import com.mycompany.myapp.dto.PwValidator;
 import com.mycompany.myapp.service.MemberService;
 
 @Controller
@@ -73,13 +74,11 @@ public class MemberController {
 	}
 
 	@RequestMapping("member/logout")
-	public String logout(String id, HttpSession session, Model model){
+	public String logout(HttpSession session, Model model){
 		logger.info("logout()");
-		session.setAttribute("memberId", id);
-		String result="success";
-		model.addAttribute("result", result);
+		session.setAttribute("memberId", "");
 		
-		return "member/result";
+		return "redirect:login";
 	}
 	
 	////find
@@ -127,6 +126,7 @@ public class MemberController {
 		logger.info("mypageDetail()");
 		String id = (String)session.getAttribute("memberId");
 		Member member = memberservice.getMember(id);
+		
 		model.addAttribute("member",member);
 		
 		return "member/mypageDetail";
@@ -138,17 +138,53 @@ public class MemberController {
 		String id = (String)session.getAttribute("memberId");
 		Member member = memberservice.getMember(id);
 		model.addAttribute("member",member);
-		
 		return "member/mypageUpdate";
 	}
 	
 	@RequestMapping(value="member/mypageUpdate", method=RequestMethod.POST)
-	public String mypageUpdate(Member member){
+	public String mypageUpdate(Member member, BindingResult bindingResult){
 		logger.info("mypageUpdate()");
+		Member temp = new Member();
+		temp = memberservice.getMember(member.getId());
+		
+		if(!member.getPw().equals(temp.getPw())){
+			bindingResult.rejectValue("pw", "non_pass", "비밀번호가 일치하지 않습니다.");
+		}
+		
+		if(bindingResult.hasErrors()){
+			return "member/mypageUpdate";
+		}
 		memberservice.update(member);
-		return "redirect:mypage";
+		return "redirect:mypage";		
+	}
+
+	@RequestMapping(value="member/pwChange", method=RequestMethod.GET)
+	public String pwChangeForm(Member member){
+		logger.info("pwChangeForm()");
+		return "member/pwChange";
 	}
 	
+	@RequestMapping(value="member/pwChange", method=RequestMethod.POST)
+	public String pwChange(Member member, HttpSession session, BindingResult bindingResult){
+		logger.info("pwChange()");
+		String id = (String)session.getAttribute("memberId");
+		Member temp = new Member();
+		temp = memberservice.getMember(id);
+		
+		if(!member.getPw().equals(temp.getPw())){
+			bindingResult.rejectValue("pw", "non_pass", "비밀번호가 일치하지 않습니다.");
+		}else {
+			new PwValidator().validate(member, bindingResult);
+		}
+		
+		if(bindingResult.hasErrors()){
+			return "member/pwChange";
+		}
+		member.setId(id);
+		memberservice.updatePw(member);
+		return "redirect:mypage";
+	}
+
 	@RequestMapping("member/ranking")
 	public String mypageRanking(HttpSession session, Model model){
 		logger.info("mypageRanking()");
