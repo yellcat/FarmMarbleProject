@@ -38,7 +38,7 @@ public class MemberService {
 		String state;
 		Member temp = mdao.selectById(member.getId());
 		
-		if(temp.getId()!=null){
+		if(temp!=null){
 			if(member.getPw().equals(temp.getPw())){
 				session.setAttribute("memberId", member.getId());
 				state="success";

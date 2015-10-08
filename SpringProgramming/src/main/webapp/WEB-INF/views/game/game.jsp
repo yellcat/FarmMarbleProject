@@ -15,7 +15,7 @@
 			body {
 				width: 960px;
 				margin: 0 auto;
-				background-image: url('resources/img/logo.png');
+				background-image: url('${pageContext.request.contextPath}/resources/image/gameBG.jpg');
 				background-size:  100%;
 			}
 			
