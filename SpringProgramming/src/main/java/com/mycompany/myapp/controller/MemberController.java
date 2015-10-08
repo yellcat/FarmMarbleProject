@@ -95,12 +95,16 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value="member/idFind", method = RequestMethod.POST)
-	public String idFind(Member member, Model model){
+	public String idFind(Member member, Model model, BindingResult bindingResult){
 		logger.info("idFind()");
 		String id = memberservice.FindID(member);
 		
-		model.addAttribute("id", id);
+		if(id==null){
+			bindingResult.rejectValue("email", "NotFoundId", " 해당 정보의 id를 찾을 수 없습니다.");
+			return "member/idFindForm";
+		}
 		
+		model.addAttribute("id", id);
 		return "member/id";
 	}
 	//pw
@@ -111,9 +115,14 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value="member/pwFind", method = RequestMethod.POST)
-	public String pwFind(Member member, Model model){
+	public String pwFind(Member member, Model model, BindingResult bindingResult){
 		logger.info("pwFind()");
 		String pw = memberservice.FindPW(member);
+		
+		if(pw==null){
+			bindingResult.rejectValue("email", "NotFoundPw", " 해당 정보의 pw를 찾을 수 없습니다.");
+			return "member/pwFindForm";
+		}
 		
 		model.addAttribute("pw", pw);
 		

@@ -20,15 +20,18 @@
 		<form:form id="Find" commandName="member">
 			ID
 			<form:input path="id" size="20"/>
-			<form:errors path="id"/> <br/>
+			<br/>
 			E-mail
 			<form:input path="email" size="20"/>
-			<form:errors path="email"/> <br/>
-
+			<br/>
+			
 			<div id="btnGroup">
-			<a href="javascript:sendData()">FIND</a>
-			<a id="btnCancle" href="selectFind">CANCLE</a>
-		</div>
+				<a href="javascript:sendData()">FIND</a>
+				<a id="btnCancle" href="selectFind">CANCLE</a>
+			<br/>
+			</div>
+			
+			<form:errors path="email"/>
 		</form:form>
 	</body>
 </html>
