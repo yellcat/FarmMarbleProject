@@ -5,9 +5,6 @@
 <html>
 	<head>
 		<title>Board</title>
-		<script src="${pageContext.request.contextPath}/resources/js/iframechange.js">
-		
-		</script>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formboard.css"/>
 	</head>
 	<body>
