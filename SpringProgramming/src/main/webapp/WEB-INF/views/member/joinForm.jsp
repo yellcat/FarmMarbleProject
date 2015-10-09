@@ -7,7 +7,7 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 	</head>
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/form_basic.css"/>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formdetail.css"/>
 	<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 	function idCheck(){
@@ -39,19 +39,23 @@
 	</script>
 	<body>
 		<div id="bar">
-			<h4>JOIN</h4>
+			<div id="part">
+				<h4>JOIN</h4>
+			</div>
 		</div>
 		<form:form id="join" commandName="member">
-			ID
+			<div class="title">
+				<h4>ID</h4>
+			</div>
 			<form:input path="id" id="id" size="20"/><form:errors path="id"/>
 			<a id="button" href="javascript:idCheck()">ID중복체크</a> <br/>
-			Name
+			<span class="title"><h4>NAME</h4></span>
 			<form:input path="name" size="20"/>
 			<form:errors path="name"/> <br/>
-			PW(4~12자)
-			<form:password id = "pw" path="pw" size="20"/>
+			<span class="title"><h4>PW</h4></span>
+			<form:password id = "pw" path="pw" size="20"/> (4~12)
 			<form:errors path="pw"/> <br/>
-			PW check
+			<span class="title"><h4>PW check</h4></span>
 			<input type="password" id = "pwCheck" path="pw" size="20"/> <br/>
 
 			<div id="btnGroup">

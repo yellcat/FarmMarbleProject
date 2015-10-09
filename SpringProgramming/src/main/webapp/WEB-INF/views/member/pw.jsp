@@ -9,11 +9,10 @@
 	</head>
 	<body>
 		<div id="bar">
-			<h4>ID</h4>
+			<div id="part"><h4>ID</h4></div>
 		</div>
-		<div>
-			memberPw : ${pw} <br/>
-		</div>
+		<div class="title">memberPw : ${pw}</div>
+		<br/>
 		<div id="btnGroup">
 			<a href="login">LOGIN</a>
 		</div>

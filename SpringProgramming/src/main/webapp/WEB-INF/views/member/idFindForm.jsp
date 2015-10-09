@@ -7,6 +7,7 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 	</head>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formdetail.css"/>
 	<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
 		function sendData(){
@@ -15,12 +16,12 @@
     </script>
 	<body>
 		<div id="bar">
-			<h4>ID FIND</h4>
+			<div id="part"><h4>ID FIND</h4></div>
 		</div>
 		<form:form id="Find" commandName="member">
-			NAME
+			<div class="title">NAME</div>
 			<form:input path="name" size="20"/><br/>
-			E-mail
+			<span class="title">E-mail</span>
 			<form:input path="email" size="20"/><br/>
 
 			<div id="btnGroup">
@@ -29,7 +30,6 @@
 			</div>
 			<br/>
 			<form:errors path="email"/>
-		
 		</form:form>
 	</body>
 </html>
