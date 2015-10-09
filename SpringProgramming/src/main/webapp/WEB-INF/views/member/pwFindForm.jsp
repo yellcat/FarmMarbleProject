@@ -7,21 +7,16 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 	</head>
-	<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript">
-		function sendData(){
-			$("#Find").submit();
-		}
-    </script>
+	<script src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
 	<body>
 	<div id="bar">
-		<h4>PW FIND</h4>
+		<div id="part"><h4>PW FIND</h4></div>	
 	</div>
-		<form:form id="Find" commandName="member">
-			ID
+		<form:form name="form" commandName="member">
+			<div class="title">ID</div>
 			<form:input path="id" size="20"/>
 			<br/>
-			E-mail
+			<div class="title">E-mail</div>
 			<form:input path="email" size="20"/>
 			<br/>
 			

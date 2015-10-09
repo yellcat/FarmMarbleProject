@@ -7,16 +7,12 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 	</head>
-	<script type="text/javascript">
-		function sendData(){
-			document.update.submit();
-		}
-	</script>
+	<script src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
 	<body>
 		<div id="bar">
 			<h4>mypage</h4><a href="mypage" id="btnCancle"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
 		</div>
-		<form:form name="update" commandName="member">
+		<form:form name="form" commandName="member">
 	      <div id="part1">
 		        <span class="title">ID</span>
 		        <span class="content">

@@ -9,9 +9,8 @@
 	</head>
 	<body>
 		<div id="bar">
-			<h4>LOGIN</h4>
+			<div id="part"><h4>Select FIND</h4></div>	
 		</div>
-		<hr/>
 		<div id="btnGroup">
 			<a href="idFind">ID</a>
 			<a href="pwFind">PW</a> <br/>

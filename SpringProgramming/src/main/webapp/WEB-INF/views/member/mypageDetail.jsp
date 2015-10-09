@@ -7,11 +7,12 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 	</head>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formdetail.css"/>
 	<body>
 		<div id="bar">
      		<h4>mypage</h4><a href="../menu" id="btnCancle"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
      	 </div>
-      <div id="part1">
+      <div id="part">
         <span class="title">ID</span>
         <span class="content">${member.id}</span><br/>
 		<span class="title">NAME</span>

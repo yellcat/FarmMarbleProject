@@ -7,20 +7,16 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 	</head>
-	<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript">
-		function sendData(){
-			$("#Find").submit();
-		}
-    </script>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formdetail.css"/>
+	<script src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
 	<body>
 		<div id="bar">
-			<h4>ID FIND</h4>
+			<div id="part"><h4>ID FIND</h4></div>
 		</div>
-		<form:form id="Find" commandName="member">
-			NAME
+		<form:form name="form" commandName="member">
+			<div class="title">NAME</div>
 			<form:input path="name" size="20"/><br/>
-			E-mail
+			<span class="title">E-mail</span>
 			<form:input path="email" size="20"/><br/>
 
 			<div id="btnGroup">
@@ -29,7 +25,6 @@
 			</div>
 			<br/>
 			<form:errors path="email"/>
-		
 		</form:form>
 	</body>
 </html>

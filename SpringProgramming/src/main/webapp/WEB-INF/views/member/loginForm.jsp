@@ -7,42 +7,24 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 	</head>
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/form_basic.css"/>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formboard.css"/>
 	<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript">
-	function sendData(){
-		var id = $("#id").val();
-		var pw = $("#pw").val();
-		$.ajax({
-			url:"loginCheck",
-			method:"POST",
-			data:{"id":id, "pw":pw},
-			success:function(data){
-				console.log(data);
-				var result = data.trim();
-				if(result == "success"){
-					$("#login").submit();
-				}else if(result=="wrong_id"){
-					alert("Non id");
-				}else if(result=="wrong_pw"){
-					alert("Non password");
-				}
-			}
-		});
-	}
-	</script>
+	<script src="${pageContext.request.contextPath}/resources/js/login.js"></script>
 	<body>
-	<div id="bar">
-		<h4>LOGIN</h4>
-	</div>
+		<div id="bar">
+			<div id="part">
+				<h4>LOGIN</h4>
+			</div>
+		</div>
 		<form:form id="login" commandName="member">
-			ID
-			<form:input path="id" size="20"/><br/>
-			<form:errors path="id"/> <br/>
-			PW
-			<form:password path="pw" size="20"/><br/>
-			<form:errors path="pw"/> <br/>
-
+			<div id=form>
+				<span class="title">ID</span>
+				<form:input path="id" size="20"/><br/>
+				<form:errors path="id"/> <br/>
+				<span class="title">PW></span>
+				<form:password path="pw" size="20"/><br/>
+				<form:errors path="pw"/> <br/>
+			</div>
 			<div id="btnGroup">
 				 <a href="javascript:sendData()">LOGIN</a>
 				 <a href="join">JOIN</a>
