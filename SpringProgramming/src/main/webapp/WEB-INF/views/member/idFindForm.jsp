@@ -8,17 +8,12 @@
 		<title>Insert title here</title>
 	</head>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formdetail.css"/>
-	<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript">
-		function sendData(){
-			$("#Find").submit();
-		}
-    </script>
+	<script src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
 	<body>
 		<div id="bar">
 			<div id="part"><h4>ID FIND</h4></div>
 		</div>
-		<form:form id="Find" commandName="member">
+		<form:form name="form" commandName="member">
 			<div class="title">NAME</div>
 			<form:input path="name" size="20"/><br/>
 			<span class="title">E-mail</span>

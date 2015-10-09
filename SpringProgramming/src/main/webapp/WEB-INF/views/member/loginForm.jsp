@@ -9,28 +9,7 @@
 	</head>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formboard.css"/>
 	<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript">
-	function sendData(){
-		var id = $("#id").val();
-		var pw = $("#pw").val();
-		$.ajax({
-			url:"loginCheck",
-			method:"POST",
-			data:{"id":id, "pw":pw},
-			success:function(data){
-				console.log(data);
-				var result = data.trim();
-				if(result == "success"){
-					$("#login").submit();
-				}else if(result=="wrong_id"){
-					alert("Non id");
-				}else if(result=="wrong_pw"){
-					alert("Non password");
-				}
-			}
-		});
-	}
-	</script>
+	<script src="${pageContext.request.contextPath}/resources/js/login.js"></script>
 	<body>
 		<div id="bar">
 			<div id="part">
