@@ -21,7 +21,7 @@
 			#pagehome {
 				position:absolute;
 				left:50%; top:50%;
-				
+				margin: -200px 0 0 -300px;
 				
 				
 			}
@@ -35,11 +35,8 @@
 			}
 			
 			#content iframe {
-				
 				width:600px;
 				height:400px;
-				margin-top:-200px;
-				margin-left:-300px;
 				border: none;
 				border-radius: 80px;
 				background-color: rgba(242,192,68,0.7);

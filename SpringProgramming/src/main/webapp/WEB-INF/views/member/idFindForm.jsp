@@ -19,16 +19,17 @@
 		</div>
 		<form:form id="Find" commandName="member">
 			NAME
-			<form:input path="name" size="20"/>
-			<form:errors path="name"/> <br/>
+			<form:input path="name" size="20"/><br/>
 			E-mail
-			<form:input path="email" size="20"/>
-			<form:errors path="email"/> <br/>
+			<form:input path="email" size="20"/><br/>
 
 			<div id="btnGroup">
-			<a href="javascript:sendData()">FIND</a>
-			<a id="btnCancle" href="selectFind">CANCLE</a>
-		</div>
+				<a href="javascript:sendData()">FIND</a>
+				<a id="btnCancle" href="selectFind">CANCLE</a>
+			</div>
+			<br/>
+			<form:errors path="email"/>
+		
 		</form:form>
 	</body>
 </html>

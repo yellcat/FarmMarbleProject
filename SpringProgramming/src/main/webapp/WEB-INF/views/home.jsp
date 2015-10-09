@@ -6,11 +6,19 @@
 		<title>Home</title>
 		<link rel="stylesheet" href="resources/css/form.css"/>
 		<script type="text/javascript">
-			function changIframSize(width, height) {
+			function aIframSize() {
 				var iframe = document.querySelector("#iframe");
-				iframe.style.width = width + "px";
-				iframe.style.height = height + "px";
-				
+				var pagehome = document.querySelector("#pagehome");
+				iframe.style.width = "600px";
+				iframe.style.height = "400px";
+				pagehome.style.margin = "-200px 0 0 -300px";
+			}
+			function bIframSize() {
+				var iframe = document.querySelector("#iframe");
+				var pagehome = document.querySelector("#pagehome");
+				iframe.style.width =  "1000px";
+				iframe.style.height = "700px";
+				pagehome.style.margin = "-350px 0 0 -500px";
 			}
 		</script>
 	</head>

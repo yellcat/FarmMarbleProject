@@ -62,6 +62,10 @@ public class MemberService {
 
 	public void update(Member member) {
 		mdao.updateInfo(member);
+	}
+
+	public void updatePw(Member member) {
+		mdao.updatePw(member);
 	}	
 
 }
