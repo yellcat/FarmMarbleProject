@@ -52,7 +52,7 @@
 				<br/>
 			</div>
 			<div id="developer">
-				<p>Egg_kim, Jamong_Jang, DamiC, Jyoung_Ahn</p>
+				<p>Egg_kim, Jamong_Jang, DamiC, Jiyoung_Ahn</p>
 				<br/>
 				<br/>
 			</div>
