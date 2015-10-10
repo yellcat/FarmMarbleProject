@@ -1,5 +1,6 @@
 package com.mycompany.myapp.controller;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,7 +39,7 @@ public class DiceHandler extends TextWebSocketHandler{
 		
 		for(int i =0; i<gamerNum; i++){
 			if(!list.keySet().contains(i)){
-				gamer.setpNo(i);
+				gamer.setpNo(i+1);
 				break;
 			}
 		}
@@ -55,12 +56,14 @@ public class DiceHandler extends TextWebSocketHandler{
 		
 		JSONObject jsonObject = new JSONObject(strJson);
 		String command = jsonObject.getString("command");
-		if(command.equals("display")){
-			display(key);
+		
+		if(command.equals("roll")){
+			logger.info("roll");
+			roll(key);
 		}
 	}
 	
-	private void display(String key) {
+	private void roll(String key) throws IOException {
 		JSONObject root = new JSONObject();
 		root.put("command", "display");
 		
@@ -69,7 +72,7 @@ public class DiceHandler extends TextWebSocketHandler{
 		Gamer gamer = list.get(key);
 		
 		int pNo = gamer.getpNo();
-		int dNo = gameService.roll();
+		int dNo = gameService.roll()+1;
 		int bLoc = gamer.getLocation();
 		int nLoc = bLoc+dNo;
 		if((nLoc)>23){
@@ -82,5 +85,14 @@ public class DiceHandler extends TextWebSocketHandler{
 		d.put("bLoc", bLoc);
 		d.put("nLoc", nLoc);
 		root.put("data", d);
+		
+		String strJson = root.toString();
+		
+		TextMessage textMessage = new TextMessage(strJson);
+		for(Gamer gamers:list.values()) {
+			synchronized(gamer.getWss()) {
+				gamers.getWss().sendMessage(textMessage);
+			}
+		}
 	}
 }
