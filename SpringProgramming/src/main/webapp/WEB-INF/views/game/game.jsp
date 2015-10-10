@@ -56,16 +56,9 @@
 			}
 			
 			#game {
-				/* height: 700px;	 */			
-				/*border: 1px solid black;*/
-				width: 560px;
-				font-size: 0;
-				display: table;
 			}
 			
 			#inner{
-				display:table-cell;
-				vertical-align:middle;
 			}
 			
 			#map{
@@ -189,7 +182,7 @@
 								<table id="map">
 									<tr id="line1">
 										<td id="0" class="box">
-											<p>START</p>											
+											<p>START</p>									
 											<%-- <img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
