@@ -140,9 +140,9 @@
 			#chat{
 				margin-left:10px;
 			}
-			
 		</style>
 	</head>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/dice.js"></script>
 	<%-- <script src="${pageContext.request.contextPath}/resources/js/jquery-ui.min.js" type="text/javascript"></script>	
 	<link href="${pageContext.request.contextPath}/resources/css/jquery-ui.css" type="text/css" rel="Stylesheet"/>

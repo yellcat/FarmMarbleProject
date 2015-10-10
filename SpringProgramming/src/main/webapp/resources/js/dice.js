@@ -1,4 +1,4 @@
-var ws;
+var ws = null;
 
 //자기 턴이 왔을 때 접속 활성화
 function  connect(){
@@ -28,14 +28,8 @@ function  connect(){
 }
 
 function roll(){
-	var id;
-	$.ajax({
-		url:"member/getId",
-		dataType:html,
-		success:function(data){
-			id=data.trim()
-		}
-	});
+	connect();
+	
 	var json={"command":"roll"};
 	var strJson = JSON.stringify(json);
 	ws.send(strJson);
