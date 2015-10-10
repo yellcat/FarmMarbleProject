@@ -147,15 +147,17 @@
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-	<link rel="stylesheet" href="/resources/demos/style.css">
 	<script src="${pageContext.request.contextPath}/resources/js/dialogue.js" type="text/javascript"></script>	
 	<body>
 		
 		<div id="page-wrapper">
 			<div id=btnGroup>
-					<button onclick="connect()">connect</button>
-					<a href="../menu"><img class="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"/></a>
-					<a href="dialogueQ"><img id="q" class="cancle" src="${pageContext.request.contextPath}/resources/image/character/Q.png"/></a>				
+				<button onclick="connect()">connect</button>
+				<a href="../menu"><img class="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"/></a>
+				<img id="q" class="cancle" src="${pageContext.request.contextPath}/resources/image/character/Q.png"/>						
+				<div id="dialog" title="HELP">
+		  			<p>게임 다이얼로그 내용</p>
+				</div>
 			</div>
 			<div id="content">						
 				<aside id="userInfo">
