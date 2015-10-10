@@ -9,7 +9,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 	</head>
 	<style>
-		#pagewrapper]{
+		#pagewrapper {
 			text-align: center;
 			font-family: 'Righteous', cursive;
 		}
@@ -40,7 +40,7 @@
 		<div id=pagewrapper>
 			<div id="bar">
 				<div id="part">
-					<h2>information</h4>
+					<h2>information</h2>
 				</div>
 				<a href="menu"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
 			</div>
