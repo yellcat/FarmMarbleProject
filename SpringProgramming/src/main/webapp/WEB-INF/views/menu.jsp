@@ -13,7 +13,7 @@
 		<div id="menu">
 					<ul>
 						<li><a href="${pageContext.request.contextPath}/member/mypage" onclick="parent.bIframSize()">MY PAGE</a></li>
-						<li><a href="${pageContext.request.contextPath}/game/game">GAME</a></li>
+						<li><a href="${pageContext.request.contextPath}/game/game" target="_parent">GAME</a></li>
 						<li><a href="${pageContext.request.contextPath}/board/list" onclick="parent.bIframSize()">COMUNNITY</a></li>
 						<li><a href="${pageContext.request.contextPath}/information" onclick="parent.aIframSize()">INFORMATION</a></li>
 						<li id="logout"><a href="${pageContext.request.contextPath}/member/logout">LOGOUT</a></li>
