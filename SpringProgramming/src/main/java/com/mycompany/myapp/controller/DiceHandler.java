@@ -30,20 +30,19 @@ public class DiceHandler extends TextWebSocketHandler{
 	public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
 		logger.info("dice connect close");
 		list.remove(session.getId());
+		list.clear();
 	}
 
 	@Override
 	public void afterConnectionEstablished(WebSocketSession session) throws Exception {
-		logger.info("dice connect suceess");
+		logger.info("dice connect suceess: "+list.size());
 		Gamer gamer = new Gamer();
 		
-		for(int i =0; i<gamerNum; i++){
-			for(Gamer gamers: list.values()){
-				if(gamers.getpNo()!=i){
-					gamer.setpNo(i+1);
-					break;
-				}
-			}
+		
+		
+		for(int i =1; i<gamerNum+1; i++){
+			//list값을 가져온다
+			//list에 있는 값 중 gamer의 pNO값이 i가 아닐 때. i값을 본인의 pNo으로 둔다
 		}
 		gamer.setWss(session);
 		list.put(session.getId(), gamer);
