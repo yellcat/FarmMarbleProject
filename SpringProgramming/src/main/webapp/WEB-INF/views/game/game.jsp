@@ -5,7 +5,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>FarmMarble</title>
 		<style>
 			* {
 				margin: 0; 
@@ -72,7 +72,12 @@
 				width: 78px;
 				height: 78px;				
 				/*border: 1px solid black;*/				
-				background-color:yellowgreen;							
+				background-color:yellowgreen;										
+			}
+			
+			p {
+				text-align: center;
+				font-weight: bold;
 			}
 			
 			.non {
@@ -88,7 +93,7 @@
 				position:absolute;
 				margin-top:-25px;
 				margin-left:10px;
-				display:inline-block;
+				display:none;
 			}
 			
 			.dice{
@@ -107,6 +112,11 @@
 			
 			.event{
 				background-color:brown;
+			}
+			
+			#roll {
+				margin-left: 15px;
+				margin-top: 20px;				
 			}
 			
 			#chatting {
@@ -133,13 +143,15 @@
 			
 		</style>
 	</head>
-	
+	<%-- <script src="${pageContext.request.contextPath}/resources/js/jquery-ui.min.js" type="text/javascript"></script>	
+	<link href="${pageContext.request.contextPath}/resources/css/jquery-ui.css" type="text/css" rel="Stylesheet"/>
+	<script src="${pageContext.request.contextPath}/resources/js/dialogue.js" type="text/javascript"></script> --%>
 	<body>
 		
 		<div id="page-wrapper">
 			<div id=btnGroup>
-					<img class="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"/>
-					<img class="cancle" src="${pageContext.request.contextPath}/resources/image/character/Q.png"/>
+					<a href="../menu"><img class="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"/></a>
+					<a href="dialogueQ"><img id="q" class="cancle" src="${pageContext.request.contextPath}/resources/image/character/Q.png"/></a>
 				</div>
 			<div id="content">						
 				<aside id="userInfo">
@@ -183,15 +195,16 @@
 									<tr id="line1">
 										<td id="0" class="box">
 											<p>START</p>									
-											<%-- <img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
+											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
 											<img class="img P1" src="${pageContext.request.contextPath}/resources/image/character/P1.png"/>
 											<img class="img P2" src="${pageContext.request.contextPath}/resources/image/character/P2.png"/>
 											<img class="img P3" src="${pageContext.request.contextPath}/resources/image/character/P3.png"/>
-											<img class="img P4" src="${pageContext.request.contextPath}/resources/image/character/P4.png"/>	 --%>							
+											<img class="img P4" src="${pageContext.request.contextPath}/resources/image/character/P4.png"/>							
 										</td>
 										<td id="1" class="box">
+											<p>이천</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -201,6 +214,7 @@
 											<img class="img P4" src="${pageContext.request.contextPath}/resources/image/character/P4.png"/>
 										</td>
 										<td id="2" class="box">
+											<p>서귀포</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -210,12 +224,14 @@
 											<img class="img P4" src="${pageContext.request.contextPath}/resources/image/character/P4.png"/>
 										</td>
 										<td id="3" class="box gold">
+											<p>황금카드</p>
 											<img class="img P1" src="${pageContext.request.contextPath}/resources/image/character/P1.png"/>
 											<img class="img P2" src="${pageContext.request.contextPath}/resources/image/character/P2.png"/>
 											<img class="img P3" src="${pageContext.request.contextPath}/resources/image/character/P3.png"/>
 											<img class="img P4" src="${pageContext.request.contextPath}/resources/image/character/P4.png"/>
 										</td>
 										<td id="4" class="box">
+											<p>오키나와</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -225,6 +241,7 @@
 											<img class="img P4" src="${pageContext.request.contextPath}/resources/image/character/P4.png"/>
 										</td>
 										<td id="5" class="box">
+											<p>방콕</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -234,6 +251,7 @@
 											<img class="img P4" src="${pageContext.request.contextPath}/resources/image/character/P4.png"/>
 										</td>
 										<td id="6" class="box event">
+											<p>비행기</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -245,6 +263,7 @@
 									</tr>
 									<tr id="line2">
 										<td id="23"class="box">
+											<p>멕시코 <br/>시티</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -256,16 +275,17 @@
 										<td class="box non"></td>
 										<td class="box non"></td>
 										<td class="box non">
-										<img width=130px height=150px id="c0" class="card" src="${pageContext.request.contextPath}/resources/image/character/C0.png"/>
-										<img width=130px height=150px id="c1" class="card" src="${pageContext.request.contextPath}/resources/image/character/C1.png"/>
-										<img width=130px height=150px id="c2" class="card" src="${pageContext.request.contextPath}/resources/image/character/C2.png"/>
-										<img width=130px height=150px id="c3" class="card" src="${pageContext.request.contextPath}/resources/image/character/C3.png"/>
-										<img width=130px height=150px id="c4" class="card" src="${pageContext.request.contextPath}/resources/image/character/C4.png"/>
-										<img width=130px height=150px id="c5" class="card" src="${pageContext.request.contextPath}/resources/image/character/C5.png"/>
+											<img width=130px height=150px id="c0" class="card" src="${pageContext.request.contextPath}/resources/image/character/C0.png"/>
+											<img width=130px height=150px id="c1" class="card" src="${pageContext.request.contextPath}/resources/image/character/C1.png"/>
+											<img width=130px height=150px id="c2" class="card" src="${pageContext.request.contextPath}/resources/image/character/C2.png"/>
+											<img width=130px height=150px id="c3" class="card" src="${pageContext.request.contextPath}/resources/image/character/C3.png"/>
+											<img width=130px height=150px id="c4" class="card" src="${pageContext.request.contextPath}/resources/image/character/C4.png"/>
+											<img width=130px height=150px id="c5" class="card" src="${pageContext.request.contextPath}/resources/image/character/C5.png"/>
 										</td>
 										<td class="box non"></td>
 										<td class="box non"></td>
 										<td id="7" class="box">
+											<p>발리</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -277,6 +297,7 @@
 									</tr>
 									<tr id="line3">
 										<td id="22" class="box">
+											<p>칠레</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -291,6 +312,7 @@
 										<td class="box non"></td>
 										<td class="box non"></td>
 										<td id="8" class="box">
+											<p>두바이</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -302,6 +324,7 @@
 									</tr>
 									<tr id="line4">
 										<td id="21" class="box gold">
+											<p>황금카드</p>
 											<img class="img P1" src="${pageContext.request.contextPath}/resources/image/character/P1.png"/>
 											<img class="img P2" src="${pageContext.request.contextPath}/resources/image/character/P2.png"/>
 											<img class="img P3" src="${pageContext.request.contextPath}/resources/image/character/P3.png"/>
@@ -313,6 +336,7 @@
 										<td class="box non"></td>
 										<td class="box non"></td>
 										<td id="9" class="box gold">
+											<p>황금카드</p>
 											<img class="img P1" src="${pageContext.request.contextPath}/resources/image/character/P1.png"/>
 											<img class="img P2" src="${pageContext.request.contextPath}/resources/image/character/P2.png"/>
 											<img class="img P3" src="${pageContext.request.contextPath}/resources/image/character/P3.png"/>
@@ -321,6 +345,7 @@
 									</tr>
 									<tr id="line5">
 										<td id="20" class="box">
+											<p>상파울로</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -331,18 +356,19 @@
 										</td>
 										<td class="box non"></td>
 										<td class="box non"></td>
-										<td class="box non">
+										<td class="box non">											
 											<img width=78px height=78px id="d1" class="dice" src="${pageContext.request.contextPath}/resources/image/character/D1.png"/>
 											<img width=78px height=78px id="d2" class="dice" src="${pageContext.request.contextPath}/resources/image/character/D2.png"/>
 											<img width=78px height=78px id="d3" class="dice" src="${pageContext.request.contextPath}/resources/image/character/D3.png"/>
 											<img width=78px height=78px id="d4" class="dice" src="${pageContext.request.contextPath}/resources/image/character/D4.png"/>
 											<img width=78px height=78px id="d5" class="dice" src="${pageContext.request.contextPath}/resources/image/character/D5.png"/>
 											<img width=78px height=78px id="d6" class="dice" src="${pageContext.request.contextPath}/resources/image/character/D6.png"/>					
-										
+											
 										</td>
 										<td class="box non"></td>
 										<td class="box non"></td>
 										<td id="10" class="box">
+											<p>카이로</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -354,6 +380,7 @@
 									</tr>
 									<tr id="line6">
 										<td id="19" class="box">
+											<p>하와이</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -364,10 +391,13 @@
 										</td>
 										<td class="box non"></td>
 										<td class="box non"></td>
-										<td class="box non"></td>
+										<td class="box non">
+											<button id="roll" onclick="roll();">CLICK</button>
+										</td>
 										<td class="box non"></td>
 										<td class="box non"></td>
 										<td id="11" class="box">
+											<p>파리</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -379,12 +409,14 @@
 									</tr>
 									<tr id="line7">
 										<td id="18" class="box event">
+											<p>고비사막</p>
 											<img class="img P1" src="${pageContext.request.contextPath}/resources/image/character/P1.png"/>
 											<img class="img P2" src="${pageContext.request.contextPath}/resources/image/character/P2.png"/>
 											<img class="img P3" src="${pageContext.request.contextPath}/resources/image/character/P3.png"/>
 											<img class="img P4" src="${pageContext.request.contextPath}/resources/image/character/P4.png"/>
 										</td>
 										<td id="17" class="box">
+											<p>몬트리올</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -394,6 +426,7 @@
 											<img class="img P4" src="${pageContext.request.contextPath}/resources/image/character/P4.png"/>
 										</td>
 										<td id="16" class="box">
+											<p>리스본</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -403,12 +436,14 @@
 											<img class="img P4" src="${pageContext.request.contextPath}/resources/image/character/P4.png"/>
 										</td>
 										<td id="15" class="box gold">
+											<p>황금카드</p>
 											<img class="img P1" src="${pageContext.request.contextPath}/resources/image/character/P1.png"/>
 											<img class="img P2" src="${pageContext.request.contextPath}/resources/image/character/P2.png"/>
 											<img class="img P3" src="${pageContext.request.contextPath}/resources/image/character/P3.png"/>
 											<img class="img P4" src="${pageContext.request.contextPath}/resources/image/character/P4.png"/>
 										</td>
 										<td id="14" class="box">
+											<p>마드리드</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -418,6 +453,7 @@
 											<img class="img P4" src="${pageContext.request.contextPath}/resources/image/character/P4.png"/>
 										</td>
 										<td id="13" class="box">
+											<p>로마</p>
 											<img class="img S1" src="${pageContext.request.contextPath}/resources/image/character/S1.png"/>
 											<img class="img S2" src="${pageContext.request.contextPath}/resources/image/character/S2.png"/>
 											<img class="img S3" src="${pageContext.request.contextPath}/resources/image/character/S3.png"/>
@@ -427,6 +463,7 @@
 											<img class="img P4" src="${pageContext.request.contextPath}/resources/image/character/P4.png"/>
 										</td>
 										<td id="12" class="box event">
+											<p>수확제</p>
 											<img class="img P1" src="${pageContext.request.contextPath}/resources/image/character/P1.png"/>
 											<img class="img P2" src="${pageContext.request.contextPath}/resources/image/character/P2.png"/>
 											<img class="img P3" src="${pageContext.request.contextPath}/resources/image/character/P3.png"/>

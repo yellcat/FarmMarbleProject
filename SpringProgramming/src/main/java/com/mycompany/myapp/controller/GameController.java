@@ -18,5 +18,11 @@ public class GameController {
 		logger.info("Game()");
 		return "game/game";
 	}
+	
+	@RequestMapping("/game/dialogueQ")
+	public String dialogueQ() {
+		logger.info("dialogue()");
+		return "game/dialogueQ";
+	}
 }
 
