@@ -207,4 +207,13 @@ public class MemberController {
 		
 		return "member/ranking";
 	}
+	
+	@RequestMapping("member/getId")
+	public String getId(HttpSession session, Model model){
+		logger.info("mypageRanking()");
+		String id = (String)session.getAttribute("memberId");
+		model.addAttribute("memberId",id);
+		
+		return "member/result";
+	}
 }

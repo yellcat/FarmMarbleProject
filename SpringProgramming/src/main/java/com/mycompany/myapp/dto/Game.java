@@ -1,8 +1,12 @@
 package com.mycompany.myapp.dto;
 
+import java.util.List;
 import java.util.Map;
 
 public class Game {
+	private List<Gamer> gamer;//게이머
+	private String rName;//방 이름
+	private String state;//방 상태(game 가능 여부)
 	private String character;
 	public String getCharacter() {
 		return character;
