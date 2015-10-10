@@ -1,28 +1,27 @@
 package com.mycompany.myapp.controller;
 
-import com.mycompany.myapp.dto.Gamer;
-
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
+import com.mycompany.myapp.dto.Gamer;
 import com.mycompany.myapp.service.GameService;
 
+@Component
 public class DiceHandler extends TextWebSocketHandler{
 	private static final Logger logger = LoggerFactory.getLogger(CommentController.class);
 	
 	@Autowired
 	private GameService gameService;
-	
 	Map<String, Gamer> list = new HashMap<String, Gamer>();
 	final static int gamerNum = 4;
 	

@@ -143,6 +143,7 @@
 			
 		</style>
 	</head>
+	<script src="${pageContext.request.contextPath}/resources/js/dice.js"></script>
 	<%-- <script src="${pageContext.request.contextPath}/resources/js/jquery-ui.min.js" type="text/javascript"></script>	
 	<link href="${pageContext.request.contextPath}/resources/css/jquery-ui.css" type="text/css" rel="Stylesheet"/>
 	<script src="${pageContext.request.contextPath}/resources/js/dialogue.js" type="text/javascript"></script> --%>
