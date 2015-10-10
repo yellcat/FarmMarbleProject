@@ -7,13 +7,13 @@ function  connect(){
 	ws.onopen = function(){
 		console.log("dice-connect");
 		//session 넘버 저장(비동기 통신)
-		//setConnected(true);
+		setConnected(true);
 	};
 	
 	ws.onclose = function(){
 		console.log("dice-close");
 		//session 넘버 삭제(비동기 통신)
-		//setConnected(false);
+		setConnected(false);
 	}
 	//메세지가 오면 실행
 	ws.onmessage = function(event){
@@ -59,10 +59,12 @@ function disconnect(){
 	}
 }
 
-/*function setConnected(connect){
+function setConnected(connect){
 	if(connect){
-		$("#roll").removeAttr("disabled");
+		$("#connect").attr("disabled",'disabled');
+		$("#disconnect").removeAttr("disabled");
 	}else{
-		$("#roll").attr("disabled",'disabled');
+		$("#connect").removeAttr("disabled");
+		$("#disconnect").attr("disabled",'disabled');
 	}
-}*/
+}
