@@ -38,9 +38,11 @@ public class DiceHandler extends TextWebSocketHandler{
 		Gamer gamer = new Gamer();
 		
 		for(int i =0; i<gamerNum; i++){
-			if(!list.keySet().contains(i)){
-				gamer.setpNo(i+1);
-				break;
+			for(Gamer gamers: list.values()){
+				if(gamers.getpNo()!=i){
+					gamer.setpNo(i+1);
+					break;
+				}
 			}
 		}
 		gamer.setWss(session);
