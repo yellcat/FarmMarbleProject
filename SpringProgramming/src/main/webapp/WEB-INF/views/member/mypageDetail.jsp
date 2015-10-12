@@ -25,6 +25,7 @@
 			color: white;
 			text: bold;
 			text-align: center;
+			font-size: 20px;
 		}
 		#part{
 			display:inline-block;
@@ -36,20 +37,26 @@
 			width:30px;
 		}
 		#container {
-			width: 300px; height: 200px;
+			width: 500px; height: 300px;
 			position: absolute;
 			left: 50%;
 			top: 50%;
-			margin-left: -250px;
-			margin-top: -125px;
-			overflow: hidden;
+			margin-left: -220px;
+			margin-top: -150px;
+			font-size: 35px;
+			color: rgb(136,101,57);
 		}
 		
 		#title {
 			float: left; width: 150px;
+			text-align: left;
+			margin-right: 120px;
+			margin-bottom: 10px;
+			font-weight: bold;
 		}
 		#content {
 			float: left; width: 150px;
+			color: rgb(166,131,87);
 		}
 		
 /* 		#content {
@@ -68,7 +75,7 @@
 			position: absolute;
 			left: 50%;
 			top: 50%;
-			margin-left: -380px;
+			margin-left: -385px;
 			margin-top: 140px;
 		}	
 		#button{
@@ -79,9 +86,16 @@
 			border: none;
 			border-radius: 10px;
 			background-color: rgb(136,101,57);
-			text-align: center;
 			float: right;
-			color: white;
+			text-align: center;
+		}
+		#button:hover { background-color: rgb(186,151,107);}
+		#button > a:active { color: rgb(136,101,57);}
+		#button > a {
+			line-height: 50px;
+			font-size: 25px;
+			text-decoration: none;
+			color: rgb(255,221,177);
 		}
 		
 	</style>
@@ -95,15 +109,15 @@
      		</div>
         <div id="container">
 			<div id="title">ID</div>
-			<div id="content">${member.id}</div>
+			<div id="content">${member.id}</div></br>
 			<div id="title">NAME</div>
-			<div id="content">${member.name}</div>
+			<div id="content">${member.name}</div></br>
 			<div id="title">NICKNAME</div>
-			<div id="content">${member.nickName}</div>
+			<div id="content">${member.nickName}</div></br>
 			<div id="title">TEL</div>
-			<div id="content">${member.tel}</div>
+			<div id="content">${member.tel}</div></br>
 			<div id="title">EMAIL</div>
-			<div id="content">${member.email}</div>
+			<div id="content">${member.email}</div></br>
 		</div>
         <div id="btnGroup">
 	        <div id="button">
