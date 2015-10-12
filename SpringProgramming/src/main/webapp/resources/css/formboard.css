@@ -163,7 +163,7 @@
 			}
 			
 			#pager a.pageNo.selected {
-				color: aqua;
+				color: rgb(136,101,57);
 			}
 			
 			.title {
@@ -171,7 +171,7 @@
 				color: white;
 			}	
 			.title:hover {
-				color: orange;
+				color: rgb(136,101,57);
 			}
 			
 			
@@ -232,13 +232,13 @@
 				font-size: small;
 				color: white;
 				border: 1px solid darkgray;
-				background-color: gray;
+				background-color: rgb(136,101,57);
 				font-weight: bold;
 			}
 			
 			#buttonGroup a:hover {
 				color: black;
-				background-color: lightgray;
+				background-color: rgb(166,131,87);
 			}
 		
 			
