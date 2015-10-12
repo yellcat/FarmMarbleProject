@@ -105,7 +105,7 @@
 		
 		<div id="part2">
 			<span class="title">내용:</span> <br/>
-			<pre>${board.content}</pre>
+			<pre>${board.board_content}</pre>
 		</div>
 		
 		<div id="buttonGroup">
