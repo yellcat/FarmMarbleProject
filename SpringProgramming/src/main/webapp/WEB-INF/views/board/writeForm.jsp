@@ -28,9 +28,10 @@
 					<td><input type="text" name="title"/></td>
 				</tr>
 				<tr>
-					<td>CONTENT</td></br>
+					<td>CONTENT</td>
 					<td><textarea name="content" rows="5" cols="50"></textarea></td>
-					
+				</tr>
+				<tr>	
 					<td>첨부파일</td>
 					<td><input type="file" name="attach" value="첨부파일"/></td>
 				</tr>
