@@ -1,18 +1,17 @@
 var ws = null;
-
+var id = null;
 //자기 턴이 왔을 때 접속 활성화
 function  connect(){
 	ws = new WebSocket("ws://"+window.location.host+"/myapp/dice-ws");
 	
 	ws.onopen = function(){
-		console.log("dice-connect");
-		//session 넘버 저장(비동기 통신)
+		console.log("connect");
+		setInfo();
 		setConnected(true);
 	};
 	
 	ws.onclose = function(){
-		console.log("dice-close");
-		//session 넘버 삭제(비동기 통신)
+		console.log("close");
 		setConnected(false);
 	}
 	//메세지가 오면 실행
@@ -29,11 +28,34 @@ function  connect(){
 	}
 }
 
-function roll(){
-	
-	var json={"command":"roll"};
+function setInfo(){
+	$.ajax({
+		url:"../member/getId",
+		success:function(data){
+			id = data.trim();
+			
+			console.log(id);
+			var json={
+					"command":"setInfo",
+					"id":id
+			};
+			var strJson = JSON.stringify(json);
+			ws.send(strJson);
+		}
+	});
+}
+
+function sendmessage(commend){
+	var json={
+				"command":commend,
+				"id":id
+		};
 	var strJson = JSON.stringify(json);
 	ws.send(strJson);
+}
+
+function roll(){
+	sendmessage("roll");
 }
 
 //주사위를 굴리면 주사위/플레이어 값 변경
@@ -53,6 +75,7 @@ function display(json){
 
 //턴이종료되면 비활성화
 function disconnect(){
+	sendmessage("deleteInfo");
 	if(ws!=null){
 		ws.close();
 		ws=null;

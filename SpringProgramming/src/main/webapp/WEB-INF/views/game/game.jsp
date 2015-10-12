@@ -152,8 +152,8 @@
 		
 		<div id="page-wrapper">
 			<div id=btnGroup>
-				<button onclick="connect()">connect</button>
-				<button onclick="disconnect()">disconnect</button>
+				<button id="connect" onclick="connect()">connect</button>
+				<button id="disconnect" onclick="disconnect()" disabled="disabled">disconnect</button>
 				<a href="../menu"><img class="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"/></a>
 				<img id="q" class="cancle" src="${pageContext.request.contextPath}/resources/image/character/Q.png"/>						
 				<div id="dialog" title="HELP">
