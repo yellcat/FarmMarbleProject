@@ -86,6 +86,12 @@ public class BoardController {
 		
 		//현재 페이지 게시물 리스트
 		List<Board> list = boardService.getPage(pageNo, rowsPerPage);
+		String board_membernickname=null;
+		
+		if(!list.isEmpty()){
+			board_membernickname=list.get(0).getBoard_membernickname();
+		}
+		
 		
 		//View로 넘길 데이터
 		model.addAttribute("pagesPerGroup", pagesPerGroup);
@@ -95,6 +101,7 @@ public class BoardController {
 		model.addAttribute("startPageNo", startPageNo);
 		model.addAttribute("endPageNo", endPageNo);
 		model.addAttribute("pageNo", pageNo);
+		model.addAttribute("board_membernickname",board_membernickname);
 		model.addAttribute("list", list);
 	
 		
