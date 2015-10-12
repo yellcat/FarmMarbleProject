@@ -163,13 +163,13 @@
 			span {
 				display: inline-block;
 				margin: 2px 10px;
-				text-align:left;
+				
 			}
 			
 			span.title {
 				margin: 2px 10px;
 				width: 70px;
-				
+				text-align: left;
 				color: rgb(136,101,57);
 			}
 			
