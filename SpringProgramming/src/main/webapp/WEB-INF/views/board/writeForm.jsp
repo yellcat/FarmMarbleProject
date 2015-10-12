@@ -32,13 +32,13 @@
 					
 					
 					<span class="content"><input type="file" name="attach" value="첨부파일"/></span></span>
-				
-					<span class="title" colspan="2" style="text-align: center;">
-						<br/>
+				<br/>
+					<div id="buttonGroup">
+						
 						<input type="submit" value="SAVE"/>
 						<input type="reset" value="RESET"/>
 						<a href="list?pageNo=${i}">BACK</a>
-					</span>
+					</div>
 				
 			</div>
 		</form>
