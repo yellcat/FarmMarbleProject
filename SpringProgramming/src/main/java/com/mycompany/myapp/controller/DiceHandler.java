@@ -85,7 +85,7 @@ public class DiceHandler extends TextWebSocketHandler{
 		logger.info(Integer.toString(gamer.getpNo()));
 		map.put(id, gamer);
 		
-		if(map.size()==1){
+		if(map.size()==gamerNum){
 			start(id);
 		}
 	}
