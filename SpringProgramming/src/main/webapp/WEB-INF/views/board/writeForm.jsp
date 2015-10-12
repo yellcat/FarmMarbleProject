@@ -24,11 +24,11 @@
 					<span class="content">${memberId}</span>
 					</br>
 					<span class="title">TITLE</span>
-					<span class="content"><input type="text" name="title"/></span>
+					<span class="content"><input type="text" name="board_title"/></span>
 					</br>
 					<span class="title">CONTENT</span>
 					</br>
-					<span class="content"><textarea name="content" rows="5" cols="50"></textarea></span>
+					<span class="content"><textarea name="board_content" rows="5" cols="50"></textarea></span>
 					
 					
 					<span class="content"><input type="file" name="attach" value="첨부파일"/></span></span>
