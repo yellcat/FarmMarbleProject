@@ -3,24 +3,34 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title>Insert title here</title>
-		<style type="text/css">
-			body {
-				font-size: small;
-				color: white;
-			}
-			
-			input {
-				font-size: 12px;
-			}
-		</style>
+		<title>Board</title>
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formboard.css"/>
+		<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 	</head>
-	
 	<body>
-		<h4>글쓰기</h4>
+		<div id="pagedetail">
+			<div id="bar">
+				<div id="part">
+					<h2>FARM'S COMMUNITY</h2>
+				</div>
+				<a href="menu"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
+			</div>
+		<h3>W R I T E</h3></br>
+		
 		<form method="post" action="write" enctype="multipart/form-data">
 			<table>
+				<tr>
+					<td>제목</td>
+					<td><input type="text" name="title"/></td>
+				</tr>
+				<tr>
+					<td>제목</td>
+					<td><input type="text" name="title"/></td>
+				</tr>
+				<tr>
+					<td>제목</td>
+					<td><input type="text" name="title"/></td>
+				</tr>
 				<tr>
 					<td>제목</td>
 					<td><input type="text" name="title"/></td>
@@ -40,8 +50,9 @@
 				<tr>
 					<td colspan="2" style="text-align: center;">
 						<br/>
-						<input type="submit" value="글올리기"/>
-						<input type="reset" value="다시작성"/>					
+						<input type="submit" value="SAVE"/>
+						<input type="reset" value="RESET"/>
+						<a href="list?pageNo=${i}">BACK</a>
 					</td>
 				</tr>
 			</table>
