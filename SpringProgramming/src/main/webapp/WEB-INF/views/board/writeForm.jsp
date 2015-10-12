@@ -21,7 +21,7 @@
 			<table>
 				<tr>
 					<td>WRITER</td>
-					<td>${Member.nickname}</td>
+					<td>${member.nickName}</td>
 				</tr>
 				<tr>
 					<td>TITLE</td>
