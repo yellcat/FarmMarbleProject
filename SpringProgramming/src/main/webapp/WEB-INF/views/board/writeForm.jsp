@@ -20,32 +20,20 @@
 		<form method="post" action="write" enctype="multipart/form-data">
 			<table>
 				<tr>
-					<td>제목</td>
+					<td>WRITER</td>
+					<td>${Member.nickname}</td>
+				</tr>
+				<tr>
+					<td>TITLE</td>
 					<td><input type="text" name="title"/></td>
 				</tr>
 				<tr>
-					<td>제목</td>
-					<td><input type="text" name="title"/></td>
-				</tr>
-				<tr>
-					<td>제목</td>
-					<td><input type="text" name="title"/></td>
-				</tr>
-				<tr>
-					<td>제목</td>
-					<td><input type="text" name="title"/></td>
-				</tr>
-				<tr>
-					<td>글쓴이</td>
-					<td><input type="text" name="writer"/></td>
-				</tr>
-				<tr>
-					<td>내용</td>
+					<td>CONTENT</td>
 					<td><textarea name="content" rows="5" cols="50"></textarea></td>
 				</tr>
 				<tr>
-					<td>첨부</td>
-					<td><input type="file" name="attach"/></td>
+					<td>첨부파일</td>
+					<td><input type="file" name="attach" value="첨부파일"/></td>
 				</tr>
 				<tr>
 					<td colspan="2" style="text-align: center;">
