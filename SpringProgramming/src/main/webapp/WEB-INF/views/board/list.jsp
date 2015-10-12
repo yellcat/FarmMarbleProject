@@ -16,7 +16,7 @@
 				</div>
 				<a href="menu"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
 			</div>
-		<h4>LIST</h4>
+		<h2>LIST</h2></br>
 		
 		<table>
 			<tr>
