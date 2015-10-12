@@ -11,25 +11,34 @@
 			}
 			/*------------------------------------*/				
 			#pagedetail {
-				position:absolute;
-				left:50%; top:50%;
+				text-align: center;
+				font-family: 'Righteous', cursive;
 				
 				
 				
 			}
 			
 			
-			/*------------------------------------*/			
-			h3{
-				width: 900px;
-				line-height: 30px;
-				text-decoration: none;
-				font-size: medium;
+			/*------------------------------------*/
+			#bar{
+				display:flex;
+				margin: 40px;
 				border: none;
-				border-radius: 20px;
+				border-radius: 15px;
 				background-color: rgb(136,101,57);
-				font-weight: bold;
 			}
+			
+			#part{
+				display:inline-block;
+				flex:1;
+				color:white;
+			}
+			#cancle{
+				height:30px;
+				width:30px;
+			}
+		
+			
 			h4{
 				color:rgb(174,162,44);
 				font-size: medium;
