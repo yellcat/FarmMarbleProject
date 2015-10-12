@@ -5,26 +5,125 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>Change Password</title>
 	</head>
+	
 	<script src="${pageContext.request.contextPath}/resources/js/submit.js"></script>
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formdetail.css"/>
+	<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	
+	<style>
+		#pagewrapper{
+			text-align: center;
+			font-family: 'Righteous', cursive;
+		}
+		
+		#bar{
+			display: flex;
+			margin: 40px;
+			border: none;
+			border-radius: 15px;
+			background-color: rgb(136,101,57);
+			color: white;
+			text: bold;
+			text-align: center;
+			font-size: 20px;
+		}
+		
+		#part{
+			display:inline-block;
+			flex: 1;
+			color:white;
+		}
+		
+		#cancle{
+			height:30px;
+			width:30px;
+			float: right;
+		}
+		
+		#container {
+			width: 500px; height: 300px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -250px;
+			margin-top: -80px;
+			font-size: 30px;
+			color: rgb(136,101,57);
+		}
+		
+		.title {
+			width: 370px;
+			text-align: left;
+			font-weight: bold;
+			margin-right: 20px;
+			margin-bottom: 60px;
+		}
+		
+		.content {
+			width: 130px;
+			float: right;
+			color: rgb(166,131,87);
+		}
+		
+		#btnGroup{
+			margin: 50px;
+			width: 700px; height: 50px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -385px;
+			margin-top: 140px;
+		}	
+		#button{
+			display:inline-block;
+			margin: 5px;
+			width: 200px;
+			height: 50px;
+			border: none;
+			border-radius: 10px;
+			background-color: rgb(136,101,57);
+			float: right;
+			text-align: center;
+		}
+		
+		#button:hover { background-color: rgb(186,151,107);}
+		#button > a:active { color: rgb(136,101,57);}
+		#button > a {
+			width: 200px;
+			line-height: 50px;
+			font-size: 25px;
+			text-decoration: none;
+			color: rgb(255,221,177);
+		}
+		
+	</style>
+	
 	<body>
-		<div id="bar">
-			<h4>Password Change</h4><a href="mypage" id="btnCancle"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
+		<div id="pagewrapper">
+			<div id="bar">
+				<div id="part">
+					<h2>Change Password</h2>
+				</div>
+				<a href="mypage" id="btnCancle"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
+			</div>
 		</div>
+		
 		<form:form name="form" commandName="member">
-	      <div id="part">
-				<span class="title">Current</span>
+	      <div id="container">
+				<span class="title">Current Password</span>
 				<span class="content">
 					<form:password id="pw" path="pw" size="20"/>
 					<form:errors path="pw"/>
 				</span><br/>
-				<span class="title">Change</span>
+				<span class="title">Change Password to</span>
 				<span class="content">
 					<form:password id="pwChanage" path="pwChange" size="20"/>
 					<form:errors path="pwChange"/>
 				</span><br/>
-				<span class="title">Check</span>
+				<span class="title">Repeat Password above</span>
 				<span class="content">
 					<form:password id="pwCheck" path="pwCheck" size="20"/>
 					<form:errors path="pwCheck"/>
@@ -32,7 +131,9 @@
 	      </div>
       </form:form>
       <div id="btnGroup">
-      	<a href="javascript:sendData()">SAVE</a>
+      	<div id="button" >
+      		<a href="javascript:sendData()">Change PW</a>
+      	</div>
       </div>
 	</body>
 </html>

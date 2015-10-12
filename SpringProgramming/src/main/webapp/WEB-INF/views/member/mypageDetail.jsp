@@ -11,11 +11,13 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formdetail.css"/>
 	<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	
 	<style>
 		#pagewrapper{
 			text-align: center;
 			font-family: 'Righteous', cursive;
 		}
+		
 		#bar{
 			display:flex;
 			margin: 40px;
@@ -27,15 +29,18 @@
 			text-align: center;
 			font-size: 20px;
 		}
+		
 		#part{
 			display:inline-block;
 			flex:1;
 			color:white;
 		}
+		
 		#cancle{
 			height:30px;
 			width:30px;
 		}
+		
 		#container {
 			width: 500px; height: 300px;
 			position: absolute;
@@ -54,20 +59,11 @@
 			margin-bottom: 10px;
 			font-weight: bold;
 		}
+		
 		#content {
 			float: left; width: 150px;
 			color: rgb(166,131,87);
 		}
-		
-/* 		#content {
-			text-align: center;
-			color: white;
-			margin: 100px 200px;
-			padding: 50px;
-			text: bold;
-			font: 50px;
-			float: center;
-		} */
 		
 		#btnGroup{
 			margin: 50px;
@@ -89,6 +85,7 @@
 			float: right;
 			text-align: center;
 		}
+		
 		#button:hover { background-color: rgb(186,151,107);}
 		#button > a:active { color: rgb(136,101,57);}
 		#button > a {
