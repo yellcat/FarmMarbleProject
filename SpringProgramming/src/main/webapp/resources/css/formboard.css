@@ -39,9 +39,10 @@
 			}
 			h2{
 				height:33px;
+				line-height: 15px;
 			}
 			
-			h4{
+			h3{
 				color:rgb(174,162,44);
 				font-size: medium;
 				font-weight: bold;
@@ -134,7 +135,7 @@
 			}
 			
 			#pager a:hover {
-				color: rgb(174,162,44);
+				color: rgb(136,101,57);
 			}
 			
 			#pager a.pageNo {
