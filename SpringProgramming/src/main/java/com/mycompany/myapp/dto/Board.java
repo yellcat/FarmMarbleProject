@@ -8,6 +8,7 @@ public class Board {
 	private int board_no;
 	private String board_title;
 	private String board_writer;
+	private String board_membernickname;
 	private Date board_date;
 	private int board_hitcount;
 	private String board_content;
@@ -20,6 +21,7 @@ public class Board {
 	public MultipartFile getAttach() {
 		return attach;
 	}
+	
 	public void setAttach(MultipartFile attach) {
 		this.attach = attach;
 	}
@@ -76,6 +78,12 @@ public class Board {
 	}
 	public void setBoard_content_type(String board_content_type) {
 		this.board_content_type = board_content_type;
+	}
+	public String getBoard_membernickname() {
+		return board_membernickname;
+	}
+	public void setBoard_membernickname(String board_membernickname) {
+		this.board_membernickname = board_membernickname;
 	}
 	
 }
