@@ -22,10 +22,10 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 	
-	/*@RequestMapping(value="/board/write",method=RequestMethod.GET)
+	@RequestMapping(value="/board/write",method=RequestMethod.GET)
 	public String writeForm() {
 		return "board/writeForm";
-	}*/
+	}
 	
 	@RequestMapping(value="/board/write",method=RequestMethod.POST)	
 	public String write(Board board, HttpSession session) {	
