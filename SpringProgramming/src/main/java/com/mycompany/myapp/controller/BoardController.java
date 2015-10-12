@@ -101,7 +101,6 @@ public class BoardController {
 		model.addAttribute("startPageNo", startPageNo);
 		model.addAttribute("endPageNo", endPageNo);
 		model.addAttribute("pageNo", pageNo);
-		model.addAttribute("board_membernickname",board_membernickname);
 		model.addAttribute("list", list);
 	
 		
