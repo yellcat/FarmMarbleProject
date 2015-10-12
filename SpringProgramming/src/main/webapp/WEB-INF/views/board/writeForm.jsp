@@ -18,31 +18,29 @@
 		<h3>W R I T E</h3></br>
 		
 		<form method="post" action="write" enctype="multipart/form-data">
-			<table>
-				<tr>
-					<td>WRITER</td>
-					<td>${board_membernickname}</td>
-				</tr>
-				<tr>
-					<td>TITLE</td>
-					<td><input type="text" name="title"/></td>
-				</tr>
-				<tr>
-					<td>CONTENT</td>
-					<td><textarea name="content" rows="5" cols="50"></textarea></td>
+			<div>
+				
+					<span class="title">WRITER</td>
+					<span class="content">${board_membernickname}</span>
+					</br>
+					<span class="title">TITLE</td>
+					<span class="content"><input type="text" name="title"/></span>
+					</br>
+					<span class="title">CONTENT</td>
+					</br>
+					<span class="content"><textarea name="content" rows="5" cols="50"></textarea></span>
 					
-					<td>첨부파일</td>
-					<td><input type="file" name="attach" value="첨부파일"/></td>
-				</tr>
-				<tr>
-					<td colspan="2" style="text-align: center;">
+					<span class="title">첨부파일</span>
+					<span class="content"><input type="file" name="attach" value="첨부파일"/></span>
+				
+					<span class="title" colspan="2" style="text-align: center;">
 						<br/>
 						<input type="submit" value="SAVE"/>
 						<input type="reset" value="RESET"/>
 						<a href="list?pageNo=${i}">BACK</a>
-					</td>
-				</tr>
-			</table>
+					</span>
+				
+			</div>
 		</form>
 	</body>
 </html>
