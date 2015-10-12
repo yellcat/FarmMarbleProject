@@ -100,7 +100,7 @@ public class MemberController {
 		String id = memberservice.FindID(member);
 		
 		if(id==null){
-			bindingResult.rejectValue("email", "NotFoundId", " 해당 정보의 id를 찾을 수 없습니다.");
+			bindingResult.rejectValue("email", "NotFoundId", " �빐�떦 �젙蹂댁쓽 id瑜� 李얠쓣 �닔 �뾾�뒿�땲�떎.");
 			return "member/idFindForm";
 		}
 		
@@ -120,7 +120,7 @@ public class MemberController {
 		String pw = memberservice.FindPW(member);
 		
 		if(pw==null){
-			bindingResult.rejectValue("email", "NotFoundPw", " 해당 정보의 pw를 찾을 수 없습니다.");
+			bindingResult.rejectValue("email", "NotFoundPw", " �빐�떦 �젙蹂댁쓽 pw瑜� 李얠쓣 �닔 �뾾�뒿�땲�떎.");
 			return "member/pwFindForm";
 		}
 		
@@ -157,7 +157,7 @@ public class MemberController {
 		temp = memberservice.getMember(member.getId());
 		
 		if(!member.getPw().equals(temp.getPw())){
-			bindingResult.rejectValue("pw", "non_pass", "비밀번호가 일치하지 않습니다.");
+			bindingResult.rejectValue("pw", "non_pass", "鍮꾨�踰덊샇媛� �씪移섑븯吏� �븡�뒿�땲�떎.");
 		}
 		
 		if(bindingResult.hasErrors()){
@@ -181,7 +181,7 @@ public class MemberController {
 		temp = memberservice.getMember(id);
 		
 		if(!member.getPw().equals(temp.getPw())){
-			bindingResult.rejectValue("pw", "non_pass", "비밀번호가 일치하지 않습니다.");
+			bindingResult.rejectValue("pw", "non_pass", "鍮꾨�踰덊샇媛� �씪移섑븯吏� �븡�뒿�땲�떎.");
 		}else {
 			new PwValidator().validate(member, bindingResult);
 		}
@@ -212,7 +212,7 @@ public class MemberController {
 	public String getId(HttpSession session, Model model){
 		logger.info("mypageRanking()");
 		String id = (String)session.getAttribute("memberId");
-		model.addAttribute("memberId",id);
+		model.addAttribute("result",id);
 		
 		return "member/result";
 	}
