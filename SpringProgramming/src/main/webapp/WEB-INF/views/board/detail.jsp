@@ -98,7 +98,7 @@
 			</div>
 			
 			<div id="part1_2">
-				<img src="${pageContext.request.contextPath}/resources/uploadfiles/${board.filesystemName}" width="100px" height="100px"/>
+				<img src="${pageContext.request.contextPath}/resources/uploadfiles/${board.board_file_system_name}" width="100px" height="100px"/>
 				<button>다운로드</button>
 			</div>
 		</div>
@@ -109,9 +109,9 @@
 		</div>
 		
 		<div id="buttonGroup">
-			<a href="list?pageNo=${pageNo}">목록</a>
-			<a href="updateForm?bno=${board.no}">수정</a>
-			<a href="delete/${board.no}">삭제</a>
+			<a href="list?pageNo=${i}">목록</a>
+			<a href="updateForm?bno=${board.board_no}">수정</a>
+			<a href="delete/${board.board_no}">삭제</a>
 		</div>		
 	</body>
 </html>
