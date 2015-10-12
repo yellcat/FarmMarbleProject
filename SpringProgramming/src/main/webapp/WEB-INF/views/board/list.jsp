@@ -31,7 +31,7 @@
 				<tr>
 					<td>${board.board_no}</td>
 					<td><a class="title" href="detail?boardNo=${board.board_no}">${board.board_title}</a></td>
-					<td>${member.nickname}</td>
+					<td>${board_membernickname}</td>
 					<td>${board.board_date}</td>
 					<td>${board.board_hitcount}</td>
 				</tr>
