@@ -400,7 +400,7 @@
 										<td class="box non"></td>
 										<td class="box non"></td>
 										<td class="box non">
-											<button id="roll" onclick="roll();">CLICK</button>
+											<button id="roll" onclick="roll();" disabled="disabled">CLICK</button>
 										</td>
 										<td class="box non"></td>
 										<td class="box non"></td>

@@ -21,9 +21,17 @@ function  connect(){
 		var json = JSON.parse(strJson);
 		var command = json.command;
 		var data = json.data;
+		if(command=="start"){
+			console.log("start");
+			start(json);
+		}
 		if(command=="display"){
 			console.log("display");
 			display(data);
+			var state=json.state;
+			if(state=="run"){
+				$("#roll").removeAttr("disabled");
+			}
 		}
 	}
 }

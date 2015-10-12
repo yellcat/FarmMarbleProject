@@ -63,7 +63,7 @@ public class DiceHandler extends TextWebSocketHandler{
 		}
 	}
 	
-	private void setInfo(String id, WebSocketSession session) {
+	private void setInfo(String id, WebSocketSession session) throws IOException {
 		Gamer gamer = new Gamer();
 		gamer.setWss(session);
 		
@@ -84,8 +84,33 @@ public class DiceHandler extends TextWebSocketHandler{
 		logger.info(Integer.toString(map.size()));
 		logger.info(Integer.toString(gamer.getpNo()));
 		map.put(id, gamer);
+		
+		if(map.size()==1){
+			start(id);
+		}
 	}
 	
+	private void start(String key) throws IOException{
+		logger.info("start()");
+		
+		JSONObject root = new JSONObject();
+		root.put("command", "start");
+		root.put("gamerNum", gamerNum);
+		
+		for(Gamer gamers: map.values()) {
+			synchronized(map.get(key).getWss()){
+				if(gamers.getpNo()==1){
+					root.put("state", "run");
+				}else{
+					root.put("state", "wait");
+				}
+				String strJson = root.toString();
+				TextMessage textMessage = new TextMessage(strJson);
+				gamers.getWss().sendMessage(textMessage);
+			}
+		}
+	}
+
 	private void deleteInfo(String id){
 		map.remove(id);
 	}
@@ -113,11 +138,24 @@ public class DiceHandler extends TextWebSocketHandler{
 		d.put("nLoc", nLoc);
 		root.put("data", d);
 		
-		String strJson = root.toString();
-		
-		TextMessage textMessage = new TextMessage(strJson);
 		for(Gamer gamers:map.values()) {
 			synchronized(gamer.getWss()) {
+				if(gamer.getpNo()==gamerNum){
+					if(gamers.getpNo()==1){
+						root.put("state", "run");
+					}else{
+						root.put("state", "wait");
+					}
+				}else{
+					if(gamers.getpNo()==(gamer.getpNo()+1)){
+						root.put("state", "run");
+					}else{
+						root.put("state", "wait");
+					}
+				}
+				
+				String strJson = root.toString();
+				TextMessage textMessage = new TextMessage(strJson);
 				gamers.getWss().sendMessage(textMessage);
 			}
 		}

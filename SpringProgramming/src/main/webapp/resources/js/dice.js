@@ -1,5 +1,21 @@
 function roll(){
+	$("#roll").attr("disabled",'disabled');
 	sendmessage("roll");
+}
+
+function start(json){	
+	console.log("start");
+	console.log(json);
+	
+	var gamerNum=json.gamerNum;
+	var state=json.state;
+	
+	for(var i=0; i<gamerNum;i++){
+		$("#0").children(".P"+(i+1)).show();
+		if(state=="run"){
+			$("#roll").removeAttr("disabled");
+		}
+	}
 }
 
 //주사위를 굴리면 주사위/플레이어 값 변경
