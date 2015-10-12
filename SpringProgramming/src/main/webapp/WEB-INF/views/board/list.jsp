@@ -6,6 +6,7 @@
 	<head>
 		<title>Board</title>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formboard.css"/>
+		<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div id="pagedetail">
