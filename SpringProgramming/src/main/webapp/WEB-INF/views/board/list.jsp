@@ -30,7 +30,7 @@
 			<c:forEach var="board" items="${list}">
 				<tr>
 					<td>${board.board_no}</td>
-					<td><a class="title" href="detail?boardNo=${board.board_no}">${board.board_title}</a></td>
+					<td><a class="contenttitle" href="detail?boardNo=${board.board_no}">${board.board_title}</a></td>
 					<td>${board.board_writer}</td>
 					<td>${board.board_date}</td>
 					<td>${board.board_hitcount}</td>
