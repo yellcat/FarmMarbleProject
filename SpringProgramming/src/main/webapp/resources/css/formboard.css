@@ -146,11 +146,11 @@
 				color: rgb(166,131,87);
 			}
 			
-			.title {
+			table.title {
 				text-decoration: none;
 				color: white;
 			}	
-			.title:hover {
+			table.title:hover {
 				color: rgb(136,101,57);
 			}
 			
