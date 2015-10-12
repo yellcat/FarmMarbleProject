@@ -79,22 +79,22 @@
 		<div id="part1">
 			<div id="part1_1">	
 				<span class="title">번호:</span> 
-				<span class="content">${board.no}</span> <br/>
+				<span class="content">${board.board_no}</span> <br/>
 				
 				<span class="title">제목:</span> 
-				<span class="content">${board.title}</span> <br/>
+				<span class="content">${board.board_title}</span> <br/>
 				
 				<span class="title">글쓴이:</span> 
-				<span class="content">${board.writer}</span> <br/>
+				<span class="content">${board.board_writer}</span> <br/>
 				
 				<span class="title">날짜:</span> 
-				<span class="content">${board.date}</span> <br/>
+				<span class="content">${board.board_date}</span> <br/>
 				
 				<span class="title">조회수:</span> 
-				<span class="content">${board.hitcount}</span> <br/>
+				<span class="content">${board.board_hitcount}</span> <br/>
 				
 				<span class="title">첨부:</span> 
-				<span class="content">${board.originalFileName}</span> <br/>
+				<span class="content">${board.board_original_file_name}</span> <br/>
 			</div>
 			
 			<div id="part1_2">
