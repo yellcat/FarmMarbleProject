@@ -28,7 +28,7 @@
 					</br>
 					<span class="title">CONTENT</span>
 					</br>
-					<span class="content"><textarea name="content" rows="5" cols="50"></textarea>
+					<span class="content"><textarea name="content" rows="5" cols="50"></textarea></span>
 					
 					
 					<span class="content"><input type="file" name="attach" value="첨부파일"/></span></span>
