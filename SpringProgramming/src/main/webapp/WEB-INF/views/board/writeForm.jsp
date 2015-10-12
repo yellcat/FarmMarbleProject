@@ -28,10 +28,10 @@
 					</br>
 					<span class="title">CONTENT</td>
 					</br>
-					<span class="content"><textarea name="content" rows="5" cols="50"></textarea></span>
+					<span class="content"><textarea name="content" rows="5" cols="50"></textarea>
 					
-					<span class="title">첨부파일</span>
-					<span class="content"><input type="file" name="attach" value="첨부파일"/></span>
+					
+					<span class="content"><input type="file" name="attach" value="첨부파일"/></span></span>
 				
 					<span class="title" colspan="2" style="text-align: center;">
 						<br/>
