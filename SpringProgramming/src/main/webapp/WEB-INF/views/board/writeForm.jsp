@@ -13,7 +13,7 @@
 				<div id="part">
 					<h2>FARM'S COMMUNITY</h2>
 				</div>
-				<a href="./menu"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
+				<a href="../menu"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
 			</div>
 		<h3>W R I T E</h3></br>
 		
