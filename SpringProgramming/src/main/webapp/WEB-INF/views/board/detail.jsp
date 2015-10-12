@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<title>Board</title>
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formboard.css"/>
+		<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 		<title>Insert title here</title>
 		<style type="text/css">
 			body {
@@ -75,7 +77,14 @@
 	</head>
 	
 	<body>
-		<h4>게시물 보기</h4>
+		<div id="pagedetail">
+			<div id="bar">
+				<div id="part">
+					<h2>FARM'S COMMUNITY</h2>
+				</div>
+				<a href="list?pageNo=${i}"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
+			</div>
+		<h3>D E T A I L</h3></br>
 		<div id="part1">
 			<div id="part1_1">	
 				<span class="title">번호:</span> 
