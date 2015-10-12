@@ -36,12 +36,13 @@
 			width:30px;
 		}
 		#container {
-			width: 500px; height: 250px;
+			width: 300px; height: 200px;
 			position: absolute;
 			left: 50%;
 			top: 50%;
 			margin-left: -250px;
 			margin-top: -125px;
+			overflow: hidden;
 		}
 		
 		#title {
@@ -50,7 +51,6 @@
 		#content {
 			float: left; width: 150px;
 		}
-		
 		
 /* 		#content {
 			text-align: center;
@@ -61,14 +61,15 @@
 			font: 50px;
 			float: center;
 		} */
+		
 		#btnGroup{
 			margin: 50px;
 			width: 700px; height: 50px;
 			position: absolute;
 			left: 50%;
 			top: 50%;
-			margin-left: -250px;
-			margin-top: 250px;
+			margin-left: -380px;
+			margin-top: 140px;
 		}	
 		#button{
 			display:inline-block;
@@ -82,7 +83,7 @@
 			float: right;
 			color: white;
 		}
-	
+		
 	</style>
 	<body>
 		<div id="pagewrapper">

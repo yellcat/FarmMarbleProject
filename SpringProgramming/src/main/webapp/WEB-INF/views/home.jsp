@@ -16,9 +16,9 @@
 			function bIframSize() {
 				var iframe = document.querySelector("#iframe");
 				var pagehome = document.querySelector("#pagehome");
-				iframe.style.width =  "1000px";
-				iframe.style.height = "700px";
-				pagehome.style.margin = "-350px 0 0 -500px";
+				iframe.style.width =  "800px";
+				iframe.style.height = "500px";
+				pagehome.style.margin = "-250px 0 0 -400px";
 			}
 			function cIframSize() {
 				var iframe = document.querySelector("#iframe");
