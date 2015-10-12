@@ -22,7 +22,7 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 	
-	@RequestMapping(value="/board/writeForm")
+	@RequestMapping(value="/board/write",method=RequestMethod.GET)
 	public String writeForm() {
 		return "board/writeForm";
 	}
