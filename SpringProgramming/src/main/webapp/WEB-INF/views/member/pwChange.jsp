@@ -44,7 +44,7 @@
 		}
 		
 		#container {
-			width: 500px; height: 300px;
+			width: 600px; height: 300px;
 			position: absolute;
 			left: 50%;
 			top: 50%;
@@ -55,17 +55,21 @@
 		}
 		
 		.title {
-			width: 370px;
+			width: 350px;
 			text-align: left;
 			font-weight: bold;
-			margin-right: 20px;
-			margin-bottom: 60px;
 		}
 		
 		.content {
-			width: 130px;
+			width: 250px;
+			height: 30px;
 			float: right;
-			color: rgb(166,131,87);
+			color: red;
+			font-size: 15px;
+		}
+		
+		#pw.errors {
+			
 		}
 		
 		#btnGroup{
@@ -76,7 +80,8 @@
 			top: 50%;
 			margin-left: -385px;
 			margin-top: 140px;
-		}	
+		}
+			
 		#button{
 			display:inline-block;
 			margin: 5px;
@@ -115,19 +120,19 @@
 	      <div id="container">
 				<span class="title">Current Password</span>
 				<span class="content">
-					<form:password id="pw" path="pw" size="20"/>
-					<form:errors path="pw"/>
-				</span><br/>
+					<form:password id="pw" path="pw" size="20"/></br>
+					<form:errors path="pw"/></br>
+				</span></br>
 				<span class="title">Change Password to</span>
 				<span class="content">
-					<form:password id="pwChanage" path="pwChange" size="20"/>
+					<form:password id="pwChanage" path="pwChange" size="20"/></br>
 					<form:errors path="pwChange"/>
-				</span><br/>
+				</span></br>
 				<span class="title">Repeat Password above</span>
 				<span class="content">
-					<form:password id="pwCheck" path="pwCheck" size="20"/>
+					<form:password id="pwCheck" path="pwCheck" size="20"/></br>
 					<form:errors path="pwCheck"/>
-				</span><br/>
+				</span></br>
 	      </div>
       </form:form>
       <div id="btnGroup">
