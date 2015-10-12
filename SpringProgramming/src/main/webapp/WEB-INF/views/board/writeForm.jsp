@@ -29,10 +29,6 @@
 				</tr>
 				<tr>
 					<td>CONTENT</td>
-				</tr>
-				<tr>
-				</tr>
-				<tr>
 					<td><textarea name="content" rows="5" cols="50"></textarea></td>
 					
 					<td>첨부파일</td>
