@@ -167,11 +167,9 @@
 			
 			span.title {
 				margin: 2px 10px;
-				border: 1px solid darkgray;
-				background: lightgray;
 				width: 70px;
 				text-align: center;
-				color: black;
+				color: rgb(174,162,44);
 			}
 			
 			pre {
