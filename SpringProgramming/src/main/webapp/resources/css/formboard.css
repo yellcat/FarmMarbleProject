@@ -204,6 +204,7 @@
 			
 			#buttonGroup a {
 				display:inline-block;
+				margin: 10px;
 				width: 70px;
 				line-height: 30px;
 				text-decoration: none;
@@ -221,6 +222,7 @@
 			
 			#buttonGroup input {
 				display:inline-block;
+				margin: 10px;
 				width: 70px;
 				line-height: 30px;
 				text-decoration: none;

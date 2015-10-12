@@ -20,15 +20,15 @@
 		<form method="post" action="write" enctype="multipart/form-data">
 			<div>
 				
-					<span class="title">WRITER</td>
+					<span class="title">WRITER</span>
 					<span class="content">${board.board_writer}</span>
 					</br>
-					<span class="title">TITLE</td>
+					<span class="title">TITLE</span>
 					<span class="content"><input type="text" name="title"/></span>
 					</br>
-					<span class="title">CONTENT</td>
+					<span class="title">CONTENT</span>
 					</br>
-					<span class="content"><textarea name="content" rows="5" cols="50"></textarea>
+					<span class="content"><textarea name="content" rows="5" cols="50"></textarea></span>
 					
 					
 					<span class="content"><input type="file" name="attach" value="첨부파일"/></span></span>
