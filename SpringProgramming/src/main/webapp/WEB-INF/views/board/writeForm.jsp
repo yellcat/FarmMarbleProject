@@ -16,6 +16,7 @@
 				<a href="list?pageNo=${i}"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
 			</div>
 		<h3>W R I T E</h3></br>
+		</div>
 		
 		<form method="post" action="write" enctype="multipart/form-data">
 			<div>
