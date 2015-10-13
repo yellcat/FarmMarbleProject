@@ -75,6 +75,13 @@
 			}
 		</style>
 	</head>
+	<script type="text/javascript">
+		var wid=$("#wid").val();
+		var mid=${memberId};
+		if(wid==mid){
+			$("#sameiduse").show();
+		}
+	</script>
 	
 	<body>
 		<div id="pagedetail">
@@ -94,7 +101,7 @@
 				<span class="content">${board.board_title}</span> <br/>
 				
 				<span class="title">글쓴이:</span> 
-				<span class="content">${board.board_writer}</span> <br/>
+				<span class="content" id="wid">${board.board_writer}</span> <br/>
 				
 				<span class="title">날짜:</span> 
 				<span class="content">${board.board_date}</span> <br/>
@@ -119,8 +126,8 @@
 		
 		<div id="buttonGroup">
 			<a href="list?pageNo=${i}">목록</a>
-			<a href="updateForm?bno=${board.board_no}">수정</a>
-			<a href="delete/${board.board_no}">삭제</a>
+			<a id="sameiduse" href="updateForm?bno=${board.board_no}">수정</a>
+			<a id="sameiduse" href="delete/${board.board_no}">삭제</a>
 		</div>		
 	</body>
 </html>
