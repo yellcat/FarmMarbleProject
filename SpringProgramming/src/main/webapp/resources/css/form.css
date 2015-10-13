@@ -1,0 +1,84 @@
+@import url("https://googledrive.com/host/0BxmAw3HA4YGCfnE1U2tYVjN2UkVLWnEzaVdsWDRUZ3VFbmpJckF3UG56WkpLSUxKMXFaTlU/nanumbarunpenb.css");
+			/*------------------------------------*/
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			/*------------------------------------*/
+			body{
+				width:960px;
+				
+				margin: 0px;
+				color: #FFFFFF;
+				background-image: url("../image/Farm.png");
+				background-size:100% 100%;
+				
+				background-repeat: no-repeat;
+
+				
+			}
+			/*------------------------------------*/				
+			#pagehome {
+				position:absolute;
+				left:50%; top:50%;
+				margin: -200px 0 0 -300px;
+				
+				
+			}
+			
+			
+			/*------------------------------------*/			
+			
+			
+			#content {
+				position: relative;		
+			}
+			
+			#content iframe {
+				width:600px;
+				height:400px;
+				border: none;
+				border-radius: 80px;
+				background-color: rgba(242,192,68,0.7);
+			}
+			/*------------------------------------*/	
+			
+			#menu {
+				position:absolute;
+				left:50%; top:50%;
+				margin: 10px;
+				text-align: center;
+				display: flex;
+    			flex-direction:column;
+			}
+			
+			#menu a{
+				width: 400px;
+				line-height: 30px;
+				text-decoration: none;
+				font-size: medium;
+				color: white;
+				border: none;
+				border-radius: 20px;
+				background-color: rgb(136,101,57);
+				font-weight: bold;
+			}
+			
+			#menu #id{
+				width: 400px;
+				line-height: 30px;
+				text-decoration: none;
+				font-size: medium;
+				color: white;
+				border: none;
+				border-radius: 20px;
+				background-color: rgb(192,0,0);
+				font-weight: bold;
+			}
+			
+			#menu a:hover {
+				color: lightgray;
+				background-color: rgb(106,71,27);
+			}
+			
+			
