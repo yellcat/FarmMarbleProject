@@ -62,14 +62,12 @@
 		
 		.content {
 			width: 250px;
-			height: 30px;
+			height: 15px;
 			float: right;
 			color: red;
 			font-size: 15px;
-		}
-		
-		#pw.errors {
-			
+			margin-top: 7.5px;
+			margin-bottom: 7.5px;
 		}
 		
 		#btnGroup{
