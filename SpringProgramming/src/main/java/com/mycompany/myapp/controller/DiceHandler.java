@@ -25,6 +25,7 @@ public class DiceHandler extends TextWebSocketHandler{
 	
 	@Autowired
 	private GameService gameService;
+	//String은 id, Gamer 객체
 	Map<String, Gamer> map = new HashMap<String, Gamer>();
 	final static int gamerNum = 2;
 
@@ -61,8 +62,17 @@ public class DiceHandler extends TextWebSocketHandler{
 			logger.info("deleteInfo");
 			deleteInfo(key);
 		}
+		if(command.equals("buy")){
+			logger.info("buy");
+			buy(key);
+		}
 	}
 	
+	private void buy(String key) {
+		
+		
+	}
+
 	private void setInfo(String id, WebSocketSession session) throws IOException {
 		Gamer gamer = new Gamer();
 		gamer.setWss(session);
