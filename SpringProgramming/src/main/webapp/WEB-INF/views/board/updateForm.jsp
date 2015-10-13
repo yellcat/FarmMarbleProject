@@ -105,7 +105,7 @@
 			<span class="content">${board.board_hitcount}</span> <br/>
 			
 			<span class="title">내용:</span> <br/>
-			<textarea name="content" cols="80" rows="5">${board.board_content}</textarea>
+			<textarea name="board_content" cols="80" rows="5">${board.board_content}</textarea>
 		</form>
 		<div id="buttonGroup">
 			<a href="javascript:sendData()">수정</a>
