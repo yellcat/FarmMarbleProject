@@ -90,26 +90,26 @@
 		<form id="modifyForm" name="modifyForm" method="post" action="update">		
 			<span class="title">번호:</span> 
 			<span class="content">${board.no}</span> 
-			<input type="hidden" name="no" value="${board.no}"/><br/>
+			<input type="hidden" name="no" value="${board.board_no}"/><br/>
 			
 			<span class="title">제목:</span> 
-			<input id="title" type="text" name="title" value="${board.title}"/> <br/>
+			<input id="title" type="text" name="title" value="${board.board_title}"/> <br/>
 			
 			<span class="title">글쓴이:</span> 
-			<span class="content">${board.writer}</span> <br/>
+			<span class="content">${board.board_title}</span> <br/>
 			
 			<span class="title">날짜:</span> 
-			<span class="content">${board.date}</span> <br/>
+			<span class="content">${board.boad_date}</span> <br/>
 			
 			<span class="title">조회수:</span> 
-			<span class="content">${board.hitcount}</span> <br/>
+			<span class="content">${board.board_hitcount}</span> <br/>
 			
 			<span class="title">내용:</span> <br/>
-			<textarea name="content" cols="80" rows="5">${board.content}</textarea>
+			<textarea name="content" cols="80" rows="5">${board.board_content}</textarea>
 		</form>
 		<div id="buttonGroup">
 			<a href="javascript:sendData()">수정</a>
-			<a href="detail?boardNo=${board.no}">취소</a>
+			<a href="detail?boardNo=${board.board_no}">취소</a>
 		</div>		
 	</body>
 </html>
