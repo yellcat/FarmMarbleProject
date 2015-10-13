@@ -35,7 +35,7 @@ public class BoardController {
 		ServletContext application = session.getServletContext();
 		String dirPath = application.getRealPath("/resources/uploadfiles");
 		if(board.getAttach() != null) {
-			String originalFilename = board.getAttach().getBoard_original_file_name();
+			String originalFilename = board.getAttach().getOriginalFilename();
 			String filesystemName = System.currentTimeMillis() + "-" + originalFilename;
 			String contentType = board.getAttach().getContentType();
 			if(!board.getAttach().isEmpty()) {	
