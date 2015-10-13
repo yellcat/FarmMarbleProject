@@ -8,11 +8,11 @@ function start(json){
 	console.log(json);
 	
 	var gamerNum=json.gamerNum;
-	var state=json.state;
+	var turn=json.turn;
 	
 	for(var i=0; i<gamerNum;i++){
 		$("#0").children(".P"+(i+1)).show();
-		if(state=="run"){
+		if(turn=="run"){
 			$("#roll").removeAttr("disabled");
 		}
 	}

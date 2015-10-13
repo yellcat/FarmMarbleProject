@@ -7,6 +7,7 @@ import org.springframework.web.socket.WebSocketSession;
 public class Gamer{
 	private int pNo;
 	private int money = 10000;
+	private String state = "playing";
 	private Map<Integer,Integer> tree; //소유하고있는 농장 정보
 	private int location = 0;
 	private WebSocketSession wss;	
@@ -22,6 +23,12 @@ public class Gamer{
 	}
 	public void setMoney(int money) {
 		this.money = money;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
 	}
 	public Map<Integer, Integer> getTree() {
 		return tree;

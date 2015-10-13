@@ -28,8 +28,8 @@ function  connect(){
 		if(command=="display"){
 			console.log("display");
 			display(data);
-			var state=json.state;
-			if(state=="run"){
+			var turn=json.turn;
+			if(turn=="run"){
 				$("#roll").removeAttr("disabled");
 			}
 		}

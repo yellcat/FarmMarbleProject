@@ -26,7 +26,7 @@ public class DiceHandler extends TextWebSocketHandler{
 	@Autowired
 	private GameService gameService;
 	Map<String, Gamer> map = new HashMap<String, Gamer>();
-	final static int gamerNum = 4;
+	final static int gamerNum = 2;
 
 	@Override
 	public void afterConnectionEstablished(WebSocketSession session) throws Exception {
@@ -100,9 +100,9 @@ public class DiceHandler extends TextWebSocketHandler{
 		for(Gamer gamers: map.values()) {
 			synchronized(map.get(key).getWss()){
 				if(gamers.getpNo()==1){
-					root.put("state", "run");
+					root.put("turn", "run");
 				}else{
-					root.put("state", "wait");
+					root.put("turn", "wait");
 				}
 				String strJson = root.toString();
 				TextMessage textMessage = new TextMessage(strJson);
@@ -142,15 +142,15 @@ public class DiceHandler extends TextWebSocketHandler{
 			synchronized(gamer.getWss()) {
 				if(gamer.getpNo()==gamerNum){
 					if(gamers.getpNo()==1){
-						root.put("state", "run");
+						root.put("turn", "run");
 					}else{
-						root.put("state", "wait");
+						root.put("turn", "wait");
 					}
 				}else{
 					if(gamers.getpNo()==(gamer.getpNo()+1)){
-						root.put("state", "run");
+						root.put("turn", "run");
 					}else{
-						root.put("state", "wait");
+						root.put("turn", "wait");
 					}
 				}
 				
