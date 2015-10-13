@@ -84,7 +84,7 @@
 				</div>
 				<a href="list?pageNo=${i}"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
 			</div>
-		<h3>${board.board_title} D E T A I L</h3></br>
+		<h3>${board.board_title}</h3></br>
 		<div id="part1">
 			<div id="part1_1">	
 				<span class="title">번호:</span> 
