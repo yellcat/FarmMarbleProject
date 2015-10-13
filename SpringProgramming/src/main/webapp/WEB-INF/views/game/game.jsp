@@ -24,7 +24,14 @@
 				<img id="q" class="cancle"
 					src="${pageContext.request.contextPath}/resources/image/character/Q.png" />
 				<div id="dialog" title="HELP">
-					<p>게임 다이얼로그 내용</p>
+					<p>게임 방법<br/>
+						1. START 버튼을 눌러주세요<br/>
+						(4명이 모여야 게임이 시작됩니다)<br/>
+						2. 순서에 따라 주사위를 CLICK 해주세요<br/>
+						3. 황금카드 설명<br/>
+						4. 이벤트 설명<br/>
+						5. 나머지 플레이어가 파산하면 게임이 종료됩니다<br/>
+					</p>
 				</div>
 			</div>
 			<div id="content">

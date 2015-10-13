@@ -1,7 +1,8 @@
 $(function() {
 		    $( "#dialog" ).dialog({
 		      autoOpen: false,
-		      height:300,
+		      height:350,
+		      width: 450,
 		     
 		      show: {
 		        effect: "blind",
