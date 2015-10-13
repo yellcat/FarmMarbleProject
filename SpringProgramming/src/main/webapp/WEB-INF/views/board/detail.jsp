@@ -76,7 +76,7 @@
 		</style>
 	</head>
 	<script type="text/javascript">
-		var wid=$("#wid").val();
+		var wid=${board.board_writer};
 		var mid=${memberId};
 		if(wid==mid){
 			$("#sameiduse").show();
@@ -101,7 +101,7 @@
 				<span class="content">${board.board_title}</span> <br/>
 				
 				<span class="title">글쓴이:</span> 
-				<span class="content" id="wid">${board.board_writer}</span> <br/>
+				<span class="content">${board.board_writer}</span> <br/>
 				
 				<span class="title">날짜:</span> 
 				<span class="content">${board.board_date}</span> <br/>
