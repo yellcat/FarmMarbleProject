@@ -28,6 +28,7 @@ function  connect(){
 		if(command=="display"){
 			console.log("display");
 			display(data);
+			
 			var turn=json.turn;
 			if(turn=="run"){
 				$("#roll").removeAttr("disabled");

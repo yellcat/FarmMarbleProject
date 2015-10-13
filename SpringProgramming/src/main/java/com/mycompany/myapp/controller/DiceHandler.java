@@ -136,7 +136,7 @@ public class DiceHandler extends TextWebSocketHandler{
 		d.put("dNo", dNo);
 		d.put("bLoc", bLoc);
 		d.put("nLoc", nLoc);
-		root.put("data", d);
+		root.put("data", d);                           
 		
 		for(Gamer gamers:map.values()) {
 			synchronized(gamer.getWss()) {
