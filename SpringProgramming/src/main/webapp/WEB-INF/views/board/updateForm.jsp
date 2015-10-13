@@ -74,7 +74,7 @@
 				
 				var board_content = document.modifyForm.board_content;
 				
-				if(title.value == "" || content.value == "") {
+				if(board_title.value == "" || board_content.value == "") {
 					alert("제목과 내용은 있어야 합니다.");
 					return;
 				}
