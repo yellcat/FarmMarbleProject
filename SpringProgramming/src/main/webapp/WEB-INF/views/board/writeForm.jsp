@@ -22,7 +22,7 @@
 			<div>
 				
 					<span class="title">WRITER</span>
-					<span class="content">${memberId}<input type="hidden" value="${board.board_writer}" name="board_writer"/></span>
+					<span class="content">${memberId}<input type="text" value="${board.board_writer}" name="board_writer"/></span>
 					</br>
 					<span class="title">TITLE</span>
 					<span class="content"><input type="text" name="board_title"/></span>
