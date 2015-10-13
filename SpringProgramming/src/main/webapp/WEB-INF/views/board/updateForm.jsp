@@ -69,10 +69,10 @@
 				console.log(modifyForm);
 				
 				//var title = document.querySelector("#title");
-				var title = document.modifyForm.title;
+				var board_title = document.modifyForm.board_title;
 				console.log(title);
 				
-				var content = document.modifyForm.content;
+				var board_content = document.modifyForm.board_content;
 				
 				if(title.value == "" || content.value == "") {
 					alert("제목과 내용은 있어야 합니다.");
