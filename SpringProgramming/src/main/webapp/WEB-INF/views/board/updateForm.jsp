@@ -89,7 +89,7 @@
 		<h4>게시물 보기</h4>
 		<form id="modifyForm" name="modifyForm" method="post" action="update">		
 			<span class="title">번호:</span> 
-			<span class="content">${board.no}</span> 
+			<span class="content">${board.board_no}</span> 
 			<input type="hidden" name="board_no" value="${board.board_no}"/><br/>
 			
 			<span class="title">제목:</span> 
