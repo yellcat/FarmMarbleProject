@@ -19,13 +19,13 @@ public class PwValidator implements Validator {
 		
 		int passwordLength = member.getPwChange().length();
 		if(passwordLength<4) {
-			errors.rejectValue("pwChange", "minlength", new Object[] {4, passwordLength}, "최소 4자리 이상 입력");
+			errors.rejectValue("pwChange", "minlength", new Object[] {4, passwordLength}, "at least 4 characters long");
 		}else if(passwordLength>12){
-			errors.rejectValue("pwChange", "maxlength", new Object[] {12, passwordLength}, "최대 12자리 이상 입력");
+			errors.rejectValue("pwChange", "maxlength", new Object[] {12, passwordLength}, "12 characters maximum");
 		}
 
 		if(!member.getPwChange().equals(member.getPwCheck())){
-			errors.rejectValue("pwCheck", "wrong_checkPass", "확인 비민번호를 제대로 입력 해주세요");
+			errors.rejectValue("pwCheck", "wrong_checkPass", "enter the same as above");
 		}
 	}
 }

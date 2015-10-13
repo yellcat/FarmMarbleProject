@@ -55,21 +55,20 @@
 		}
 		
 		.title {
-			width: 350px;
+			width: 400px;
+			height: 50px;
 			text-align: left;
 			font-weight: bold;
 		}
 		
 		.content {
-			width: 250px;
-			height: 30px;
+			width: 200px;
+			height: 15px;
 			float: right;
 			color: red;
 			font-size: 15px;
-		}
-		
-		#pw.errors {
-			
+			margin-top: 7.5px;
+			margin-bottom: 7.5px;
 		}
 		
 		#btnGroup{
@@ -128,7 +127,7 @@
 					<form:password id="pwChanage" path="pwChange" size="20"/></br>
 					<form:errors path="pwChange"/>
 				</span></br>
-				<span class="title">Repeat Password above</span>
+				<span class="title">Reenter New Password</span>
 				<span class="content">
 					<form:password id="pwCheck" path="pwCheck" size="20"/></br>
 					<form:errors path="pwCheck"/>

@@ -11,9 +11,9 @@ function sendData(){
 					if(result == "success"){
 						$("#login").submit();
 					}else if(result=="wrong_id"){
-						alert("Non id");
+						alert("Please check your id");
 					}else if(result=="wrong_pw"){
-						alert("Non password");
+						alert("Please check your password");
 					}
 				}
 			});
