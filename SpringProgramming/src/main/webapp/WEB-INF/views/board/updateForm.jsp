@@ -99,7 +99,7 @@
 			<span class="content">${board.board_title}</span> <br/>
 			
 			<span class="title">날짜:</span> 
-			<span class="content">${board.boad_date}</span> <br/>
+			<span class="content">${board.board_date}</span> <br/>
 			
 			<span class="title">조회수:</span> 
 			<span class="content">${board.board_hitcount}</span> <br/>
