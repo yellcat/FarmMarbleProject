@@ -90,10 +90,10 @@
 		<form id="modifyForm" name="modifyForm" method="post" action="update">		
 			<span class="title">번호:</span> 
 			<span class="content">${board.no}</span> 
-			<input type="hidden" name="no" value="${board.board_no}"/><br/>
+			<input type="hidden" name="board_no" value="${board.board_no}"/><br/>
 			
 			<span class="title">제목:</span> 
-			<input id="title" type="text" name="title" value="${board.board_title}"/> <br/>
+			<input id="title" type="text" name="board_title" value="${board.board_title}"/> <br/>
 			
 			<span class="title">글쓴이:</span> 
 			<span class="content">${board.board_title}</span> <br/>
