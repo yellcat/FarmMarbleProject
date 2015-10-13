@@ -76,8 +76,8 @@
 		</style>
 	</head>
 	<script type="text/javascript">
-		var wid=${board.board_writer};
-		var mid=${memberId};
+		var wid="${board.board_writer}";
+		var mid="${memberId}"";
 		if(wid==mid){
 			$("#sameiduse").show();
 		}
