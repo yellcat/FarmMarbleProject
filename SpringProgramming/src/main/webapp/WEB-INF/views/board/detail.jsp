@@ -10,7 +10,7 @@
 	window.onload=function() {
 		var wid=document.getElementById("#board_writer");
 		var mid=document.getElementById("#memberId");
-		if(wid.value==mid.value){
+		if(wid.attribute==mid.attribute){
 			document.getElementById("#sameiduse").style.display = "none";
 		}
 	}
