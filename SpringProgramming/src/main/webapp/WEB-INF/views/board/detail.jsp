@@ -8,8 +8,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 		<script type="text/javascript">
 	window.onload=function() {
-		var wid=document.getElementById("#board_writer").value;
-		var mid=document.getElementById("#memberId").value;
+		var wid=(String)document.getElementById("#board_writer").value;
+		var mid=(String)document.getElementById("#memberId").value;
 		if(wid==mid){
 			document.getElementById("#sameiduse").style.display = "none";
 		}
