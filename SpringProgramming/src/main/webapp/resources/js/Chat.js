@@ -1,7 +1,7 @@
 	    var wsc = null;
 	    cconnect();
 	    function cconnect() {
- 			wsc = new WebSocket("wsc://"+window.location.host+"/myapp/chatcolor-ws");
+ 			wsc = new WebSocket("wsc://"+window.location.host+"/myapp/chat-wsc");
  			
  			wsc.onopen = function(){
  				log("접속O");
