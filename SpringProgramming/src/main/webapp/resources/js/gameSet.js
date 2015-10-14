@@ -96,9 +96,6 @@ function sendmessage(commend){
 //턴이종료되면 비활성화
 function disconnect(){
 	sendmessage("disconnect");
-	$("#nLoc").children(".P"+pNo).hide();
-	$("#p"+pNo).children(".txt").children(".u").html("USER: ");
-	$("#p"+pNo).children(".txt").children(".m").html("MONEY: ");
 	sendmessage("deleteInfo");
 	if(ws!=null){
 		ws.close();
