@@ -71,8 +71,13 @@
 			margin-bottom: 7.5px;
 		}
 		
-		#pw.errors {
-			color: red;
+		.update {
+			width: 200px;
+			height: 10px;
+			float: right;
+			color: rgba(255,0,0,0.8);
+			font-size: 15px;
+			margin-bottom: 7.5px;
 		}
 		
 		#btnGroup{
@@ -132,20 +137,20 @@
 					<form:hidden path="name" size="20"/>
 				</span><br/>
 				<span class="title">PW</span>
-				<span class="content">
-					<form:password id="pw" path="pw" size="20"/>
+				<span class="update">
+					<form:password id="pw" path="pw" size="20"/><br/>
 					<form:errors path="pw"/>
 				</span><br/>
 				<span class="title">NICKNAME</span>
-				<span class="content">
+				<span class="update">
 					<form:input path="nickName" size="20"/>
 				</span><br/>
 				<span class="title">TEL</span>
-				<span class="content">
+				<span class="update">
 					<form:input path="tel" size="20"/>
 				</span><br/>
 				<span class="title">Email</span>
-	            <span class="content">
+	            <span class="update">
 					<form:input path="email" size="20"/>
 				</span><br/>
 	      </div>
