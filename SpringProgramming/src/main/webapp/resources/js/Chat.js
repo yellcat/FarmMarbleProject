@@ -1,18 +1,18 @@
 	    var ws = null;
 	    function connect() {
- 			ws = new WebSocket("ws://"+window.location.host+"/myapp/chatcolor-ws");
+ 			wsc = new WebSocket("ws://"+window.location.host+"/myapp/chatcolor-ws");
  			
- 			ws.onopen = function(){
+ 			wsc.onopen = function(){
  				log("접속O");
  				setConnected(true);
  			};
  			
- 			ws.onclose = function(){
+ 			wsc.onclose = function(){
  				log("접속X");
  				setConnected(false);
  			};
  			
- 			ws.onmessage = function(event){//메세지가 오면 실행
+ 			wsc.onmessage = function(event){//메세지가 오면 실행
  				var strJson = event.data;
  				var json = JSON.parse(strJson);
  				var command = json.command;
@@ -22,7 +22,7 @@
  			}
 		}
 	    
-		function setConnected(connected){
+		function csetConnected(connected){
 			if(connected){
 				$("#connect").attr("disabled",'disabled');
 				$("#disconnect").removeAttr("disabled");
@@ -59,14 +59,14 @@
 			ws.send(strJson);
 		}
 		
-		function display(data){
+		function cdisplay(data){
 			var fontColor = json.fontColor;
 			var data = json.data;
 			log(fontColor, data);
 		}
 		
  			
-		function log(color,message){
+		function clog(color,message){
             $("#console").append("<span style='display:block; color:'"+color+";/>"+message+"</span><br/>");
             if($("#console span").length>20){
                $("#console span").first().remove();
@@ -74,7 +74,7 @@
             $("#console").scrollTop($("#console").height());
         }
  
-	    function disconnect(){
+	    function cdisconnect(){
 			if(ws!=null){
 				ws.close();
 				ws=null;
