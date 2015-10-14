@@ -66,6 +66,8 @@
 			width: 300px;
 			color: rgba(106,71,27,0.8);
 			font-size: 25px;
+			font-family: 'Jeju Gothic';
+			font-weight: bold;
 		}
 		
 		#btnGroup{

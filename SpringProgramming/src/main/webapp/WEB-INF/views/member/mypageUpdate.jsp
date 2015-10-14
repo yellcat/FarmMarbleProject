@@ -67,17 +67,26 @@
 			height: 10px;
 			float: right;
 			color: rgba(106,71,27,0.8);
+			font-family: 'Jeju Gothic';
 			font-size: 25px;
+			font-weight: bold;
+			text-align: left;
 			margin-bottom: 7.5px;
 		}
 		
 		.update {
 			width: 200px;
-			height: 10px;
+			height: 15px;
 			float: right;
-			color: rgba(255,0,0,0.8);
-			font-size: 15px;
+			font-size: 14px;
+			color: rgba(255,0,0,0.6);
+			margin-top: 7.5px;
 			margin-bottom: 7.5px;
+		}
+		
+		input {
+			font-family: 'Jeju Gothic';
+			font-weight: bold;
 		}
 		
 		#btnGroup{
