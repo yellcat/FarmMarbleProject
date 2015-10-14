@@ -8,9 +8,9 @@
 		<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 		<script type="text/javascript">
 	window.onload=function() {
-		var wid=document.getElementById("#board_writer");
-		var mid=document.getElementById("#memberId");
-		if(wid.attribute==mid.attribute){
+		var wid=document.getElementById("#board_writer").value;
+		var mid=document.getElementById("#memberId").value;
+		if(wid==mid){
 			document.getElementById("#sameiduse").style.display = "none";
 		}
 	}
