@@ -10,6 +10,7 @@
 	<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/gameSet.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/dice.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/Chat.js"></script>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -17,8 +18,8 @@
 	<body>
 		<div id="page-wrapper">
 			<div id=btnGroup>
-				<button id="connect" onclick="connect()">START</button>
-				<button id="disconnect" onclick="disconnect()" disabled="disabled">READY</button>
+				<button id="connect" onclick="ready()">START</button>
+				<button id="disconnect" onclick="wait()" disabled="disabled">READY</button>
 				<a href="../menu"><img class="cancle"
 					src="${pageContext.request.contextPath}/resources/image/character/X.png" /></a>
 				<img id="q" class="cancle"
@@ -510,11 +511,12 @@
 				<aside id="chatting">
 					<div id="chatGroup">
 						<div id="chat">
+							<button id="echo" onclick="echo()" disabled="disabled">
 							<img width=100% height=550px;
-								src="${pageContext.request.contextPath}/resources/image/character/chat.png" />
+								src="${pageContext.request.contextPath}/resources/image/character/chat.png" /></button>
 						</div>
 						<div style="height:30px;">
-							<input id="in" type="text"/>
+							<input id="message" type="text"/>
 							<img id="chatbtn"
 								src="${pageContext.request.contextPath}/resources/image/character/chatbtn.png" />
 						</div>
