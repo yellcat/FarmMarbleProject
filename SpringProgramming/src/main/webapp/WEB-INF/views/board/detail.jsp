@@ -10,7 +10,7 @@
 			#sameiduse{display:none;}
 		</style>
 		<script type="text/javascript">
-	window.onload=function idcheck() {
+	window.onload=function() {
 		var wid=document.toString("#board_writer");
 		var mid=document.toString("#memberId");
 		if(wid==mid){
