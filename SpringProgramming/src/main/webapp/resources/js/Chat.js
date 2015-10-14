@@ -1,6 +1,6 @@
 	    var ws = null;
 	    function connect() {
- 			ws = new WebSocket("ws://"+window.location.host+"/SpringProgramming/chatcolor-ws");
+ 			ws = new WebSocket("ws://"+window.location.host+"/myapp/chatcolor-ws");
  			
  			ws.onopen = function(){
  				log("접속O");
