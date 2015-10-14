@@ -24,8 +24,8 @@
 				var iframe = document.querySelector("#iframe");
 				var pagehome = document.querySelector("#pagehome");
 				iframe.style.width =  "1200px";
-				iframe.style.height = "800px";
-				pagehome.style.margin = "-400px 0 0 -600px";
+				iframe.style.height = "700px";
+				pagehome.style.margin = "-350px 0 0 -600px";
 			}
 		</script>
 	</head>

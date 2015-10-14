@@ -214,18 +214,18 @@
 								</td>
 								<td class="box non"></td>
 								<td class="box non"></td>
-								<td class="box non"><img width=130px height=150px id="c0"
-									class="card"
+								<td class="box non">
+									<img width=130px height=150px id="c0" class="card"
 									src="${pageContext.request.contextPath}/resources/image/character/C0.png" />
-									<img width=130px height=150px id="c1" class="card"
+									<img width=130px height=150px id="c1" class="card ocard"
 									src="${pageContext.request.contextPath}/resources/image/character/C1.png" />
-									<img width=130px height=150px id="c2" class="card"
+									<img width=130px height=150px id="c2" class="card ocard"
 									src="${pageContext.request.contextPath}/resources/image/character/C2.png" />
-									<img width=130px height=150px id="c3" class="card"
+									<img width=130px height=150px id="c3" class="card ocard"
 									src="${pageContext.request.contextPath}/resources/image/character/C3.png" />
-									<img width=130px height=150px id="c4" class="card"
+									<img width=130px height=150px id="c4" class="card ocard"
 									src="${pageContext.request.contextPath}/resources/image/character/C4.png" />
-									<img width=130px height=150px id="c5" class="card"
+									<img width=130px height=150px id="c5" class="card ocard"
 									src="${pageContext.request.contextPath}/resources/image/character/C5.png" />
 								</td>
 								<td class="box non"></td>
@@ -510,11 +510,11 @@
 				<aside id="chatting">
 					<div id="chatGroup">
 						<div id="chat">
-							<img width=100% height=600px;
+							<img width=100% height=550px;
 								src="${pageContext.request.contextPath}/resources/image/character/chat.png" />
 						</div>
 						<div>
-							<input type="text" width=100px; /> <img height=30px
+							<input type="text" width=80px /> <img height=30px
 								src="${pageContext.request.contextPath}/resources/image/character/chatbtn.jpg" />
 						</div>
 					</div>

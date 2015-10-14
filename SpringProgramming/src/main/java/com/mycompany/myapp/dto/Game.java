@@ -1,7 +1,6 @@
 package com.mycompany.myapp.dto;
 
 import java.util.List;
-import java.util.Map;
 
 public class Game {
 	private List<Gamer> gamer;//게이머
