@@ -42,27 +42,30 @@
 		}
 		
 		#container {
-			width: 500px; height: 300px;
+			width: 600px; 
+			height: 300px;
 			position: absolute;
 			left: 50%;
 			top: 50%;
-			margin-left: -220px;
-			margin-top: -150px;
-			font-size: 35px;
-			color: rgb(136,101,57);
+			margin-left: -250px;
+			margin-top: -130px;
+			font-size: 30px;
+			padding: 10px;
 		}
 		
-		#title {
-			float: left; width: 150px;
+		.title {
+			width: 150px;
+			float: left;
 			text-align: left;
-			margin-right: 120px;
-			margin-bottom: 10px;
 			font-weight: bold;
+			color: rgba(136,101,57,0.8);
+			margin-right: 10px;
 		}
 		
-		#content {
-			float: left; width: 150px;
-			color: rgb(166,131,87);
+		.content {
+			width: 300px;
+			color: rgba(106,71,27,0.8);
+			font-size: 25px;
 		}
 		
 		#btnGroup{
@@ -105,16 +108,16 @@
      			<a href="../menu" id="btnCancle"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
      		</div>
         <div id="container">
-			<div id="title">ID</div>
-			<div id="content">${member.id}</div></br>
-			<div id="title">NAME</div>
-			<div id="content">${member.name}</div></br>
-			<div id="title">NICKNAME</div>
-			<div id="content">${member.nickName}</div></br>
-			<div id="title">TEL</div>
-			<div id="content">${member.tel}</div></br>
-			<div id="title">EMAIL</div>
-			<div id="content">${member.email}</div></br>
+			<span class="title">ID</span>
+			<span class="content">${member.id}</span></br>
+			<span class="title">NAME</span>
+			<span class="content">${member.name}</span></br>
+			<span class="title">NICKNAME</span>
+			<span class="content">${member.nickName}</span></br>
+			<span class="title">TEL</span>
+			<span class="content">${member.tel}</span></br>
+			<span class="title">EMAIL</span>
+			<span class="content">${member.email}</span></br>
 		</div>
         <div id="btnGroup">
 	        <div id="button">
