@@ -14,7 +14,7 @@
 		var wid=document.toString("#board_writer");
 		var mid=document.toString("#memberId");
 		if(wid==mid){
-			document.getElementById("#sameiduse").style.display = "block";
+			document.getElementById("sameiduse").style.display = "block";
 		}
 	}
 	idcheck();
