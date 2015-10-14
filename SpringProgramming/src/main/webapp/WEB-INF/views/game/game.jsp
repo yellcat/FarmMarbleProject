@@ -511,14 +511,15 @@
 				<aside id="chatting">
 					<div id="chatGroup">
 						<div id="chat">
-							<button id="echo" onclick="echo()" disabled="disabled"></button>
+							
 							<img width=100% height=550px;
 								src="${pageContext.request.contextPath}/resources/image/character/chat.png" />
 						</div>
+						<input id="message" type="text"/>
 						<div style="height:30px;">
-							<input id="message" type="text"/>
+						<button id="echo" onclick="echo()" disabled="disabled">
 							<img id="chatbtn"
-								src="${pageContext.request.contextPath}/resources/image/character/chatbtn.png" />
+								src="${pageContext.request.contextPath}/resources/image/character/chatbtn.png" /></button>
 						</div>
 					</div>
 				</aside>
