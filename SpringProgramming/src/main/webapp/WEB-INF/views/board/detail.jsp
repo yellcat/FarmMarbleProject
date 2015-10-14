@@ -102,8 +102,8 @@
 				
 				<span class="title">글쓴이:</span> 
 				<span class="content">${board.board_writer}</span> <br/>
-				<input type="hidden" value="${board.board_writer}" name="board_writer"/>
-				<input type="hidden" value="${memberId}" name="memberId"/>
+				<input type="hidden" value="${board.board_writer}" id="board_writer" name="board_writer"/>
+				<input type="hidden" value="${memberId}" id="memberId" name="memberId"/>
 				
 				<span class="title">날짜:</span> 
 				<span class="content">${board.board_date}</span> <br/>
