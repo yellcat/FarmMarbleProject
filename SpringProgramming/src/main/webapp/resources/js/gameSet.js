@@ -108,6 +108,10 @@ function wait(){
 	$("#disconnect").attr("disabled",'disabled');
 }
 
+$(".cancle").click(function(){
+	disconnect();
+})
+
 //턴이종료되면 비활성화
 function disconnect(){
 	sendmessage("disconnect");
