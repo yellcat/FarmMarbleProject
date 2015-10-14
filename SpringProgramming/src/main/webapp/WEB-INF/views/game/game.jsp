@@ -511,9 +511,9 @@
 				<aside id="chatting">
 					<div id="chatGroup">
 						<div id="chat">
-							<button id="echo" onclick="echo()" disabled="disabled">
+							<button id="echo" onclick="echo()" disabled="disabled"></button>
 							<img width=100% height=550px;
-								src="${pageContext.request.contextPath}/resources/image/character/chat.png" /></button>
+								src="${pageContext.request.contextPath}/resources/image/character/chat.png" />
 						</div>
 						<div style="height:30px;">
 							<input id="message" type="text"/>
