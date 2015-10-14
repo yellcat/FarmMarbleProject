@@ -72,7 +72,7 @@ public class DiceHandler extends TextWebSocketHandler{
 		}
 	}
 	
-	private void buy(String key) {
+	private void buy(String key) throws IOException {
 		Gamer gamer = map.get(key);
 		int l = gamer.getLocation();
 		Integer level = gamer.getTree().get(l);
@@ -85,7 +85,23 @@ public class DiceHandler extends TextWebSocketHandler{
 		} else if (level == 2) {
 			level = 3;
 			gamer.getTree().replace(l, level);
-		}		
+		}
+		
+		JSONObject root = new JSONObject();
+		root.put("command", "buy");
+		JSONObject d = new JSONObject();
+		d.put("level", level);
+		d.put("location", l);
+		root.put("data", d);
+		
+		String strJson = root.toString();
+		TextMessage textMessage = new TextMessage(strJson);
+		
+		for(Gamer gamers: map.values()) {
+			synchronized(map.get(key).getWss()) {
+				gamers.getWss().sendMessage(textMessage);
+			}
+		}
 	}
 
 	private void setInfo(String id, WebSocketSession session) throws IOException {
