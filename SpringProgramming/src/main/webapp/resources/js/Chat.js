@@ -1,5 +1,5 @@
-	    var ws = null;
-	    function connect() {
+	    var wsc = null;
+	    function cconnect() {
  			wsc = new WebSocket("ws://"+window.location.host+"/myapp/chatcolor-ws");
  			
  			wsc.onopen = function(){
