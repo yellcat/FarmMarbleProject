@@ -69,7 +69,16 @@ public class DiceHandler extends TextWebSocketHandler{
 	}
 	
 	private void buy(String key) {
-		
+		Gamer gamer = map.get(key);
+		int l = gamer.getLocation();
+		Integer level = gamer.getTree().get(l);
+		if(level == null) {
+			level = 1;			
+		} else if(level == 1) {
+			level = 2;
+		} else if (level == 2) {
+			level = 3;
+		}		
 		
 	}
 
