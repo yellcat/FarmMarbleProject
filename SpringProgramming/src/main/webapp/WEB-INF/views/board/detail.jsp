@@ -6,18 +6,14 @@
 		<title>Board</title>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formboard.css"/>
 		<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
-		<style type="text/css">
-			#sameiduse{display:none;}
-		</style>
 		<script type="text/javascript">
-	function idcheck() {
+	window.onload=function() {
 		var wid=document.toString("#board_writer");
 		var mid=document.toString("#memberId");
-		if(wid==mid){
-			document.getElementById("sameiduse").style.display = "block";
+		if(wid!=mid){
+			document.getElementById("#sameiduse").style.display = "none";
 		}
 	}
-	idcheck();
 	</script>
 	
 	</head>
