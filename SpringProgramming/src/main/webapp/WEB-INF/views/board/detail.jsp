@@ -11,7 +11,7 @@
 		var wid=document.querySelector("#board_writer");
 		var mid=document.querySelector("#memberId");
 		if(wid.value==mid.value){
-			document.getElementById("#sameiduse").style.display = "none";
+			document.querySelector("#sameiduse").style.display = "none";
 		}
 	}
 	</script>
