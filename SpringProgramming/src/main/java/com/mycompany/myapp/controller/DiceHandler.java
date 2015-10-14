@@ -73,13 +73,15 @@ public class DiceHandler extends TextWebSocketHandler{
 		int l = gamer.getLocation();
 		Integer level = gamer.getTree().get(l);
 		if(level == null) {
-			level = 1;			
+			level = 1;		
+			gamer.getTree().put(l, level);
 		} else if(level == 1) {
 			level = 2;
+			gamer.getTree().replace(l, level);
 		} else if (level == 2) {
 			level = 3;
+			gamer.getTree().replace(l, level);
 		}		
-		
 	}
 
 	private void setInfo(String id, WebSocketSession session) throws IOException {
