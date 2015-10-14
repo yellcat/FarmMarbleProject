@@ -2,18 +2,19 @@ var ws = null;
 var id = null;
 var npNo = null;
 //자기 턴이 왔을 때 접속 활성화
+connect();
 function  connect(){
 	ws = new WebSocket("ws://"+window.location.host+"/myapp/dice-ws");
 	
 	ws.onopen = function(){
 		console.log("connect");
 		setInfo();
-		setConnected(true);
+		/*setConnected(true);*/
 	};
 	
 	ws.onclose = function(){
 		console.log("close");
-		setConnected(false);
+		/*setConnected(false);*/
 	}
 	//메세지가 오면 실행
 	ws.onmessage = function(event){
@@ -95,23 +96,24 @@ function sendmessage(command){
 	ws.send(strJson);
 }
 
+function ready(){
+	sendmessage("ready");
+	$("#connect").attr("disabled",'disabled');
+	$("#disconnect").removeAttr("disabled");
+}
+
+function wait(){
+	sendmessage("deleteInfo");
+	$("#connect").removeAttr("disabled");
+	$("#disconnect").attr("disabled",'disabled');
+}
+
 //턴이종료되면 비활성화
 function disconnect(){
-	sendmessage("deleteInfo");
 	sendmessage("disconnect");
 	
 	if(ws!=null){
 		ws.close();
 		ws=null;
-	}
-}
-
-function setConnected(connect){
-	if(connect){
-		$("#connect").attr("disabled",'disabled');
-		$("#disconnect").removeAttr("disabled");
-	}else{
-		$("#connect").removeAttr("disabled");
-		$("#disconnect").attr("disabled",'disabled');
 	}
 }

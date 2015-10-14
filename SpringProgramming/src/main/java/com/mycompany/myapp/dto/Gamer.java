@@ -7,7 +7,7 @@ import org.springframework.web.socket.WebSocketSession;
 public class Gamer{
 	private int pNo;
 	private int money = 10000;
-	private String state = "playing";
+	private String state = "wait";
 	private Map<Integer,Integer> tree; //소유하고있는 농장 정보
 	private int location = 0;
 	private WebSocketSession wss;	

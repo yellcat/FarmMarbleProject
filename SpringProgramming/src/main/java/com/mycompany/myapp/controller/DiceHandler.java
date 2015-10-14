@@ -53,6 +53,10 @@ public class DiceHandler extends TextWebSocketHandler{
 			logger.info("setInfo");
 			setInfo(key, session);
 			}
+		if(command.equals("ready")){
+			logger.info("setInfo");
+			ready(key);
+		}
 		if(command.equals("roll")){//주사위 굴림
 			logger.info("roll");
 			roll(key);
@@ -124,6 +128,13 @@ public class DiceHandler extends TextWebSocketHandler{
 		logger.info(Integer.toString(map.size()));
 		logger.info(Integer.toString(gamer.getpNo()));
 		map.put(id, gamer);
+	}
+	
+	private void ready(String id) throws IOException{
+		Gamer gamer = map.get(id);
+		gamer.setState("playing");
+		
+		int count=0;
 		
 		JSONObject root = new JSONObject();
 		root.put("command", "setPlayer");
@@ -140,11 +151,14 @@ public class DiceHandler extends TextWebSocketHandler{
 		
 		for(Gamer gamers: map.values()) {
 			synchronized(gamers.getWss()){
-				gamers.getWss().sendMessage(textMessage);				
+				gamers.getWss().sendMessage(textMessage);			
+			}
+			if(gamers.getState()=="playing"){
+				count++;
 			}
 		}
 		
-		if(map.size()==gamerNum){
+		if(count==gamerNum){
 			start(id);
 		}
 	}
