@@ -1,5 +1,6 @@
 var ws = null;
 var id = null;
+var npNo = null;
 //자기 턴이 왔을 때 접속 활성화
 function  connect(){
 	ws = new WebSocket("ws://"+window.location.host+"/myapp/dice-ws");
@@ -27,8 +28,7 @@ function  connect(){
 		}
 		if(command=="clearInfo"){
 			console.log("clearInfo");
-			console.log(data);
-			clearInfo(json);
+			clearInfo(data);
 		}
 		if(command=="start"){
 			console.log("start");
@@ -71,6 +71,8 @@ function setPlayer(data){
 	var oid = data.oid;
 	var money = data.money;
 	
+	npNo = pNo;
+	
 	$("#p"+pNo).children(".txt").children(".u").html("USER: "+ oid);
 	$("#p"+pNo).children(".txt").children(".m").html("MONEY: "+ money);
 }
@@ -84,9 +86,9 @@ function clearInfo(data){
 	
 }
 
-function sendmessage(commend){
+function sendmessage(command){
 	var json={
-				"command":commend,
+				"command":command,
 				"id":id
 		};
 	var strJson = JSON.stringify(json);
@@ -95,8 +97,9 @@ function sendmessage(commend){
 
 //턴이종료되면 비활성화
 function disconnect(){
-	sendmessage("disconnect");
 	sendmessage("deleteInfo");
+	sendmessage("disconnect");
+	
 	if(ws!=null){
 		ws.close();
 		ws=null;
