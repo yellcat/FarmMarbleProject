@@ -77,8 +77,8 @@
 	</head>
 	<script type="text/javascript">
 	function idcheck() {
-		var wid=$("#board_writer").val();
-		var mid=$("#memberId").val();
+		var wid=document.toString("#board_writer");
+		var mid=document.toString("#memberId");
 		if(wid==mid){
 			$("#sameiduse").show();
 		}
