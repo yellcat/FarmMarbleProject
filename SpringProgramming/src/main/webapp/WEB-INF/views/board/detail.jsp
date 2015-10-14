@@ -6,10 +6,7 @@
 		<title>Board</title>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/formboard.css"/>
 		<link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
-		<title>Insert title here</title>
-	
-	</head>
-	<script type="text/javascript">
+		<script type="text/javascript">
 	function idcheck() {
 		var wid=document.toString("#board_writer");
 		var mid=document.toString("#memberId");
@@ -20,6 +17,8 @@
 	}
 	idcheck();
 	</script>
+	
+	</head>
 	
 	<body>
 		<div id="pagedetail">
