@@ -10,7 +10,7 @@ import org.springframework.web.socket.*;
 import org.springframework.web.socket.handler.*;
 
 @Component
-public class Chap09ChatColorHandler extends TextWebSocketHandler {
+public class ChatHandler extends TextWebSocketHandler {
 	private static final Logger logger = LoggerFactory.getLogger(Chap09ChatColorHandler.class);
 	private List<WebSocketSession> list = new ArrayList<WebSocketSession>();
 	
