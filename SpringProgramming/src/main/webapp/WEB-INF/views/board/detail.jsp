@@ -12,7 +12,7 @@
 		var mid=document.toString("#memberId");
 		var sameiduse=document.querySelector("#sameiduse");
 		if(wid==mid){
-			sameiduse.style.display="block";
+			sameiduse.style.display="block"; 
 		}
 	}
 	idcheck();
