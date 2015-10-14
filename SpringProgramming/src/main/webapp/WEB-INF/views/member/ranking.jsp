@@ -44,36 +44,62 @@
 		}
 		
 		#container {
-			width: 400px; height: 300px;
+			width: 550px; height: 300px;
 			position: absolute;
 			left: 50%;
 			top: 50%;
 			margin-left: -180px;
-			margin-top: -120px;
+			margin-top: -100px;
 			font-size: 30px;
 			color: rgb(136,101,57);
 		}
 		
 		.title {
 			width: 200px;
+			font-size: 25px;
+			font-weight: bold;
+			color: rgba(106,71,27,0.6);
+			margin-top: 7.5px;
+			margin-bottom: 7.5px;
+			margin-left: 60px;
+			margin-right: 70px;
+		}
+		
+		.content {
+			width: 300px;
+			height: 25px;
+			float: right;
+			color: rgba(106,71,27,0.9);
+			font-size: 30px;
+			margin-bottom: 7.5px;
+			margin-left: 20px;
+		}
+		
+		.border {
+			color: rgba(106,71,27,0.5);
+		}
+		
+		.rateTitle {
+			width: 200px;
 			text-align: left;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgba(106,71,27,0.6);
+			margin-top: 7.5px;
+			margin-bottom: 7.5px;
+			margin-left: 10px;
+			margin-right: 30px;
+		}
+		
+		.rateContent {
+			width: 200px;
+			text-align: left;
+			font-size: 30px;
 			font-weight: bold;
 			margin-top: 7.5px;
 			margin-bottom: 7.5px;
 		}
-		
-		.content {
-			width: 200px;
-			height: 10px;
-			float: right;
-			color: rgba(106,71,27,0.8);
-			font-size: 25px;
-			margin-bottom: 7.5px;
-		}
-		
-		#pw.errors {
-			color: red;
-		}
+
 		
 		#btnGroup{
 			margin: 50px;
@@ -110,16 +136,29 @@
 	</style>
 	
 	<body>
-	<div id="bar">
-      <h4>ranking</h4><a href="mypage" id="btnCancle"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
-    </div>
-      <div id="part">
-        <span class="title">WIN</span>
-        <span class="content">${member.win}</span><br/>
-		<span class="title">LOSE</span>
-        <span class="content">${member.lose}</span><br/>
-        <span class="title">winningRATE</span>
-        <span class="content">${member.rate}</span><br/>
+		<div id="pagewrapper">
+			<div id="bar">
+				<div id="part">
+      				<h2>Ranking</h2>
+    			</div>
+    			<a href="mypage" id="btnCancle"><img id="cancle" src="${pageContext.request.contextPath}/resources/image/character/X.png"></a>
+    		</div>
+    	</div>
+    	
+      	<div id="container">
+	        <span class="title">WIN</span>
+	        <span class="content">${member.win}</span><br/>
+			<span class="title">LOSE</span>
+	        <span class="content">${member.lose}</span><br/>
+	        <span class="border">--------------------</span></br>
+	        <span class="rateTitle">Winning RATE</span>
+	        <span class="rateContent">${member.rate}</span><br/>
+      </div>
+      
+      <div id="btnGroup">
+      	<div id="button">
+      		<a href="../menu" id="btnCancle">GO TO MENU</a>
+      	</div>
       </div>
 	</body>
 </html>
