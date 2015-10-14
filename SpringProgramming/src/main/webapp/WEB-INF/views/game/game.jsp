@@ -513,9 +513,10 @@
 							<img width=100% height=550px;
 								src="${pageContext.request.contextPath}/resources/image/character/chat.png" />
 						</div>
-						<div>
-							<input type="text" width=80px /> <img height=30px
-								src="${pageContext.request.contextPath}/resources/image/character/chatbtn.jpg" />
+						<div style="height:30px;">
+							<input id="in" type="text"/>
+							<img id="chatbtn"
+								src="${pageContext.request.contextPath}/resources/image/character/chatbtn.png" />
 						</div>
 					</div>
 				</aside>
