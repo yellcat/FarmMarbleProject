@@ -13,9 +13,9 @@
 	function idcheck() {
 		var wid=document.toString("#board_writer");
 		var mid=document.toString("#memberId");
-		var sameiduse=document.getElementById("#sameiduse");
+		var sameiduse=document.querySelector("#sameiduse");
 		if(wid==mid){
-			sameiduse.style.display="inline-block";
+			sameiduse.style.display="block";
 		}
 	}
 	idcheck();
