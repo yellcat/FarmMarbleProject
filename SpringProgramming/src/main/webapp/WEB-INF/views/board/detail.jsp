@@ -10,14 +10,13 @@
 			#sameiduse{display:none;}
 		</style>
 		<script type="text/javascript">
-	function idcheck() {
+	window.onload=function idcheck() {
 		var wid=document.toString("#board_writer");
 		var mid=document.toString("#memberId");
 		if(wid==mid){
-			document.getElementById("sameiduse").style.display = "block";
+			document.getElementById("#sameiduse").style.display = "block";
 		}
 	}
-	idcheck();
 	</script>
 	
 	</head>
