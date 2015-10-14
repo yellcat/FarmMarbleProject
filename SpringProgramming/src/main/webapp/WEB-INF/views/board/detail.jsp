@@ -76,11 +76,14 @@
 		</style>
 	</head>
 	<script type="text/javascript">
+	function idcheck() {
 		var wid=$("#board_writer").val();
 		var mid=$("#memberId").val();
 		if(wid==mid){
 			$("#sameiduse").show();
 		}
+	}
+	idcheck();
 	</script>
 	
 	<body>
