@@ -34,6 +34,10 @@ function  connect(){
 				$("#roll").removeAttr("disabled");
 			}
 		}
+		if(command=="buy") {
+			console.log("buy");
+			buy(data);
+		}
 	}
 }
 
