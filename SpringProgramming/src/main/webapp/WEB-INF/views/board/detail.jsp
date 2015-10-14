@@ -10,9 +10,9 @@
 	function idcheck() {
 		var wid=document.toString("#board_writer");
 		var mid=document.toString("#memberId");
-		var sameiduse=document.getElementById("#sameiduse");
 		if(wid==mid){
-			sameiduse.style.display="block"; 
+			document.getElementById("#sameiduse").style.display = "block";
+}
 		}
 	}
 	idcheck();
@@ -65,7 +65,7 @@
 		
 		<div id="buttonGroup">
 			<a href="list?pageNo=${i}">목록</a>
-			<div id="sameiduse">
+			<div id="sameiduse" name="sameiduse">
 			<a href="updateForm?bno=${board.board_no}">수정</a>
 			<a href="delete/${board.board_no}">삭제</a>
 			</div>
