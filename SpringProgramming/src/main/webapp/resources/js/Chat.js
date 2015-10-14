@@ -1,4 +1,5 @@
 	    var wsc = null;
+	    cconnect();
 	    function cconnect() {
  			wsc = new WebSocket("ws://"+window.location.host+"/myapp/chatcolor-ws");
  			
@@ -75,8 +76,8 @@
         }
  
 	    function cdisconnect(){
-			if(ws!=null){
-				ws.close();
-				ws=null;
+			if(wsc!=null){
+				wsc.close();
+				wsc=null;
 			}
 		}
