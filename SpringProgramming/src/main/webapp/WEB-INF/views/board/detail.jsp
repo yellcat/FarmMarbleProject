@@ -66,8 +66,10 @@
 		
 		<div id="buttonGroup">
 			<a href="list?pageNo=${i}">목록</a>
-			<a id="sameiduse" href="updateForm?bno=${board.board_no}">수정</a>
-			<a id="sameiduse" href="delete/${board.board_no}">삭제</a>
+			<div id="sameiduse">
+			<a href="updateForm?bno=${board.board_no}">수정</a>
+			<a href="delete/${board.board_no}">삭제</a>
+			</div>
 		</div>		
 	</body>
 </html>
