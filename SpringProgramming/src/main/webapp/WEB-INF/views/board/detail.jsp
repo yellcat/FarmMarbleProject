@@ -12,7 +12,6 @@
 		var mid=document.toString("#memberId");
 		if(wid==mid){
 			document.getElementById("#sameiduse").style.display = "block";
-}
 		}
 	}
 	idcheck();
