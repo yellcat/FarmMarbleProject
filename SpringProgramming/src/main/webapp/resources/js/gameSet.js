@@ -21,6 +21,15 @@ function  connect(){
 		var json = JSON.parse(strJson);
 		var command = json.command;
 		var data = json.data;
+		if(command=="setPlayer"){
+			console.log("setPlayer");
+			setPlayer(data);
+		}
+		if(command=="clearInfo"){
+			console.log("clearInfo");
+			console.log(data);
+			clearInfo(json);
+		}
 		if(command=="start"){
 			console.log("start");
 			start(json);
@@ -36,7 +45,6 @@ function  connect(){
 		}
 		if(command=="buy") {
 			console.log("buy");
-			
 		}
 	}
 }
@@ -46,8 +54,8 @@ function setInfo(){
 		url:"../member/getId",
 		success:function(data){
 			id = data.trim();
-			
 			console.log(id);
+			
 			var json={
 					"command":"setInfo",
 					"id":id
@@ -56,6 +64,24 @@ function setInfo(){
 			ws.send(strJson);
 		}
 	});
+}
+
+function setPlayer(data){
+	var pNo = data.pNo;
+	var oid = data.oid;
+	var money = data.money;
+	
+	$("#p"+pNo).children(".txt").children(".u").html("USER: "+ oid);
+	$("#p"+pNo).children(".txt").children(".m").html("MONEY: "+ money);
+}
+
+function clearInfo(data){
+	var nLoc = data.nLoc;
+	var pNo = data.pNo;
+	$("#nLoc").children(".P"+pNo).hide();
+	$("#p"+pNo).children(".txt").children(".u").html("USER: ");
+	$("#p"+pNo).children(".txt").children(".m").html("MONEY: ");
+	
 }
 
 function sendmessage(commend){
@@ -69,6 +95,10 @@ function sendmessage(commend){
 
 //턴이종료되면 비활성화
 function disconnect(){
+	sendmessage("disconnect");
+	$("#nLoc").children(".P"+pNo).hide();
+	$("#p"+pNo).children(".txt").children(".u").html("USER: ");
+	$("#p"+pNo).children(".txt").children(".m").html("MONEY: ");
 	sendmessage("deleteInfo");
 	if(ws!=null){
 		ws.close();

@@ -62,6 +62,10 @@ public class DiceHandler extends TextWebSocketHandler{
 			logger.info("deleteInfo");
 			deleteInfo(key);
 		}
+		if(command.equals("discnonnect")){
+			logger.info("discnonnect");
+			disconnect(key);
+		}
 		if(command.equals("buy")){
 			logger.info("buy");
 			buy(key);
@@ -106,6 +110,25 @@ public class DiceHandler extends TextWebSocketHandler{
 		logger.info(Integer.toString(gamer.getpNo()));
 		map.put(id, gamer);
 		
+		JSONObject root = new JSONObject();
+		root.put("command", "setPlayer");
+		
+		JSONObject d = new JSONObject();
+		d.put("oid", id);
+		d.put("pNo", gamer.getpNo());
+		d.put("money", gamer.getMoney());
+		
+		root.put("data", d);
+		
+		String strJson = root.toString();
+		TextMessage textMessage = new TextMessage(strJson);
+		
+		for(Gamer gamers: map.values()) {
+			synchronized(map.get(id).getWss()){
+				gamers.getWss().sendMessage(textMessage);				
+			}
+		}
+		
 		if(map.size()==gamerNum){
 			start(id);
 		}
@@ -128,6 +151,29 @@ public class DiceHandler extends TextWebSocketHandler{
 				String strJson = root.toString();
 				TextMessage textMessage = new TextMessage(strJson);
 				gamers.getWss().sendMessage(textMessage);
+			}
+		}
+	}
+	
+	private void disconnect(String id) throws IOException{
+		JSONObject root = new JSONObject();
+		root.put("command", "clearInfo");
+		Gamer gamer = map.get(id);
+		int pNo = gamer.getpNo();
+		int nLoc = gamer.getLocation();
+		
+		JSONObject d = new JSONObject();
+		d.put("pNo", pNo);
+		d.put("nLoc", nLoc);
+		
+		root.put("data", d);
+		
+		String strJson = root.toString();
+		TextMessage textMessage = new TextMessage(strJson);
+		
+		for(Gamer gamers: map.values()) {
+			synchronized(map.get(id).getWss()){
+				gamers.getWss().sendMessage(textMessage);				
 			}
 		}
 	}

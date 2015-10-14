@@ -11,7 +11,7 @@ import org.springframework.web.socket.handler.*;
 
 @Component
 public class ChatHandler extends TextWebSocketHandler {
-	private static final Logger logger = LoggerFactory.getLogger(Chap09ChatColorHandler.class);
+	private static final Logger logger = LoggerFactory.getLogger(ChatHandler.class);
 	private List<WebSocketSession> list = new ArrayList<WebSocketSession>();
 	
 	@Override

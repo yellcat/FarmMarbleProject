@@ -42,9 +42,9 @@
 						<div class="txt">
 							<h3>PLAYER1</h3>
 							<br />
-							<h4>USER:</h4>
+							<h4 class="u">USER:</h4>
 							<br />
-							<h4>MONEY:</h4>
+							<h4 class="m">MONEY:</h4>
 						</div>
 					</div>
 					<div id="p2" class="player">
@@ -53,9 +53,9 @@
 						<div class="txt">
 							<h3>PLAYER2</h3>
 							<br />
-							<h4>USER:</h4>
+							<h4 class="u">USER:</h4>
 							<br />
-							<h4>MONEY:</h4>
+							<h4 class="m">MONEY:</h4>
 						</div>
 					</div>
 					<div id="p3" class="player">
@@ -64,9 +64,9 @@
 						<div class="txt">
 							<h3>PLAYER3</h3>
 							<br />
-							<h4>USER:</h4>
+							<h4 class="u">USER:</h4>
 							<br />
-							<h4>MONEY:</h4>
+							<h4 class="m">MONEY:</h4>
 						</div>
 					</div>
 					<div id="p4" class="player">
@@ -75,9 +75,9 @@
 						<div class="txt">
 							<h3>PLAYER4</h3>
 							<br />
-							<h4>USER:</h4>
+							<h4 class="u">USER:</h4>
 							<br />
-							<h4>MONEY:</h4>
+							<h4 class="m">MONEY:</h4>
 						</div>
 					</div>
 				</aside>
