@@ -36,7 +36,7 @@ function  connect(){
 		}
 		if(command=="buy") {
 			console.log("buy");
-			buy(data);
+			
 		}
 	}
 }
