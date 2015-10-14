@@ -1,6 +1,6 @@
 @import url("https://googledrive.com/host/0BxmAw3HA4YGCfnE1U2tYVjN2UkVLWnEzaVdsWDRUZ3VFbmpJckF3UG56WkpLSUxKMXFaTlU/nanumbarunpenb.css");
-@import url("https://fonts.googleapis.com/css?family=Righteous");
-@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
 @import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);			
 			/*------------------------------------*/			
 			* {
@@ -98,5 +98,5 @@
 				color: lightgray;
 				background-color: rgb(152,0,0);
 			}
-			
-			
+	
+				

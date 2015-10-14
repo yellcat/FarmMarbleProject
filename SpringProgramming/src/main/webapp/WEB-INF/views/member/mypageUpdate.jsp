@@ -116,7 +116,7 @@
 		#button > a {
 			width: 200px;
 			line-height: 50px;
-			font-size: 25px;
+			font-size: 15px;
 			text-decoration: none;
 			color: rgb(255,221,177);
 		}
