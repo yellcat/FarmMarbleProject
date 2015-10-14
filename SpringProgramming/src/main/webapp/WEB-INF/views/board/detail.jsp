@@ -10,7 +10,7 @@
 	function idcheck() {
 		var wid=document.toString("#board_writer");
 		var mid=document.toString("#memberId");
-		var sameiduse=document.querySelector("#sameiduse");
+		var sameiduse=document.getElementById("#sameiduse");
 		if(wid==mid){
 			sameiduse.style.display="block"; 
 		}
