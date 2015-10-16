@@ -3,15 +3,7 @@
 		function chatconnect() {
 			wschat = new WebSocket("wschat://"+window.location.host+"/myapp/chat-wschat");
  			
- 			wschat.onopen = function(){
- 				clog("접속O");
- 				
- 			};
- 			
- 			wschat.onclose = function(){
- 				clog("접속X");
- 				
- 			};
+ 		
  			wschat.onmessage = function(event){//메세지가 오면 실행
  				var strJson = event.data;
  				var json = JSON.parse(strJson);
