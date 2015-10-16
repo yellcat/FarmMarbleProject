@@ -143,6 +143,10 @@
 				font-weight: lighter; 
 			}
 			
+			#connect-container {
+				margin: 10px;
+			}
+			
 			#in{
 				position:absolute; height:20px; width:160px; padding:0; margin:0;
 			}
