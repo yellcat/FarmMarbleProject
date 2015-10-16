@@ -42,7 +42,6 @@ function clearInfo(data){
 	$("#p"+pNo).children(".txt").children(".u").html("USER: ");
 	$("#p"+pNo).children(".txt").children(".m").html("MONEY: ");
 	$("#p"+pNo).children(".txt").children("h3").css("color","white");
-	
 }
 
 function sendmessage(command){
@@ -82,8 +81,7 @@ function start(json){
 		$("#0").children(".P"+(i+1)).show();
 		if(turn=="run"){
 			console.log(npNo);
-			
-			$("#p"+npNo).children(".txt").children("h3").css("color",color);
+			$("#p"+(i+1)).children(".txt").children("h3").css("color",color);
 			$("#roll").removeAttr("disabled");
 		}
 	}
@@ -99,8 +97,8 @@ function display(json){
 	console.log(json);
 	
 	$(".dice").hide();
+	$("#p"+pNo).children(".txt").children("h3").css("color","white");
 	$("#d"+dNo).show(); //주사위값 보여주기
 	$("#"+bLoc).children(".P"+pNo).hide(); //이전 위치 지우기
 	$("#"+nLoc).children(".P"+pNo).show(); //현재위치 보여주기
-	$("#p"+pNo).children(".txt").children("h3").css("color","white");
 }
