@@ -41,6 +41,7 @@ function  connect(){
 			
 			var turn=json.turn;
 			if(turn=="run"){
+				$("#p"+npNo).children("h4").style.color("green");
 				$("#roll").removeAttr("disabled");
 			}
 		}
