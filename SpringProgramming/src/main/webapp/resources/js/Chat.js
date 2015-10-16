@@ -63,6 +63,6 @@
             if($("#console span").length>20){
                $("#console span").first().remove();
             }
-            $("#console").scrollTop($("#console").height());
+            $("#chatcontent").scrollTop($("#chatcontent").height());
         }
  
