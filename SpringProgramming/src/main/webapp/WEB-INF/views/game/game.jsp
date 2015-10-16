@@ -520,7 +520,7 @@
 						<input id="message" type="text"/>
 						
 							<img id="echo"
-								src="${pageContext.request.contextPath}/resources/image/character/chatbtn.png" onclick="echo()" />
+								src="${pageContext.request.contextPath}/resources/image/character/chatbtn.png"  />
 						</div>
 					</div>
 				</aside>
