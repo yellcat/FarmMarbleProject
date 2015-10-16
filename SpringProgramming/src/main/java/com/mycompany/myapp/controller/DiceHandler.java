@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.json.JSONObject;
 import org.slf4j.Logger;
@@ -26,8 +27,12 @@ public class DiceHandler extends TextWebSocketHandler{
 	@Autowired
 	private GameService gameService;
 	//String은 id, Gamer 객체
+	
 	Map<String, Gamer> map = new HashMap<String, Gamer>();
 	final static int gamerNum = 1;
+	final static Integer country[] = {1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 15, 17, 19, 20, 22, 23};
+	final static Integer gold[] = {3, 9, 15, 21};
+	final static Integer spot[] = {6, 12, 18};
 
 	@Override
 	public void afterConnectionEstablished(WebSocketSession session) throws Exception {
@@ -222,7 +227,7 @@ public class DiceHandler extends TextWebSocketHandler{
 		Gamer gamer = map.get(key);
 		
 		int pNo = gamer.getpNo();
-		int dNo = gameService.roll()+1;
+		int dNo = gameService.roll();
 		int bLoc = gamer.getLocation();
 		int nLoc = bLoc+dNo;
 		String check = "buy";
@@ -233,16 +238,24 @@ public class DiceHandler extends TextWebSocketHandler{
 		}
 		gamer.setLocation(nLoc);
 		
-		if(gamer.getTree().get(nLoc)!=null){
-			check = "upgrade";
-			level = gamer.getTree().get(nLoc);
-		}else{
-			for(Gamer gamers: map.values()){
-				if(gamers.getTree().get(nLoc)!=null){
-					check = "pay";
-					level = gamers.getTree().get(nLoc);
+		if(country.equals(nLoc)){
+			if(gamer.getTree().get(nLoc)!=null){
+				check = "upgrade";
+				level = gamer.getTree().get(nLoc);
+			}else{
+				for(Gamer gamers: map.values()){
+					if(gamers.getTree().get(nLoc)!=null){
+						check = "pay";
+						level = gamers.getTree().get(nLoc);
+					}
 				}
 			}
+		}else if(gold.equals(nLoc)){
+			check = "gold";
+			level = gameService.card();
+		}else if(spot.equals(nLoc)){
+			check = "spot";
+			level = nLoc;
 		}
 		
 		d.put("pNo", pNo);
