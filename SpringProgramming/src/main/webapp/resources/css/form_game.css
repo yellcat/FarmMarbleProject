@@ -8,8 +8,6 @@
 			
 			body {				
 				margin: 0 auto;
-				background-image: url('${pageContext.request.contextPath}/resources/image/gameBG.jpg');
-				background-size:  100%;
 			}
 			
 			#page-wrapper {

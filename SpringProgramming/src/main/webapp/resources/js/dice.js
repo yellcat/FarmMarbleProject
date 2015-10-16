@@ -13,6 +13,8 @@ function start(json){
 	for(var i=0; i<gamerNum;i++){
 		$("#0").children(".P"+(i+1)).show();
 		if(turn=="run"){
+			console.log(npNo);
+			$("#p"+npNo).children("h4").css("color","yellow");
 			$("#roll").removeAttr("disabled");
 		}
 	}

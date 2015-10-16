@@ -1,6 +1,7 @@
 var ws = null;
 var id = null;
 var npNo = null;
+var p1 = "yellow";
 //자기 턴이 왔을 때 접속 활성화
 connect();
 function  connect(){
@@ -29,6 +30,7 @@ function  connect(){
 		}
 		if(command=="clearInfo"){
 			console.log("clearInfo");
+			console.log(data);
 			clearInfo(data);
 		}
 		if(command=="start"){
@@ -38,10 +40,10 @@ function  connect(){
 		if(command=="display"){
 			console.log("display");
 			display(data);
-			
+			console.log(npNo);
 			var turn=json.turn;
 			if(turn=="run"){
-				$("#p"+npNo).children("h4").style.color("green");
+				$("#p"+npNo).children("h4").css("color","yellow");
 				$("#roll").removeAttr("disabled");
 			}
 		}
@@ -81,9 +83,9 @@ function setPlayer(data){
 }
 
 function clearInfo(data){
-	var nLoc = data.nLoc;
+	console.log("clearInfo function");
 	var pNo = data.pNo;
-	$("#nLoc").children(".P"+pNo).hide();
+	$(".P"+pNo).hide();
 	$("#p"+pNo).children(".txt").children(".u").html("USER: ");
 	$("#p"+pNo).children(".txt").children(".m").html("MONEY: ");
 	
