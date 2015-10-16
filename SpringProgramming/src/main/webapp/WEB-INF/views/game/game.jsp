@@ -515,14 +515,14 @@
 							<img width=100% height=550px;
 								src="${pageContext.request.contextPath}/resources/image/character/chat.png" />
 						</div>
-						
-						<div style="height:30px;">
+					</div>
+						<div style="height:30px;" id="connect-container">
 						<input id="message" type="text"/>
-						<p onclick="echo()">
+						<p id="echo" onclick="echo()">
 							<img id="chatbtn"
 								src="${pageContext.request.contextPath}/resources/image/character/chatbtn.png"/></p>
 						</div>
-					</div>
+					
 				</aside>
 			</div>
 		</div>
