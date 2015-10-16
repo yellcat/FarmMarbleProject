@@ -19,7 +19,7 @@
 	<body>
 		<div id="page-wrapper">
 			<div id=btnGroup>
-				<button id="connect" onclick="ready()">START</button>
+				<button id="connect" onclick="ready(),chatconnect()">START</button>
 				<button id="disconnect" onclick="wait()" disabled="disabled">READY</button>
 				<a href="../menu"><img class="cancle"
 					src="${pageContext.request.contextPath}/resources/image/character/X.png" /></a>
