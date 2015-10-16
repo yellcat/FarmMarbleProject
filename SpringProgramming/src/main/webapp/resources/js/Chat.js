@@ -4,7 +4,7 @@
  				var json = JSON.parse(strJson);
  				var command = json.command;
  				if(command == "display"){
-					display(data);
+					cdisplay(data);
  				}
  			}
 		}
@@ -37,7 +37,7 @@
 		function cdisplay(data){
 			var fontColor = json.fontColor;
 			var data = json.data;
-			log(fontColor, data);
+			clog(fontColor, data);
 		}
 		
  			
