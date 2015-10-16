@@ -516,9 +516,9 @@
 								src="${pageContext.request.contextPath}/resources/image/character/chat.png" />
 						</div>
 					</div>
-						<div style="height:30px;" id="connect-container">
+						<div style="height:30px; width:230px;" id="connect-container">
 						<input id="message" type="text"/>
-						<div id="echo" onclick="echo();" stiyle="width:"170px;" height:"18px;" display:inline;">
+						<div id="echo" onclick="echo();" stiyle="width:"50px;" display:inline;">
 							<img id="chatbtn"
 								src="${pageContext.request.contextPath}/resources/image/character/chatbtn.png"/></div>
 						</div>
