@@ -514,7 +514,7 @@
 						<div style="position:relative;" align="right" width="100%" height="550px">
 							<img width="100%" height="550px"
 								src="${pageContext.request.contextPath}/resources/image/character/chat.png" />
-								<p align="right" width="100%" height="550px" style="position:absolute; top:0px; left:0px;" id="console"></p>
+								<p align="right" width="100%" height="550px" style="position:absolute; top:0px; right:0px;" id="console"></p>
 
 						</div>
 					</div>
