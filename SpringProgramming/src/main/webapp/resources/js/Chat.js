@@ -1,7 +1,7 @@
 		var wschat=null;
 		chatconnect();
 		function chatconnect() {
-			wschat = new WebSocket("wschat://"+window.location.host+"/myapp/chat-wschat");
+			wschat = new WebSocket("wss://"+window.location.host+"/myapp/chat-wschat");
  			
  		
  			wschat.onmessage = function(event){//메세지가 오면 실행
