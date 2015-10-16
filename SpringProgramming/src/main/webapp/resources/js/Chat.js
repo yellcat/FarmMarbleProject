@@ -1,4 +1,4 @@
-
+		function chatconnect() {
  			ws.onmessage = function(event){//메세지가 오면 실행
  				var strJson = event.data;
  				var json = JSON.parse(strJson);
