@@ -41,7 +41,7 @@
 			left: 50%;
 			top: 50%;
 			margin-left: -220px;
-			margin-top: -80px;
+			margin-top: -90px;
 			font-size: 30px;
 			padding: 10px;
 		}
@@ -67,7 +67,7 @@
 			left: 50%;
 			top: 50%;
 			margin-left: -335px;
-			margin-top: 60px;
+			margin-top: 50px;
 		}	
 		#button{
 			display:inline-block;
@@ -95,7 +95,7 @@
 		<div id=pagewrapper>
 			<div id="bar">
 				<div id="part">
-					Login
+					Welcome 
 				</div>
 			</div>
 		
