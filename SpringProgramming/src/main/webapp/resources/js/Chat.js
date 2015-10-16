@@ -17,7 +17,7 @@
  				var strJson = event.data;
  				var json = JSON.parse(strJson);
  				var command = json.command;
- 				if(command == "display"){
+ 				if(command == "cdisplay"){
 					cdisplay(data);
  				}
  			}
