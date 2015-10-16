@@ -27,7 +27,9 @@
 			var userName=$("#userName").val();
 			var fontColor=$("#fontColor").val();
 			var message = $("#message").val();
-			
+			console.log(userName);
+			console.log(fontColor);
+			console.log(message);
 			if(userName==""){
 				userName=="noName";
 			}
