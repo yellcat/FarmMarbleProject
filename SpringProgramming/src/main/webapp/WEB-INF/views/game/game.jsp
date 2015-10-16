@@ -511,10 +511,11 @@
 	
 				<aside id="chatting">
 					<div id="console-container">
-						
-							<img id="console" width=100% height=550px;
+						<div style="position:relative;">
+							<img width=100% height=550px;
 								src="${pageContext.request.contextPath}/resources/image/character/chat.png" />
-						
+								<p style="position:absolute; top:0px; left:0px;" id="console"></p>
+						</div>
 					</div>
 						<div style="height:30px; width:230px;" id="connect-container">
 						<input type="hidden" id="userName" value="${memberId}"/>
