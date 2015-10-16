@@ -518,9 +518,9 @@
 					</div>
 						<div style="height:30px;" id="connect-container">
 						<input id="message" type="text"/>
-						<p id="echo" onclick="echo()">
+						<div id="echo" onclick="echo()">
 							<img id="chatbtn"
-								src="${pageContext.request.contextPath}/resources/image/character/chatbtn.png"/></p>
+								src="${pageContext.request.contextPath}/resources/image/character/chatbtn.png"/></div>
 						</div>
 					
 				</aside>
