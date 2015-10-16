@@ -50,7 +50,7 @@ public class ChatHandler extends TextWebSocketHandler {
 		 */
 		
 		JSONObject root = new JSONObject();
-		root.put("command", "display");
+		root.put("command", "cdisplay");
 		JSONObject d = new JSONObject();
 		d.put("fontColor", fontColor);
 		d.put("message", "[" + userName + "]" + message);
