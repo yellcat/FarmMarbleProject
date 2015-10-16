@@ -39,7 +39,7 @@
 					"command":"broadcast",
 					"data":{
 						"userName":userName,
-						"fontColor":"#ff0000",
+						"fontColor":fontColor,
 						"message":message
 					}
 			};
