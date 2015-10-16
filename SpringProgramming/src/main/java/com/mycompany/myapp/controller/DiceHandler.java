@@ -225,15 +225,32 @@ public class DiceHandler extends TextWebSocketHandler{
 		int dNo = gameService.roll()+1;
 		int bLoc = gamer.getLocation();
 		int nLoc = bLoc+dNo;
+		String check = "buy";
+		int level = 0;
+		
 		if((nLoc)>23){
 			nLoc -= 24; 
 		}
 		gamer.setLocation(nLoc);
 		
+		if(gamer.getTree().get(nLoc)!=null){
+			check = "upgrade";
+			level = gamer.getTree().get(nLoc);
+		}else{
+			for(Gamer gamers: map.values()){
+				if(gamers.getTree().get(nLoc)!=null){
+					check = "pay";
+					level = gamers.getTree().get(nLoc);
+				}
+			}
+		}
+		
 		d.put("pNo", pNo);
 		d.put("dNo", dNo);
 		d.put("bLoc", bLoc);
 		d.put("nLoc", nLoc);
+		d.put("check", check);
+		d.put("level", level);
 		root.put("data", d);                           
 		
 		for(Gamer gamers:map.values()) {

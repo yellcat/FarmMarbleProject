@@ -1,7 +1,7 @@
-var ws = null;
-var id = null;
-var npNo = null;
-var color = null;
+var ws = null; //web socket
+var id = null; //본인 id
+var npNo = null; //본인 player No
+var color = null; //본인 color(yellow/red/orange/green)
 
 //자기 턴이 왔을 때 접속 활성화
 connect();
@@ -41,7 +41,13 @@ function  connect(){
 		if(command=="display"){
 			console.log("display");
 			display(data);
-			console.log(npNo);
+			
+			var check = json.check;
+			
+			if(check == "buy"){
+				//다이얼로그 띄우기
+			}
+			
 			var turn=json.turn;
 			if(turn=="run"){
 				$("#p"+npNo).children(".txt").children("h3").css("color",color);
