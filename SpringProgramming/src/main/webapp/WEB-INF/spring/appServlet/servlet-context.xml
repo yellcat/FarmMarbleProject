@@ -25,11 +25,6 @@
 		<websocket:mapping handler="diceHandler" path="/dice-ws"/>
 	</websocket:handlers>	
 	
-	<!-- WebSocket handler -->
-	<websocket:handlers>
-		<websocket:mapping handler="chatHandler" path="/chat-wsc"/>
-	</websocket:handlers>
-	
 	<!-- multipart -->
 	<beans:bean id="multipartResolver"
             class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
