@@ -137,6 +137,7 @@
             		
 			}
 			#console-container p {
+				width:195px;
 				text-align: left;
 				font-weight: lighter; 
 			}
