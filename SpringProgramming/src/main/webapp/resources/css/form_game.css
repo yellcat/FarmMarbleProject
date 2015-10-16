@@ -124,12 +124,13 @@
 				flex: 1;
 				margin-left:10px;		
 			}
-			
+			#console-container{
+				overflow-y: scroll;
+            			padding: 5px;
+			}
 			#console-container p {
 				text-align: left;
 				font-weight: lighter; 
-				overflow-y: scroll;
-            			padding: 5px;
 			}
 			
 			#in{
