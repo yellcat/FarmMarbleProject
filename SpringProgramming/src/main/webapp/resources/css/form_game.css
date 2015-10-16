@@ -8,6 +8,8 @@
 			
 			body {				
 				margin: 0 auto;
+				background-image: url('${pageContext.request.contextPath}/resources/image/gameBG.jpg');
+				background-size:  100%;
 			}
 			
 			#page-wrapper {
@@ -127,7 +129,7 @@
 				position:absolute; height:20px; width:160px; padding:0; margin:0;
 			}
 			
-			#chatbtn{
+			#echo{
 				position:absolute; height:30px; width:50; padding:0; margin-left:165px;
 			}
 			
