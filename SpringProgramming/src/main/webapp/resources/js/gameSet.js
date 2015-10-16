@@ -41,12 +41,7 @@ function  connect(){
 		if(command=="display"){
 			console.log("display");
 			display(data);
-			
-			var check = json.check;
-			
-			if(check == "buy"){
-				//다이얼로그 띄우기
-			}
+			levent(data);
 			
 			var turn=json.turn;
 			if(turn=="run"){
@@ -61,6 +56,22 @@ function  connect(){
 	}
 }
 
+function levent(data){
+	var check = data.check;
+	var level = data.level;
+	
+	if(check == "buy"){
+		//구입 or 취소
+	}else if(check=="upgrade"){
+		//구입 or 취소
+	}else if(check=="pay"){
+		//금액 and 확인
+	}else if(check=="gold"){
+		//확인
+	}else if(check=="spot"){
+		//확인
+	}
+}
 
 $(".cancle").click(function(){
 	disconnect();
