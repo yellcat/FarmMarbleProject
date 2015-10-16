@@ -1,5 +1,18 @@
+		var wschat=null;
+		chatconnect();
 		function chatconnect() {
- 			ws.onmessage = function(event){//메세지가 오면 실행
+			wschat = new WebSocket("ws://"+window.location.host+"/myapp/chat-wschat");
+ 			
+ 			wschat.onopen = function(){
+ 				clog("접속O");
+ 				
+ 			};
+ 			
+ 			wschat.onclose = function(){
+ 				clog("접속X");
+ 				
+ 			};
+ 			wschat.onmessage = function(event){//메세지가 오면 실행
  				var strJson = event.data;
  				var json = JSON.parse(strJson);
  				var command = json.command;
@@ -31,7 +44,7 @@
 			};
 			
 			var strJson = JSON.stringify(json);
-			ws.send(strJson);
+			wschat.send(strJson);
 		}
 		
 		function cdisplay(data){
