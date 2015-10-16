@@ -22,12 +22,8 @@
 	
 	<!-- WebSocket handler -->
 	<websocket:handlers>
-		<websocket:mapping handler="chatHandler" path="/chat-wschat"/>
-	</websocket:handlers>	
-	
-	<!-- WebSocket handler -->
-	<websocket:handlers>
 		<websocket:mapping handler="diceHandler" path="/dice-ws"/>
+		<websocket:mapping handler="chatHandler" path="/chat-wschat"/>
 	</websocket:handlers>	
 	
 	<!-- multipart -->
