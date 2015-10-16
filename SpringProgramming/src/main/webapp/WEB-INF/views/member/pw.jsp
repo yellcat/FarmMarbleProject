@@ -15,6 +15,7 @@
 		<br/>
 		<div id="btnGroup">
 			<a href="login">LOGIN</a>
+			<a href="idFind">Find ID</a>
 		</div>
 
 	</body>

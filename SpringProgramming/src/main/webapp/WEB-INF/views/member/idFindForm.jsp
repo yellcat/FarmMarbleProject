@@ -34,7 +34,7 @@
 		}
 		
 		#container {
-			width: 400px; 
+			width: 300px; 
 			height: 200px;
 			position: absolute;
 			left: 50%;
@@ -44,42 +44,22 @@
 		}
 		
 		.title {
-			width: 100px;
+			width: 200px;
 			font-weight: bold;
-			text-align: left;
 			color: rgba(166,131,87,0.9);
 			margin-right: 5px;
-			margin-bottom: 5px;
-			float: left;
+
 		}
 		
 		.content {
-			width: 290px;
+			width: 300px;
 			height: 20px;
 			margim-bottom: 5px;
 			color: rgba(106,71,27,0.8);
 			font-family: 'Jeju Gothic';
 			font-weight: bold;
-			text-align: left;
-			float: left;
-		}
-		
-		#checkButton {
-			width: 50px;
-			border: none;
-			border-radius: 3px;
-			background-color: rgba(166,131,87,0.5);
-		}
-		
-		#checkButton:hover { background-color: rgb(186,151,107);}
-		#checkButton > a:active { color: rgb(136,101,57);}
-		#checkButton > a {
-			line-height: 100%;
-			font-size: 12px;
-			text-decoration: none;
-			font-family: 'Jeju Gothic';
-			color: rgb(255,221,177);
-			text-align: center;
+			
+			float: right;
 		}
 		
 		#btnGroup{
@@ -121,6 +101,7 @@
 			</div>
 			
 		<form:form name="form" commandName="member">
+		<div id="container">
 			<span class="title">NAME</span>
 			<span class="content">
 				<form:input path="name" size="20"/>
@@ -129,17 +110,18 @@
 			<span class="title">E-mail</span>
 			<span class="content">	
 				<form:input path="email" size="20"/><br/>
+				<form:errors path="email"/>
 			</span><br/>
 			
 			<div id="btnGroup">
 				<div id="button">
-					<a href="javascript:sendData()">FIND</a>
+					<a id="btnCancle" href="login">cancel</a>
 				</div>
 				<div id="button">
-					<a id="btnCancle" href="selectFind">cancel</a>
+					<a href="javascript:sendData()">FIND</a>
 				</div>
-			</div><br/>
-			<form:errors path="email"/>
+			</div>
+		</div>
 		</form:form>
 		</div>
 	</body>

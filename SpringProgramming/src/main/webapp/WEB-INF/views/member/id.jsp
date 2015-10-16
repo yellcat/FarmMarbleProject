@@ -19,7 +19,7 @@
 			 <br/>
 			<div id="btnGroup">
 				<a href="login">LOGIN</a>
-				<a href="pwFind">FIND PW</a>
+				<a href="pwFind">Find PW</a>
 			</div>
 		</div>
 	</body>

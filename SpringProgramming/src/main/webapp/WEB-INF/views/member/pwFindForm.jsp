@@ -21,8 +21,9 @@
 			<br/>
 			
 			<div id="btnGroup">
-				<a href="javascript:sendData()">FIND</a>
-				<a id="btnCancle" href="selectFind">cancel</a>
+				<a href="javascript:sendData()">Find PW</a>
+				<a id="btnCancle" href="login">cancel</a>
+				<a href="idFind">Find ID</a>
 			<br/>
 			</div>
 			
