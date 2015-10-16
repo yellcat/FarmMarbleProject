@@ -25,7 +25,7 @@
 					"command":"broadcast",
 					"data":{
 						"userName":userName,
-						"fontColor":fontColor,
+						"fontColor":"#ff0000",
 						"message":message
 					}
 			};
