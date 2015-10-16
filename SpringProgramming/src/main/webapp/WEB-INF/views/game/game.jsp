@@ -518,6 +518,7 @@
 					</div>
 						<div style="height:30px; width:230px;" id="connect-container">
 						<input type="hidden" id="userName" value="${memberId}"/>
+						<input type="hidden" id="fontColor" value="#ff0000"/>
 						<input id="message" type="text"/>
 						<div id="echo" onclick="echo();" style="width:50px; display:inline;">
 							<img id="chatbtn"
