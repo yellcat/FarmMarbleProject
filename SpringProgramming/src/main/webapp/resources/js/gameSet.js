@@ -1,7 +1,8 @@
 var ws = null;
 var id = null;
 var npNo = null;
-var p1 = "yellow";
+var color = null;
+
 //자기 턴이 왔을 때 접속 활성화
 connect();
 function  connect(){
@@ -43,7 +44,7 @@ function  connect(){
 			console.log(npNo);
 			var turn=json.turn;
 			if(turn=="run"){
-				$("#p"+npNo).children("h4").css("color","yellow");
+				$("#p"+npNo).children(".txt").children("h3").css("color",color);
 				$("#roll").removeAttr("disabled");
 			}
 		}
@@ -54,63 +55,6 @@ function  connect(){
 	}
 }
 
-function setInfo(){
-	$.ajax({
-		url:"../member/getId",
-		success:function(data){
-			id = data.trim();
-			console.log(id);
-			
-			var json={
-					"command":"setInfo",
-					"id":id
-			};
-			var strJson = JSON.stringify(json);
-			ws.send(strJson);
-		}
-	});
-}
-
-function setPlayer(data){
-	var pNo = data.pNo;
-	var oid = data.oid;
-	var money = data.money;
-	
-	npNo = pNo;
-	
-	$("#p"+pNo).children(".txt").children(".u").html("USER: "+ oid);
-	$("#p"+pNo).children(".txt").children(".m").html("MONEY: "+ money);
-}
-
-function clearInfo(data){
-	console.log("clearInfo function");
-	var pNo = data.pNo;
-	$(".P"+pNo).hide();
-	$("#p"+pNo).children(".txt").children(".u").html("USER: ");
-	$("#p"+pNo).children(".txt").children(".m").html("MONEY: ");
-	
-}
-
-function sendmessage(command){
-	var json={
-				"command":command,
-				"id":id
-		};
-	var strJson = JSON.stringify(json);
-	ws.send(strJson);
-}
-
-function ready(){
-	sendmessage("ready");
-	$("#connect").attr("disabled",'disabled');
-	$("#disconnect").removeAttr("disabled");
-}
-
-function wait(){
-	sendmessage("deleteInfo");
-	$("#connect").removeAttr("disabled");
-	$("#disconnect").attr("disabled",'disabled');
-}
 
 $(".cancle").click(function(){
 	disconnect();
