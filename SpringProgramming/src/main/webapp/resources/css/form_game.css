@@ -128,6 +128,8 @@
 			#console-container p {
 				text-align: left;
 				font-weight: lighter;
+				overflow-y: scroll;
+            			padding: 5px;
 			}
 			
 			#in{
