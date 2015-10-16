@@ -1,19 +1,5 @@
-	    var wsc = null;
-	    cconnect();
-	    function cconnect() {
- 			wsc = new WebSocket("wsc://"+window.location.host+"/myapp/chat-wsc");
- 			
- 			wsc.onopen = function(){
- 				log("접속O");
- 				setConnected(true);
- 			};
- 			
- 			wsc.onclose = function(){
- 				log("접속X");
- 				setConnected(false);
- 			};
- 			
- 			wsc.onmessage = function(event){//메세지가 오면 실행
+
+ 			ws.onmessage = function(event){//메세지가 오면 실행
  				var strJson = event.data;
  				var json = JSON.parse(strJson);
  				var command = json.command;
@@ -23,18 +9,6 @@
  			}
 		}
 	    
-		function csetConnected(connected){
-			if(connected){
-				$("#connect").attr("disabled",'disabled');
-				$("#disconnect").removeAttr("disabled");
-				$("#echo").removeAttr("disabled");
-			}else{
-				$("#connect").removeAttr("disabled");
-				$("#disconnect").attr("disabled",'disabled');
-				$("#echo").attr("disabled",'disabled');
-			}
-		}
-		
 		function echo(){
 			var userName=$("#userName").val();
 			var fontColor=$("#fontColor").val();
@@ -75,9 +49,3 @@
             $("#console").scrollTop($("#console").height());
         }
  
-	    function cdisconnect(){
-			if(wsc!=null){
-				wsc.close();
-				wsc=null;
-			}
-		}
