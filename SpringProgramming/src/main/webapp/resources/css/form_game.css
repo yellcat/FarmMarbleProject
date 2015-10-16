@@ -124,7 +124,7 @@
 				flex: 1;
 				margin-left:10px;		
 			}
-			#console-container{
+			#chatcontent{
 				overflow-y: scroll;
             			padding: 5px;
 			}
