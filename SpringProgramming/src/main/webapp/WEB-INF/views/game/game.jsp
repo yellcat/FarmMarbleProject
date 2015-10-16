@@ -511,10 +511,11 @@
 	
 				<aside id="chatting">
 					<div id="console-container">
-						<div style="position:relative;">
+						<div style="position:relative;" align="right">
 							<img width=100% height=550px;
 								src="${pageContext.request.contextPath}/resources/image/character/chat.png" />
-								<p align="right" style="position:absolute; top:0px; left:0px;" id="console"></br></p>
+								<p align="right" style="position:absolute; top:0px; left:0px;" id="console"></p>
+								</br>
 						</div>
 					</div>
 						<div style="height:30px; width:230px;" id="connect-container">
