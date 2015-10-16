@@ -126,8 +126,8 @@
 			}
 			
 			#console-container p {
-				text-align: right;
-				font-weight: normal;
+				text-align: left;
+				font-weight: lighter;
 			}
 			
 			#in{
