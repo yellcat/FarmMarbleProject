@@ -517,6 +517,7 @@
 						</div>
 					</div>
 						<div style="height:30px; width:230px;" id="connect-container">
+						<input type="hidden" id="${memberId}"/>
 						<input id="message" type="text"/>
 						<div id="echo" onclick="echo();" style="width:50px; display:inline;">
 							<img id="chatbtn"
