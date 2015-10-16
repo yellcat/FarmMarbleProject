@@ -36,7 +36,7 @@ public class ChatHandler extends TextWebSocketHandler {
 	}
 	
 	private void broadcast(JSONObject data) throws IOException {
-		String chatName = data.getString("chatName");
+		String userName = data.getString("userName");
 		String fontColor = data.getString("fontColor");
 		String message = data.getString("message");
 		/*
@@ -53,7 +53,7 @@ public class ChatHandler extends TextWebSocketHandler {
 		root.put("command", "display");
 		JSONObject d = new JSONObject();
 		d.put("fontColor", fontColor);
-		d.put("message", "[" + chatName + "]" + message);
+		d.put("message", "[" + userName + "]" + message);
 		root.put("data", d);
 		
 		String strJson = root.toString();
