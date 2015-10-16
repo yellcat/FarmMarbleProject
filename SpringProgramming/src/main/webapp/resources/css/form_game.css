@@ -126,7 +126,7 @@
 			}
 			
 			#console-container{
-				width:100%;
+				width:195px;
 				height:550px;
 			}
 			
@@ -134,6 +134,7 @@
 				background-color: rgb(224, 255, 240);
 				height:550px;
 				overflow-y: scroll;
+				width:195px;
             		
 			}
 			#console-container p {
