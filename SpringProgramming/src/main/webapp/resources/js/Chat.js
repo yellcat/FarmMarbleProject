@@ -17,6 +17,7 @@
  				var strJson = event.data;
  				var json = JSON.parse(strJson);
  				var command = json.command;
+ 				var data=json.data;
  				if(command == "cdisplay"){
 					cdisplay(data);
  				}
@@ -51,9 +52,9 @@
 		}
 		
 		function cdisplay(data){
-			var fontColor = json.fontColor;
-			var data = json.data;
-			clog(fontColor, data);
+			var fontColor = data.fontColor;
+			var message = data.message;
+			clog(fontColor, message);
 		}
 		
  			
