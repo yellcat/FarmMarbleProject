@@ -37,33 +37,139 @@
 		$("#join").submit();
 	}
 	</script>
+	
+	<style>
+		#pagewrapper{
+			text-align: center;
+			font-family: 'Righteous', cursive;
+		}
+		
+		#bar{
+			display:flex;
+			margin: 40px;
+			border: none;
+			border-radius: 15px;
+			background-color: rgb(136,101,57);
+			text: bold;
+			text-align: center;
+			font-size: 30px;
+		}
+		
+		#part{
+			display:inline-block;
+			flex:1;
+			color: white;
+		}
+		
+		#container {
+			width: 450px; 
+			height: 200px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -220px;
+			margin-top: -80px;
+		}
+		
+		.title {
+			width: 100px;
+			font-weight: bold;
+			text-align: left;
+			color: rgba(166,131,87,0.9);
+			margin-right: 5px;
+			margin-bottom: 10px;
+			float: left;
+		}
+		
+		.content {
+			width: 300px;
+			color: rgba(106,71,27,0.8);
+			font-family: 'Jeju Gothic';
+			font-weight: bold;
+			margin-bottom: 10px;
+			float: left;
+		}
+		
+		#checkButton {
+			
+		}
+		
+		#btnGroup{
+			margin: 50px;
+			width: 500px; height: 30px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -335px;
+			margin-top: 60px;
+		}	
+		#button{
+			display:inline-block;
+			margin: 2px;
+			width: 100px;
+			height: 40px;
+			border: none;
+			border-radius: 15px;
+			background-color: rgb(136,101,57);
+			float: right;
+			text-align: center;
+		}
+		
+		#button:hover { background-color: rgb(186,151,107);}
+		#button > a:active { color: rgb(136,101,57);}
+		#button > a {
+			line-height: 40px;
+			font-size: 20px;
+			text-decoration: none;
+			color: rgb(255,221,177);
+		}
+	</style>
+	
 	<body>
-		<div id="bar">
-			<div id="part">
-				<h4>JOIN</h4>
+		<div id="pagewrapper">
+			<div id="bar">
+				<div id="part">
+					<h4>JOIN</h4>
+				</div>
+			</div>
+			<div id="container">
+				<form:form id="join" commandName="member">
+					<span class="title">ID</span>
+					<span class="content">
+						<form:input path="id" id="id" size="20"/>
+						<form:errors path="id"/>
+					</span>
+					<span id="checkButton">
+						<a href="javascript:idCheck()">ID중복체크</a>
+					</span><br/>
+					
+					<span class="title">NAME</span>
+					<span class="content">
+						<form:input path="name" size="20"/>
+						<form:errors path="name"/>
+					</span><br/>
+					
+					<span class="title">PW(4~12)</span>
+					<span class="content">
+						<form:password id = "pw" path="pw" size="20"/>
+						<form:errors path="pw"/>
+					</span><br/>
+					
+					<span class="title">Reenter PW</span>
+					<span class="content">
+						<input type="password" id = "pwCheck" path="pw" size="20"/>
+					</span><br/>
+					
+					<div id="btnGroup">
+						<div id="button">
+							<a id="btnCancle" href="login">CANCEL</a>
+						</div>
+						<div id="button">
+							<a href="javascript:sendData()">JOIN</a>
+						</div>
+					</div>
+				</form:form>
 			</div>
 		</div>
-		<form:form id="join" commandName="member">
-			<div class="title">
-				<h4>ID</h4>
-			</div>
-			<form:input path="id" id="id" size="20"/><form:errors path="id"/>
-			<a id="button" href="javascript:idCheck()">ID중복체크</a> <br/><br/>
-			<span class="title"><h4>NAME</h4></span> <br/>
-			<form:input path="name" size="20"/> <br/>
-			<form:errors path="name"/> <br/>
-			<span class="title"><h4>PW</h4></span><br/>
-			<form:password id = "pw" path="pw" size="20"/> (4~12)<br/>
-			<form:errors path="pw"/> <br/>
-			<span class="title"><h4>PW check</h4></span><br/>
-			<input type="password" id = "pwCheck" path="pw" size="20"/> <br/>
-
-			<div id="btnGroup">
-				<a href="javascript:sendData()">JOIN</a>
-				<a id="btnCancle" href="login">CANCLE</a>
-			</div>
-
-		</form:form>
-		
 	</body>
 </html>

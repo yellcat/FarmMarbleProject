@@ -7,14 +7,101 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 	</head>
+	
+		<style>
+		#pagewrapper{
+			text-align: center;
+			font-family: 'Righteous', cursive;
+		}
+		
+		#bar{
+			display:flex;
+			margin: 40px;
+			border: none;
+			border-radius: 15px;
+			background-color: rgb(136,101,57);
+			text: bold;
+			text-align: center;
+			font-size: 30px;
+		}
+		
+		#part{
+			display:inline-block;
+			flex:1;
+			color: white;
+		}
+		
+		#container {
+			width: 500px; 
+			height: 200px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -220px;
+			margin-top: -80px;
+			font-size: 30px;
+			padding: 10px;
+		}
+		
+		.title {
+			width: 10px;
+			font-weight: bold;
+			color: rgba(166,131,87,0.7);
+			margin-right: 10px;
+		}
+		
+		.content {
+			width: 300px;
+			color: rgba(106,71,27,0.8);
+			font-family: 'Jeju Gothic';
+			font-weight: bold;
+		}
+		
+		#btnGroup{
+			margin: 50px;
+			width: 500px; height: 30px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -335px;
+			margin-top: 60px;
+		}	
+		#button{
+			display:inline-block;
+			margin: 2px;
+			width: 100px;
+			height: 40px;
+			border: none;
+			border-radius: 15px;
+			background-color: rgb(136,101,57);
+			float: right;
+			text-align: center;
+		}
+		
+		#button:hover { background-color: rgb(186,151,107);}
+		#button > a:active { color: rgb(136,101,57);}
+		#button > a {
+			line-height: 40px;
+			font-size: 20px;
+			text-decoration: none;
+			color: rgb(255,221,177);
+		}
+	</style>
+	
 	<body>
 		<div id="bar">
 			<div id="part"><h4>Select FIND</h4></div>	
 		</div>
 		<div id="btnGroup">
-			<a href="idFind">ID</a>
-			<a href="pwFind">PW</a> <br/>
-			<a id="btnCancle" href="login">CANCLE</a>
+			<div id="button">
+				<a href="idFind">ID</a>
+			</div>
+			<div id="button">
+				<a href="pwFind">PW</a> <br/>
+			</div>
+			<div id="button">
+				<a id="btnCancle" href="login">CANCEL</a>
+			</div>
 		</div>
 	</body>
 </html>
