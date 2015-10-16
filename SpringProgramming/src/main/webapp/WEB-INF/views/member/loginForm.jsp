@@ -66,17 +66,17 @@
 			position: absolute;
 			left: 50%;
 			top: 50%;
-			margin-left: -335px;
+			margin-left: -308px;
 			margin-top: 50px;
 		}	
 		#button{
 			display:inline-block;
-			margin: 2px;
-			width: 100px;
-			height: 40px;
+			margin: 1px;
+			width: 90px;
+			height: 35px;
 			border: none;
-			border-radius: 15px;
-			background-color: rgb(136,101,57);
+			border-radius: 5px;
+			background-color: rgba(136,101,57,0.6);
 			float: right;
 			text-align: center;
 		}
@@ -84,7 +84,7 @@
 		#button:hover { background-color: rgb(186,151,107);}
 		#button > a:active { color: rgb(136,101,57);}
 		#button > a {
-			line-height: 40px;
+			line-height: 35px;
 			font-size: 20px;
 			text-decoration: none;
 			color: rgb(255,221,177);
@@ -118,11 +118,14 @@
 					<a href="join">Sign up</a>
 				</div>
 				<div id="button">
-					<a href="selectFind">Forget</a>
+					<a href="pwFind">Find PW</a>
+				</div>
+				<div id="button">
+					<a href="idFind">Find ID</a>
 				</div>
 				<div id="button">
 					<a href="javascript:sendData()">Login</a>
-				</div>
+			</div>
 		</form:form>
 		
 		</div>

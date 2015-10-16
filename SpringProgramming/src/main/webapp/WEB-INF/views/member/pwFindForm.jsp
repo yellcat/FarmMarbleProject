@@ -22,7 +22,7 @@
 			
 			<div id="btnGroup">
 				<a href="javascript:sendData()">FIND</a>
-				<a id="btnCancle" href="selectFind">CANCLE</a>
+				<a id="btnCancle" href="selectFind">cancel</a>
 			<br/>
 			</div>
 			
