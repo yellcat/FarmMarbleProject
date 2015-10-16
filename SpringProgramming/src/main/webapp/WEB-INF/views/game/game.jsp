@@ -512,7 +512,7 @@
 				<aside id="chatting">
 					<div id="console-container">
 						<div id="chatcontent" style="position:relative;" align="right">
-								<p align="left" width="100%" height="550px" style="position:absolute; top:0px; left:0px;" id="console"></p>
+								<p align="left" height="550px" style="position:absolute; top:0px; left:0px;" id="console"></p>
 
 						</div>
 					</div>
