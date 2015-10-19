@@ -20,7 +20,7 @@ public class BoardController {
 	private static final Logger logger = LoggerFactory.getLogger(BoardController.class);
 	
 	@Autowired
-	private BoardService boardService;
+	private BoardService boardService;	
 	
 	@RequestMapping(value="/board/write",method=RequestMethod.GET)
 	public String writeForm() {
@@ -133,6 +133,7 @@ public class BoardController {
 		boardService.remove(boardNo);
 		return "redirect:/board/list";
 	}
+	
 
 }
 

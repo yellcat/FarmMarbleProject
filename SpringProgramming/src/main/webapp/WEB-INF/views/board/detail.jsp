@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 	
 <!DOCTYPE html>
 <html>
@@ -13,6 +14,10 @@
 		if(wid.value!=mid.value){
 			document.querySelector("#sameiduse").style.display = "none";
 		}
+	}
+	
+	function sendcomment() {
+		document.comment.submit();
 	}
 	</script>
 	
@@ -59,6 +64,37 @@
 		<div id="part2">
 			<span class="title">내용:</span> <br/>
 			<pre>${board.board_content}</pre>
+		</div>
+		
+		<div id="part3-1">
+			<table border="1">				
+					<tr>
+						<th style="width:60px">WRITER</th>
+						<th>CONTENT</th>
+						<th style="width:80px">DATE</th>						
+					</tr>				
+					
+					<c:forEach var="comment" items="${list}">
+						<tr>
+							<td>${comment.writer}</td>
+							<td>${comment.content}</td>							
+							<td>${comment.date}</td>							
+						</tr>
+					</c:forEach>			
+			</table>
+			
+			<div id="part3-2">
+				<form name="comment" method="post" action="../comment/writeComment">
+					<input id="comment" type="text" name="cmcontent" placeholder="댓글을 작성하세요" width="100px" size="20"/><br/>
+				</form>
+				<a href="javascript:sendcomment()">SAVE</a>
+			</div>
+		</div>
+		
+		<div id="part3-2">
+			<table>
+			
+			</table>
 		</div>
 		
 		<div id="buttonGroup">
