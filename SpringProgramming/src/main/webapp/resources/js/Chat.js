@@ -66,3 +66,9 @@
             $("#chatcontent").scrollTop($("#chatcontent").height());
         }
  
+		function EnterCheck(){
+			if(event.keyCode==13){
+				echo();
+			}
+		}
+		
