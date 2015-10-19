@@ -16,7 +16,7 @@
 		}
 	}
 	
-	function sendcomment() {
+	function sendcomment() {		
 		document.comment.submit();
 	}
 	</script>
@@ -84,18 +84,12 @@
 			</table>
 			
 			<div id="part3-2">
-				<form name="comment" method="post" action="../comment/writeComment">
+				<form id="comment" name="comment" method="post" action="../comment/writeComment">
 					<input id="comment" type="text" name="cmcontent" placeholder="댓글을 작성하세요" width="100px" size="20"/><br/>
-				</form>
+				</form>				
 				<a href="javascript:sendcomment()">SAVE</a>
 			</div>
-		</div>
-		
-		<div id="part3-2">
-			<table>
-			
-			</table>
-		</div>
+		</div>		
 		
 		<div id="buttonGroup">
 			<a href="list?pageNo=${i}">목록</a>

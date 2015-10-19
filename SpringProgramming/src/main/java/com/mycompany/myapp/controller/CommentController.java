@@ -57,4 +57,11 @@ public class CommentController {
 		return "comment/list";
 		
 	}
+	
+	@RequestMapping("/comment/writeComment")
+	public String writeComment(int boardNo, Comment comment) {
+		comment.setBoardNo(boardNo);
+		commentService.add(comment);
+		return "redirect:/board/detail?boardNo=" + boardNo;
+	}
 }
