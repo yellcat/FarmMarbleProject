@@ -85,7 +85,8 @@
 			
 			<div id="part3-2">
 				<form id="comment" name="comment" method="post" action="../comment/writeComment">
-					<input id="comment" type="text" name="cmcontent" placeholder="댓글을 작성하세요" width="100px" size="20"/><br/>
+					<input id="cmcontent" type="text" name="cmcontent" placeholder="댓글을 작성하세요" width="100px" size="20"/><br/>
+					<input id="boardNo" type="hidden" name="boardNo" value="${board.board_no}"/><br/>				
 				</form>				
 				<a href="javascript:sendcomment()">SAVE</a>
 			</div>
