@@ -1,7 +1,7 @@
 		var wschat=null;
 		chatconnect();
 		function chatconnect() {
-			wschat = new WebSocket("ws://"+window.location.host+"/myapp/chat-wschat");
+			wschat = new WebSocket("ws://"+window.location.host+"/SpringProgramming/chat-wschat");
  			
  			wschat.onopen = function(){
  				console.log("접속O");
