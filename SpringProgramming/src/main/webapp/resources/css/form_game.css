@@ -147,12 +147,13 @@
 				margin-top: 10px;
 			}
 			
-			#in{
-				position:absolute; height:20px; width:160px; padding:0; margin:0;
-			}
+			
+			#message{
+				height:15px;
+							}
 			
 			#chatbtn{
-				position:absolute; height:30px; width:50; padding:0; /*margin-left:165px;*/
+				position:absolute; height:20px;padding:0; /*margin-left:165px;*/
 			}
 			
 			#btnGroup{
