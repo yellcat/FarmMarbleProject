@@ -10,6 +10,7 @@
 	<script src="${pageContext.request.contextPath}/resources/js/jquery-1.11.3.min.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/gameSet.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/dice.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/gameEvent.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/Chat.js"></script>
 	<script src="${pageContext.request.contextPath}/resources/js/game.js"></script>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -34,6 +35,8 @@
 						4. 이벤트 설명<br/>
 						5. 나머지 플레이어가 파산하면 게임이 종료됩니다<br/>
 					</p>
+				</div>
+				<div id="gameEvent" title="EVENT">
 				</div>
 			</div>
 			<div id="content">
