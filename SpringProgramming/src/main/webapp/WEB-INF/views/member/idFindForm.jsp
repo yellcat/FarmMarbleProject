@@ -68,8 +68,8 @@
 			position: absolute;
 			left: 50%;
 			top: 50%;
-			margin-left: -470px;
-			margin-top: 50px;
+			margin-left: -395px;
+			margin-top: 30px;
 		}
 			
 		#button{
@@ -101,27 +101,27 @@
 			</div>
 			
 		<form:form name="form" commandName="member">
-		<div id="container">
-			<span class="title">NAME</span>
-			<span class="content">
-				<form:input path="name" size="20"/>
-			</span><br/>
-			
-			<span class="title">E-mail</span>
-			<span class="content">	
-				<form:input path="email" size="20"/><br/>
-				<form:errors path="email"/>
-			</span><br/>
-			
-			<div id="btnGroup">
-				<div id="button">
-					<a id="btnCancle" href="login">cancel</a>
-				</div>
-				<div id="button">
-					<a href="javascript:sendData()">FIND</a>
+			<div id="container">
+				<span class="title">NAME</span>
+				<span class="content">
+					<form:input path="name" size="20"/>
+				</span><br/>
+				
+				<span class="title">E-mail</span>
+				<span class="content">	
+					<form:input path="email" size="20"/><br/>
+					<form:errors path="email"/>
+				</span><br/>
+				
+				<div id="btnGroup">
+					<div id="button">
+						<a id="btnCancle" href="login">cancel</a>
+					</div>
+					<div id="button">
+						<a href="javascript:sendData()">FIND</a>
+					</div>
 				</div>
 			</div>
-		</div>
 		</form:form>
 		</div>
 	</body>
