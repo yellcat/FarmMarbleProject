@@ -67,7 +67,7 @@
 			position: absolute;
 			left: 50%;
 			top: 50%;
-			margin-left: -150px;
+			margin-left: -180px;
 			margin-top: -80px;
 		}
 		
@@ -89,7 +89,17 @@
 			font-family: 'Jeju Gothic';
 			font-weight: bold;
 			text-align: left;
-			float: left;
+		}
+		
+		#boxContent {
+			width: 290px;
+			height: 20px;
+			margin-left: 65px;
+			margin-bottom: 5px;
+			color: rgba(106,71,27,0.8);
+			font-family: 'Jeju Gothic';
+			font-weight: bold;
+			text-align: left;
 		}
 		
 		#checkButton {
@@ -116,8 +126,8 @@
 			position: absolute;
 			left: 50%;
 			top: 50%;
-			margin-left: -470px;
-			margin-top: 50px;
+			margin-left: -410px;
+			margin-top: 100px;
 		}
 			
 		#button{
@@ -149,10 +159,12 @@
 					<h4>New Account</h4>
 				</div>
 			</div>
+			
 			<div id="container">
 				<form:form id="join" commandName="member">
+					
 					<span class="title">ID</span>
-					<span class="content">
+					<span id="boxContent">
 						<form:input path="id" id="id" size="20"/>
 							<span id="checkButton">
 								<a href="javascript:idCheck()">ID중복체크</a>
@@ -177,16 +189,18 @@
 						<input type="password" id = "pwCheck" path="pw" size="20"/><br/>
 					</span><br/>
 					
-					<div id="btnGroup">
-						<div id="button">
-							<a id="btnCancle" href="login">cancel</a>
-						</div>
-						<div id="button">
-							<a href="javascript:sendData()">Sign up</a>
-						</div>
-					</div>
 				</form:form>
 			</div>
-		</div>
-	</body>
+			
+				<div id="btnGroup">
+					<div id="button">
+						<a id="btnCancle" href="login">cancel</a>
+					</div>
+					<div id="button">
+						<a href="javascript:sendData()">Sign up</a>
+					</div>
+				</div>
+				
+			</div>
+		</body>
 </html>

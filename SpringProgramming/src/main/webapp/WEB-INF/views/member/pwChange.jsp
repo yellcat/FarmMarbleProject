@@ -118,15 +118,15 @@
 	      <div id="container">
 				<span class="title">Current Password</span>
 				<span class="content">
-					<form:password id="pw" path="pw" size="20"/></br>
-					<form:errors path="pw"/></br>
+					<form:password id="pw" path="pw" size="20"/><br/>
+					<form:errors path="pw"/><br/>
 				</span></br>
 				<span class="title">Change Password to</span>
 				<span class="content">
 					<form:password id="pwChanage" path="pwChange" size="20"/></br>
 					<form:errors path="pwChange"/>
 				</span></br>
-				<span class="title">Repeat Password above</span>
+				<span class="title">Reenter Password above</span>
 				<span class="content">
 					<form:password id="pwCheck" path="pwCheck" size="20"/></br>
 					<form:errors path="pwCheck"/>
