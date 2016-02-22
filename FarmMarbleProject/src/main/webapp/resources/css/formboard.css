@@ -1,0 +1,402 @@
+@import url("https://googledrive.com/host/0BxmAw3HA4YGCfnE1U2tYVjN2UkVLWnEzaVdsWDRUZ3VFbmpJckF3UG56WkpLSUxKMXFaTlU/nanumbarunpenb.css");
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);			
+			
+			/*------------------------------------*/
+			* {
+				margin: 0px;
+				padding: 0px;
+				font-size: 15px;
+				font-family: 'Jeju Gothic';
+			}
+			/*------------------------------------*/
+			body {
+				color: #c0c0c0000;
+				font-size: 12px;
+			}
+			
+			a {
+				text-decoration: none;
+			}
+			/*------------------------------------*/				
+			#pagedetail {
+				
+				
+			}
+			
+			
+			/*------------------------------------*/
+			#bar{
+				display:flex;
+				margin: 40px;
+				border: none;
+				border-radius: 15px;
+				background-color: rgb(136,101,57);
+				text-align: center;
+			}
+			
+			#part{
+				display:inline-block;
+				flex:1;
+				color:white;
+			}
+			
+			#cancle{
+				height:30px;
+				width:30px;
+			}
+			
+			h2{
+				line-height: 33px;
+				font-size: 25px;
+				font-family: 'Righteous', cursive;
+			}
+			
+			h3{
+				text-align: center;
+				color:rgba(174,162,44,0.7);
+				font-size: 25px;
+				font-weight: bold;
+				
+			}
+			
+			
+			/*------------------------------------*/	
+			#content {
+				position: relative;		
+			}
+			
+			#content iframe {
+				width: 100%;
+				height: 100%;
+				border: none;
+				border-radius: 80px;
+				background-color: rgba(242,192,68,0.7);
+			}
+			/*------------------------------------*/	
+			
+			#menu {
+				margin: 10px;
+				text-align: center;
+				display: flex;
+    			flex-direction:column;
+			}
+			
+			#menu a{
+				width: 400px;
+				line-height: 30px;
+				text-decoration: none;
+				font-size: medium;
+				color: white;
+				border: none;
+				border-radius: 20px;
+				background-color: rgb(136,101,57);
+				font-weight: bold;
+			}
+			
+			#menu #id{
+				width: 400px;
+				line-height: 30px;
+				text-decoration: none;
+				font-size: medium;
+				color: white;
+				border: none;
+				border-radius: 20px;
+				background-color: rgb(192,0,0);
+				font-weight: bold;
+			}
+			
+			#menu a:hover {
+				color: lightgray;
+				background-color: rgb(106,71,27);
+			}
+			
+			body {
+				color: white;
+				
+			}
+			
+			/*------------------------------------*/
+			
+			#commentTable {
+				color: rgb(136,101,57);
+				width: 98%;
+				margin: 10px 10px;
+				
+				border-collapse: collapse;
+				font-size: small;
+				text-align: left;
+				float: left;
+				border: 1px solid lightgray;
+			}
+			#writer {
+				color: rgba(136,101,57,0.6);
+			}
+			
+			#commentContents {
+				padding-left: 5px;
+				text-align: left;
+			}
+			
+			#date {
+				text-align: right;
+				width: 110px;
+				color: rgba(136,101,57,0.6);
+			}
+			
+			#part3-1 td > a {
+				height: 95%;
+				margin: 1px 1px;
+				padding: 1px 1px;
+				background-color: rgba(255,255,210,0.5);
+				font-size: 12px;
+				color: #808040;
+				border-radius: 3px;
+				float: right;
+			}
+			#part3-1 td > a:hover { background-color: rgba(255,255,255,0.8); }
+			#part3-1 td > a:active { color: rgb(136,101,57); }
+			
+			#insert {
+				height: 25px;
+				width: 40px;
+
+				background-color: rgba(255,255,210,0.5);
+				font-size: 16px;
+				color: #808040;
+				border-radius: 0px 8px 8px 0px;
+			}
+			
+			#insert:hover { background-color: rgba(186,151,107,0.7); }
+			#insert:active { color: rgb(136,101,57); }
+			
+			/*-----------------list-------------------*/
+			#listTable {
+				color: rgb(136,101,57);
+				width: 90%;
+				margin-top: 80px;
+				margin-left: 40px;
+				border-collapse: collapse;
+				font-size: small;
+			}
+			
+			#listTable, td {
+				border: 1px solid rgba(230,230,230,0.5);
+				text-align: center;
+			}
+			
+			.contenttitle {
+				text-decoration: none;
+				color: rgb(255,255,240);
+				float: left;
+				margin-left: 5px;
+			}
+				
+			.contenttitle:hover {
+				color: rgb(136,101,57);
+			}
+			
+			#pager {
+				width: 450px;
+				display: inline-block;
+				text-align: right;
+				margin-top: 15px;
+				font-size: small;
+				
+			}
+			
+			#pager a {
+				text-decoration: none;
+				color: white;
+			}
+			
+			#pager a:hover {
+				color: rgb(136,101,57);
+			}
+			
+			#pager a.pageNo {
+				margin-left: 5px;
+				margin-right: 5px;
+			}
+			
+			#pager a.pageNo.selected {
+				color: rgb(166,131,87);
+			}
+			
+			
+			/*------------------------------------*/
+			span {
+				display: inline-block;
+				margin: 2px 10px;
+				
+			}
+			
+			span.title {
+				margin: 5px 10px;
+				width: 70px;
+				line-height: 100%;
+				text-align: left;
+				color: rgb(136,101,57);
+			}
+			
+			#container > span {
+				
+				
+				
+			}
+			
+			span.writeTitle {
+				margin-left: 120px;
+				width: 100px;
+				
+				
+				color: rgb(136,101,57);
+			}
+			
+			pre {
+				margin: 0px 10px;
+				border: 1px solid rgba(230,230,230,0.5);
+				padding: 10px;
+				width: 95%;
+				height: 100px;
+				font-size: 15px;
+				text-align: left;
+			}
+			
+			.imgfile{
+				margin-left: 244px;
+				border: none;
+				width: 500px;
+				font-size: 15px;
+			}
+			
+			
+			/*------------------------------------*/
+			#pagewrapper{
+				width: 700px;
+				margin: 20px 40px;
+			}
+			
+			#part1 {
+				display: flex;
+			}
+			#part1_1 {
+				flex: 1;
+				margin: 0px;
+				text-align: left;
+			}
+			#part1_2 {
+				width: 200px;
+			}
+			#part1_2 img {
+				
+				display: block;
+				padding: 1px;
+				
+				
+			}
+			
+			#part3-2 {
+				text-align: center;
+			
+			}
+			
+			/*------------------------------------*/
+			#buttonGroup {
+				margin-top: 10px;
+				margin-right: 50px;
+				float: right;
+			}
+			
+			#buttonGroup a {
+				display:inline-block;
+				margin-right: 1px;
+				width: 70px;
+				line-height: 30px;
+				border: none;
+				border-radius: 3px;
+				background-color: rgba(166,121,77,0.5);
+				color: white;
+				text-decoration: none;
+				font-size: 15px;
+				text-align: center;
+			}
+			
+			#buttonGroup a:hover { background-color: rgb(186,151,107); }
+			#buttonGroup a:active { color: rgb(136,101,57); }
+			
+			#detailButtonGroup {
+				margin-top: 0px;
+				text-align: center;
+			}
+			
+			#detailButtonGroup a {
+				display:inline-block;
+				margin-right: 1px;
+				width: 70px;
+				line-height: 30px;
+				border: none;
+				border-radius: 3px;
+				background-color: rgba(166,121,77,0.5);
+				color: white;
+				text-decoration: none;
+				font-size: 15px;
+				text-align: center;
+			}
+			
+			#detailButtonGroup a:hover { 
+			background-color: rgb(186,151,107); 
+			}
+			
+			#detailButtonGroup a:active { color: rgb(136,101,57); }
+			
+			#sameiduse{display:inline-block;}
+			
+			
+			#writeButtonGroup {
+				margin-top: 20px;
+				margin-left: 20px;
+				text-align: center;
+			}
+			
+			#writeButtonGroup a {
+				display:inline-block;
+				margin-right: 1px;
+				width: 70px;
+				line-height: 30px;
+				border: none;
+				border-radius: 3px;
+				background-color: rgba(166,121,77,0.5);
+				color: white;
+				text-decoration: none;
+				font-size: 15px;
+				text-align: center;
+			}
+			
+			#writeButtonGroup a:hover {background-color: rgb(186,151,107);}
+			
+			#writeButtonGroup a:active {color: rgb(136,101,57);}
+			
+			#writeButtonGroup input {
+				display:inline-block;
+				margin-right: 1px;
+				width: 70px;
+				line-height: 30px;
+				border: none;
+				border-radius: 3px;
+				background-color: rgba(166,121,77,0.5);
+				color: white;
+				text-decoration: none;
+				font-size: 15px;
+				text-align: center;
+			}
+			
+			#writeButtonGroup input:hover {
+				background-color: rgb(186,151,107);
+			}
+			
+			#writeButtonGroup input:active { color: rgb(136,101,57); }
+			
+			
+			

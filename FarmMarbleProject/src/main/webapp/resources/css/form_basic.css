@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+		*{
+			text-align:center;
+			margin:0;
+			padding:0;
+		}
+		#title{
+			display:inline-block;
+			flex:1;
+			color:white;
+		}
+		#cancle{
+			height:30px;
+			width:30px;
+		}
+
+		#bar{
+				display:flex;
+				margin: 40px;
+				border: none;
+				border-radius: 15px;
+				height:40px;
+				background-color: rgb(136,101,57);
+			}
+			
+		a{
+		
+			font-family: 'Sigmar One';
+			text-align:center;
+			
+			display:inline-block;
+			width: 100px;
+			text-decoration: none;
+			color: white;
+			margin: 20px;
+			
+			border: none;
+			border-radius: 15px;
+			background-color: rgb(136,101,57);
+			
+			line-height: 50px;
+			font-size: large;
+			list-style:none;
+		}
